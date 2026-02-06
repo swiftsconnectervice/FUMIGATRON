@@ -1,0 +1,7 @@
+{
+  "name": "Fumigatron - Control de Plagas Premium",
+  "description": "Sitio web profesional para servicios de fumigación con tecnología biológica, diseño moderno y optimización para conversiones.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

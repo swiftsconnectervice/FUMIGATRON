@@ -1,0 +1,29 @@
+{
+  "name": "fumigatron---control-de-plagas-premium",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.93.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "fast-check": "^4.5.3",
+    "jsdom": "^27.4.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "^4.0.18"
+  }
+}
