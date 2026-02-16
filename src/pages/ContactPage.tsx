@@ -286,7 +286,7 @@ const ContactForm = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                          Nombre Completo *
+                          Nombre*
                         </label>
                         <input 
                           type="text" 
@@ -387,7 +387,7 @@ const ContactForm = () => {
 
                     <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1">
                       <span className="material-icons-outlined text-sm">lock</span>
-                      Tus datos están protegidos. Te contactaremos en menos de 2 horas.
+                      Tus datos están protegidos. Te contactaremos en menos de 15 min.
                     </p>
                   </form>
                 )}
@@ -464,7 +464,7 @@ const EmergencySection = () => (
             <div className="text-center md:text-left flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2">¿Emergencia de plagas?</h3>
               <p className="text-gray-600 text-sm mb-4">
-                Respondemos en menos de 2 horas para casos críticos.
+                Respondemos en menos de 15 min.
               </p>
               <a 
                 href="https://wa.me/5520872132"

@@ -171,16 +171,37 @@ const Hero = () => (
       <div className="fade-in space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-brand-green text-xs font-bold tracking-wide uppercase">
           <span className="material-icons-outlined text-sm">location_on</span>
-          Servicio en CDMX y Edo Mex
+          Cobertura inmediata en CDMX y Edo. Méx.
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-green leading-tight italic">
-          Recupera la paz de tu hogar y protege a los tuyos de las plagas hoy mismo.
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight italic">
+          Erradicación de Plagas con Precisión y Cero Riesgos.
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-xl leading-relaxed">
-          Fumigación profesional en CDMX con productos certificados, sin olores molestos y 100% seguro para niños y mascotas. Eliminamos el problema desde la raíz con garantía por escrito.
+          Especialistas en fumigación, control de plagas y desinfección con protocolos adaptados a tu entorno. <span className="font-bold text-gray-900">Resultados garantizados desde la primera visita.</span>
         </p>
+        <div className="flex flex-col gap-3 max-w-xl">
+          <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
+            <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
+            <div>
+              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Hogar</p>
+              <p className="text-gray-600 text-sm">Fórmulas 100% seguras para niños y mascotas.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
+            <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
+            <div>
+              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Empresa</p>
+              <p className="text-gray-600 text-sm">Cumplimiento normativo estricto (clínicas, restaurantes, oficinas).</p>
+            </div>
+          </div>
+        </div>
         <div className="pt-2">
-          <a href="#contacto" className="inline-block px-6 sm:px-8 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg">
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20estaba%20viendo%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20sobre%20sus%20servicios."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 sm:px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg"
+          >
             Hablar con un Especialista ahora
           </a>
         </div>
@@ -194,7 +215,7 @@ const Hero = () => (
             className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover"
           />
           {/* Stats Card */}
-          <div className="absolute -bottom-4 right-4 md:bottom-6 md:right-6 bg-brand-green text-white p-4 md:p-5 rounded-xl shadow-xl">
+          <div className="absolute -bottom-4 left-4 md:bottom-6 md:left-6 bg-brand-green text-white p-4 md:p-5 rounded-xl shadow-xl">
             <p className="text-2xl md:text-3xl font-black">+15,000</p>
             <p className="text-xs md:text-sm opacity-90">Hogares protegidos</p>
           </div>
@@ -208,11 +229,12 @@ const TrustBar = () => (
   <div className="bg-gray-50 py-12 border-y border-gray-100">
     <div className="container mx-auto px-4 text-center">
       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">Tecnología biológica respaldada por:</p>
-      <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-        <span className="font-display font-black text-2xl tracking-tighter cursor-default">BAYER</span>
-        <span className="font-display font-black text-2xl tracking-tighter cursor-default">Syngenta</span>
-        <span className="font-display font-black text-2xl tracking-tighter cursor-default">Bell Labs</span>
-        <span className="font-display font-black text-2xl tracking-tighter cursor-default">FMC</span>
+      <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+        <img src="/images/Bayer.png" alt="Bayer" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/bell.png" alt="Bell Labs" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/allister.png" alt="Allister" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/agromundo.png" alt="Agromundo" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/bird.png" alt="Bird" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
       </div>
     </div>
   </div>
@@ -228,67 +250,73 @@ const BenefitsAndTestimonials = () => (
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">home</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Hogar 100%</h3>
-            <p className="text-lg md:text-xl opacity-90">libre de plagas</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Libres de plagas en 1 visita</h3>
+            <p className="text-lg md:text-xl opacity-90">O la reaplicación es 100% gratis.</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">health_and_safety</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Protección contra</h3>
-            <p className="text-lg md:text-xl opacity-90">enfermedades</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Escudo contra enfermedades</h3>
+            <p className="text-lg md:text-xl opacity-90">Desinfección de alto nivel que neutraliza virus y bacterias al contacto.</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">verified_user</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Tranquilidad total</h3>
-            <p className="text-lg md:text-xl opacity-90">garantizada</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Garantía y reporte por escrito</h3>
+            <p className="text-lg md:text-xl opacity-90">Respaldo para tu empresa y paz mental absoluta para tu hogar.</p>
           </div>
         </div>
       </div>
     </div>
     
-    {/* Problem Section */}
+    {/* Dual CTA Section */}
     <div className="bg-white py-16 md:py-20">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 leading-tight">
-          ¿Sientes que ya no eres el dueño de tu propia casa?
-        </h2>
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-          No hay nada peor que encender la luz de la cocina y ver algo correr, o vivir con el miedo constante de que una plaga afecte la salud de tus hijos con enfermedades como la Salmonelosis, el Dengue o la Leptospirosis.
-        </p>
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-          Los insecticidas de supermercado solo matan a los que ves, pero el verdadero problema se esconde y se multiplica en tus paredes. La frustración de gastar dinero en soluciones temporales termina aquí.
-        </p>
-      </div>
-    </div>
-    
-    {/* Solution Section */}
-    <div className="bg-white py-16 md:py-20 border-t border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 leading-tight">
-              Entendemos la impotencia de ver tu espacio invadido.
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
-              En Fumigatron, sabemos que tu hogar es tu refugio, no un nido de insectos. Como expertos con 15 años de experiencia, hemos ayudado a cientos de vecinos a recuperar su tranquilidad mediante técnicas de Manejo Integral de Plagas (MIP). No solo aplicamos producto; analizamos el origen para que no vuelvan.
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">¿Cómo podemos ayudarte?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Selecciona la opción que mejor se adapte a tu situación y te atenderemos de inmediato.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Hogar / B2C */}
+          <div className="bg-green-50 rounded-2xl p-8 md:p-10 flex flex-col items-center text-center border border-green-100">
+            <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mb-6">
+              <span className="material-icons-outlined text-4xl text-brand-green">home</span>
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Hogar</h3>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Protege a tu familia con fórmulas 100% seguras para niños y mascotas. Evaluación urgente sin compromiso.
             </p>
-            <a href="#contacto" className="inline-block px-6 sm:px-8 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg">
-              Hablar con un Especialista ahora
+            <a
+              href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Solicitar ayuda urgente para mi casa
             </a>
           </div>
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=500&fit=crop" 
-              alt="Especialista en fumigación profesional" 
-              className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
-            />
-            <div className="absolute -bottom-4 -left-4 bg-brand-green text-white p-4 rounded-xl shadow-lg hidden md:block">
-              <p className="text-2xl font-black">15+</p>
-              <p className="text-sm opacity-90">Años de experiencia</p>
+
+          {/* Empresas / B2B */}
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-10 flex flex-col items-center text-center border border-gray-200">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+              <span className="material-icons-outlined text-4xl text-blue-700">business</span>
             </div>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Empresa</h3>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Cumplimiento normativo estricto para clínicas, restaurantes, oficinas y más. Certificados válidos ante autoridades.
+            </p>
+            <a
+              href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-4 bg-blue-700 hover:bg-blue-800 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Cotizar servicio corporativo
+            </a>
           </div>
         </div>
       </div>
@@ -352,117 +380,138 @@ const Testimonials = () => (
 const ProcessSteps = () => (
   <section className="bg-brand-forest py-16 md:py-20">
     <div className="container mx-auto px-4">
-      <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-12 md:mb-16">
-        Proceso de 3 Pasos
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-        {/* Step 1 */}
-        <div className="text-center relative">
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[80px] md:text-[100px] font-black text-white/10 leading-none select-none">
-            1
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
+          Tu espacio libre de plagas en 3 pasos sencillos
+        </h2>
+        <div className="h-1 w-16 bg-emerald-400 rounded-full mx-auto"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 max-w-5xl mx-auto">
+        {/* Paso 1 */}
+        <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="absolute -top-4 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Paso 1
           </div>
-          <div className="relative z-10">
-            <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-              <span className="material-icons-outlined text-6xl text-emerald-400">search</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Diagnóstico</h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              Inspección detallada para identificar la plaga y origen.
-            </p>
-          </div>
+          <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">smartphone</span></div>
+          <h3 className="text-lg font-bold text-white mb-3">Diagnóstico por WhatsApp</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Escríbenos o envíanos una foto de tu problema. Un experto evaluará tu nivel de riesgo y te dará una cotización exacta en minutos, sin compromisos.
+          </p>
         </div>
-        
-        {/* Step 2 */}
-        <div className="text-center relative">
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[80px] md:text-[100px] font-black text-white/10 leading-none select-none">
-            2
+
+        {/* Paso 2 */}
+        <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="absolute -top-4 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Paso 2
           </div>
-          <div className="relative z-10">
-            <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-              <span className="material-icons-outlined text-6xl text-emerald-400">water_drop</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Tratamiento</h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              Aplicación precisa de productos certificados y seguros.
-            </p>
-          </div>
+          <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">gps_fixed</span></div>
+          <h3 className="text-lg font-bold text-white mb-3">Intervención Precisa</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Nuestros técnicos acuden con puntualidad táctica. Aplicamos el tratamiento de grado hospitalario (MIP) de forma rápida, discreta y sin que tengas que abandonar el lugar por horas.
+          </p>
         </div>
-        
-        {/* Step 3 */}
-        <div className="text-center relative">
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[80px] md:text-[100px] font-black text-white/10 leading-none select-none">
-            3
+
+        {/* Paso 3 */}
+        <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="absolute -top-4 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            Paso 3
           </div>
-          <div className="relative z-10">
-            <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-              <span className="material-icons-outlined text-6xl text-emerald-400">home</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Hogar Libre</h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              Disfruta de un ambiente libre de plagas con seguimiento.
-            </p>
-          </div>
+          <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">verified_user</span></div>
+          <h3 className="text-lg font-bold text-white mb-3">Certificación y Paz Mental</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            El problema queda resuelto desde la primera visita. Te entregamos tu garantía por escrito, recomendaciones de prevención y tu certificado de sanidad válido para autoridades.
+          </p>
         </div>
+      </div>
+
+      {/* CTA */}
+      <div className="text-center mt-12">
+        <a
+          href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Quiero%20empezar%20con%20el%20diagn%C3%B3stico%20de%20mi%20problema%20de%20plagas."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-base transition-all hover:scale-105 shadow-lg"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quiero empezar el Paso 1 ahora
+        </a>
       </div>
     </div>
   </section>
 );
 
 const ComparisonTable = () => {
-  const benefits = [
-    { name: 'Certificaciones y Permisos', us: true, others: false },
-    { name: 'Productos No Tóxicos', us: true, others: false },
-    { name: 'Garantía de Servicio', us: true, others: false },
-    { name: 'Enfoque Científico (MIP)', us: true, others: false },
-    { name: 'Soporte y Seguimiento', us: true, others: false },
+  const rows = [
+    {
+      benefit: 'Velocidad de Resultados',
+      us: 'Erradicación en 1 sola visita. Tratamiento de choque exacto.',
+      others: 'Múltiples visitas (hasta 3 o más). Tratan el síntoma, no el nido, alargando tu problema.',
+    },
+    {
+      benefit: 'Enfoque del Tratamiento',
+      us: 'Prevención a largo plazo. Analizamos el origen y evitamos que regresen.',
+      others: 'Reactivo. Solo matan lo que ves hoy. El problema vuelve en semanas.',
+    },
+    {
+      benefit: 'Seguridad y Productos',
+      us: 'Dosis mínimas y responsables. Fórmulas biodegradables avaladas.',
+      others: 'Exceso de toxicidad. Riesgo de intoxicación por químicos baratos.',
+    },
+    {
+      benefit: 'Nivel de Experiencia',
+      us: 'Asesores certificados. Expertos en Manejo Integral de Plagas (MIP).',
+      others: 'Prueba y error. Basado en "tutoriales de Google" o informales.',
+    },
+    {
+      benefit: 'Respaldo y Tranquilidad',
+      us: 'Garantía y Certificados válidos. Somos tu aliado estratégico.',
+      others: 'Sin respaldo. Si la plaga sigue, pierdes tu dinero y tu tiempo.',
+    },
   ];
 
   return (
     <section className="bg-gray-50 py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-black text-gray-900 text-center mb-10 md:mb-14 uppercase tracking-wide">
-          ¿Por qué elegir Fumigatron?
-        </h2>
-        
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+            ¿Por qué elegir a un Asesor Profesional en lugar de arriesgarte?
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
+            El verdadero costo de las soluciones temporales es la salud de tu familia y la reputación de tu negocio.
+          </p>
+        </div>
+
         {/* Desktop Table */}
-        <div className="hidden sm:block max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-          {/* Header */}
-          <div className="grid grid-cols-3 bg-gray-800 text-white">
-            <div className="p-4 md:p-6 font-bold text-sm md:text-base">Beneficio</div>
-            <div className="p-4 md:p-6 font-bold text-sm md:text-base text-center text-brand-green">Nosotros</div>
-            <div className="p-4 md:p-6 font-bold text-sm md:text-base text-center">Otros</div>
+        <div className="hidden md:block max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="grid grid-cols-[1fr_1.3fr_1.3fr] bg-gray-800 text-white">
+            <div className="p-5 font-bold text-sm">Lo que realmente necesitas</div>
+            <div className="p-5 font-bold text-sm text-center bg-brand-green/90"><span className="material-icons-outlined text-sm align-middle mr-1">verified_user</span> FUMIGATRON — Tu Socio Experto</div>
+            <div className="p-5 font-bold text-sm text-center"><span className="material-icons-outlined text-sm align-middle mr-1">cancel</span> Servicios Tradicionales</div>
           </div>
-          
-          {/* Rows */}
           <div className="divide-y divide-gray-100">
-            {benefits.map((benefit, index) => (
-              <div key={index} className={`grid grid-cols-3 items-center ${index % 2 === 1 ? 'bg-gray-50' : ''}`}>
-                <div className="p-4 md:p-6 text-gray-700 text-sm md:text-base">{benefit.name}</div>
-                <div className="p-4 md:p-6 text-center">
-                  <span className="material-icons-outlined text-2xl text-brand-green">check_circle</span>
-                </div>
-                <div className="p-4 md:p-6 text-center">
-                  <span className="text-red-400 text-xl">✕</span>
-                </div>
+            {rows.map((row, i) => (
+              <div key={i} className={`grid grid-cols-[1fr_1.3fr_1.3fr] ${i % 2 === 1 ? 'bg-gray-50' : ''}`}>
+                <div className="p-5 font-semibold text-gray-900 text-sm flex items-start">{row.benefit}</div>
+                <div className="p-5 text-sm text-gray-700 bg-green-50/50 border-x border-green-100">{row.us}</div>
+                <div className="p-5 text-sm text-gray-500">{row.others}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Mobile Cards */}
-        <div className="sm:hidden space-y-3">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-xl p-4 shadow-md border border-gray-100 flex items-center justify-between">
-              <span className="text-gray-700 text-sm font-medium flex-1 pr-4">{benefit.name}</span>
-              <div className="flex items-center gap-4">
-                <div className="text-center">
-                  <span className="material-icons-outlined text-xl text-brand-green">check_circle</span>
-                  <p className="text-[10px] text-gray-400 font-semibold">Nosotros</p>
-                </div>
-                <div className="text-center">
-                  <span className="text-red-400 text-lg">✕</span>
-                  <p className="text-[10px] text-gray-400 font-semibold">Otros</p>
-                </div>
+        <div className="md:hidden space-y-6">
+          {rows.map((row, i) => (
+            <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+              <div className="bg-gray-800 text-white px-4 py-3 font-semibold text-sm">{row.benefit}</div>
+              <div className="p-4 bg-green-50 border-b border-green-100">
+                <p className="text-xs font-bold text-brand-green mb-1"><span className="material-icons-outlined text-xs align-middle mr-1">verified_user</span> FUMIGATRON</p>
+                <p className="text-sm text-gray-700">{row.us}</p>
+              </div>
+              <div className="p-4">
+                <p className="text-xs font-bold text-gray-400 mb-1"><span className="material-icons-outlined text-xs align-middle mr-1">cancel</span> Servicios Tradicionales</p>
+                <p className="text-sm text-gray-500">{row.others}</p>
               </div>
             </div>
           ))}
@@ -508,14 +557,10 @@ const ServiceDetails = () => (
         <div className="w-full lg:w-1/2 relative group">
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <img 
-              src="https://picsum.photos/id/10/800/1000" 
+              src="/images/especialistasenlodificl.jpg" 
               alt="Especialistas en control" 
               className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
             />
-          </div>
-          <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg">
-             <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Tecnología de Vanguardia</p>
-             <p className="font-bold text-gray-900">APLICACIÓN DE GEL DE PRECISIÓN</p>
           </div>
         </div>
         
@@ -541,10 +586,10 @@ const ServiceDetails = () => (
             ))}
           </ul>
           
-          <a href="#" className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all group pt-4">
-            VER TODOS LOS SERVICIOS 
+          <Link to="/servicios" className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all group pt-4">
+            CONOCE NUESTRA METODOLOGÍA
             <span className="material-icons-outlined text-sm">arrow_forward</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -632,28 +677,26 @@ const MapSection = () => (
       />
       
       <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[280px] sm:h-[350px] md:h-[450px] bg-gray-100 border-4 md:border-8 border-white">
-        {/* Placeholder for real map */}
-        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-            <div className="text-center opacity-30">
-                <span className="material-icons-outlined text-6xl mb-4">map</span>
-                <p className="font-bold">GOOGLE MAPS INTEGRATION</p>
-            </div>
-        </div>
         <iframe 
-          title="Fumigatron Cobertura"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15050.485407049872!2d-99.16782354999999!3d19.42900765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico%20City%2C%20CDMX%2C%20Mexico!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx" 
-          className="absolute inset-0 w-full h-full grayscale border-none"
+          title="Fumigatron Ubicación"
+          src="https://maps.google.com/maps?q=19.538723330398547,-99.18204677655439&z=18&output=embed" 
+          className="absolute inset-0 w-full h-full border-none"
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         
-        <div className="absolute top-4 left-4 md:top-8 md:left-8 bg-white/95 backdrop-blur-sm p-3 md:p-5 rounded-xl md:rounded-2xl shadow-2xl border border-gray-100 max-w-[200px] md:max-w-xs transition-all hover:scale-105">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-            <p className="font-bold text-gray-900">Técnicos en ruta: 8</p>
+        <div className="absolute top-4 left-4 md:top-8 md:left-8 bg-white/95 backdrop-blur-sm p-3 md:p-5 rounded-xl md:rounded-2xl shadow-2xl border border-gray-100 max-w-[220px] md:max-w-xs">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="material-icons-outlined text-brand-green">location_on</span>
+            <p className="font-bold text-gray-900 text-sm">Nuestra Oficina</p>
           </div>
-          <p className="text-xs text-gray-500 leading-relaxed">
-            Tiempo de llegada estimado para urgencias en CDMX: <span className="font-bold">2 hrs.</span>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            C. Colima 20, Hab Valle Ceylan, 54150 Tlalnepantla, Méx.
           </p>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="material-icons-outlined text-brand-green text-sm">shield</span>
+            <p className="text-xs text-gray-500">Base central de operaciones. Cobertura a toda la CDMX y Estado de México.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -666,8 +709,20 @@ const ContactSection = () => {
     phone: '',
     service: ''
   });
+  const [clientType, setClientType] = useState<'hogar' | 'empresa'>('hogar');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<{ name?: string; phone?: string; service?: string }>({});
+
+  const testimonials = {
+    hogar: {
+      quote: '"Excelente servicio, llegaron puntual y explicaron todo el proceso. Adiós cucarachas."',
+      author: '— María G. (Polanco)',
+    },
+    empresa: {
+      quote: '"Puntuales y muy profesionales. Me entregaron mi certificado de fumigación válido para mi negocio ante las autoridades sanitarias."',
+      author: '— Javier T. (Dueño de Restaurante)',
+    },
+  };
 
   const validateForm = () => {
     const newErrors: typeof errors = {};
@@ -705,7 +760,7 @@ const ContactSection = () => {
         <div className="bg-white rounded-2xl md:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
           <div className="md:w-5/12 bg-gray-900 text-white p-6 sm:p-10 lg:p-14 flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl font-black mb-4">Solicitar Inspección</h2>
+              <h2 className="text-3xl font-black mb-4">Recibir Diagnóstico sin Costo</h2>
               <p className="text-gray-400 mb-10">Déjenos sus datos. Un especialista le contactará en menos de 15 minutos para darle un presupuesto preliminar.</p>
               
               <div className="space-y-6">
@@ -724,9 +779,9 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
-               <p className="text-sm italic text-gray-300 mb-4">"Excelente servicio, llegaron puntual y explicaron todo el proceso. Adiós cucarachas."</p>
-               <p className="text-xs font-bold text-brand-green">— Maria G. (Polanco)</p>
+            <div className="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm transition-all duration-300">
+               <p className="text-sm italic text-gray-300 mb-4">{testimonials[clientType].quote}</p>
+               <p className="text-xs font-bold text-brand-green">{testimonials[clientType].author}</p>
             </div>
           </div>
           
@@ -755,8 +810,37 @@ const ContactSection = () => {
                 )}
                 
                 <div className="grid gap-6">
+                  {/* Client Type Selector */}
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Nombre Completo</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">¿Para quién es el servicio?</label>
+                    <div className="grid grid-cols-2 gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setClientType('hogar')}
+                        className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all border-2 ${
+                          clientType === 'hogar'
+                            ? 'border-brand-green bg-green-50 text-brand-green'
+                            : 'border-gray-200 bg-gray-50 text-gray-500 hover:border-gray-300'
+                        }`}
+                      >
+                        <span className="material-icons-outlined text-sm">home</span> Para mi Hogar
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setClientType('empresa')}
+                        className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm transition-all border-2 ${
+                          clientType === 'empresa'
+                            ? 'border-blue-600 bg-blue-50 text-blue-700'
+                            : 'border-gray-200 bg-gray-50 text-gray-500 hover:border-gray-300'
+                        }`}
+                      >
+                        <span className="material-icons-outlined text-sm">business</span> Para mi Empresa
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Tu Nombre</label>
                     <input 
                       type="text" 
                       placeholder="Ej. Juan Pérez" 
@@ -799,12 +883,11 @@ const ContactSection = () => {
                   disabled={status === 'loading'}
                   className="w-full bg-brand-green hover:bg-brand-forest text-white py-5 rounded-xl font-bold text-lg shadow-xl shadow-green-100 transition-all hover:-translate-y-1 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === 'loading' ? 'ENVIANDO...' : 'SOLICITAR INSPECCIÓN'}
+                  {status === 'loading' ? 'ENVIANDO...' : 'RECIBIR DIAGNÓSTICO SIN COSTO'}
                 </button>
                 
                 <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
-                   <span className="material-icons-outlined text-sm">lock</span>
-                   Sus datos están protegidos. Garantía de servicio o devolvemos su dinero.
+                   <span className="material-icons-outlined text-sm">lock</span> Tus datos están seguros. Garantía de solución desde la 1ª visita.
                 </div>
               </form>
             )}

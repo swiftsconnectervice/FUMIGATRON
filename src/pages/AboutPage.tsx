@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // --- Shared Components ---
@@ -221,14 +221,14 @@ const AboutHero = () => (
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-3xl">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-wide uppercase mb-6">
-          <span className="material-icons-outlined text-sm">history</span>
+          <span className="material-icons-outlined text-sm">verified</span>
           Desde 2017
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
           Quiénes Somos
         </h1>
         <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-          Más que fumigadores, somos guardianes de la salud familiar.
+          Guardianes de la salud familiar. Aliados estratégicos de tu empresa.
         </p>
       </div>
     </div>
@@ -242,11 +242,11 @@ const AboutContent = () => (
         <div className="space-y-8">
           <div className="space-y-6">
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Desde 2017, en <span className="font-bold text-brand-green">Fumigatron</span> (ahora bajo nuestra marca insignia <span className="font-bold text-brand-forest">Fumigalex</span>), dejamos de ver el control de plagas como una labor industrial para verla como una <span className="font-bold">misión de salud familiar</span>.
+              Desde nuestros inicios, dejamos de ver el control de plagas como una simple labor de erradicación para convertirlo en una <span className="font-bold">misión de salud integral</span>.
             </p>
             
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              No solo aplicamos métodos novedosos en sectores empresariales; llevamos esa misma <span className="font-bold">excelencia técnica</span> a tu sala, tu cocina y tu descanso.
+              No solo aplicamos los protocolos más estrictos y novedosos en el sector empresarial e industrial; llevamos esa misma <span className="font-bold">excelencia técnica y cero toxicidad</span> a tu sala, tu cocina y tu descanso.
             </p>
           </div>
           
@@ -255,16 +255,16 @@ const AboutContent = () => (
               <div className="w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center mb-3">
                 <span className="material-icons-outlined text-brand-green">family_restroom</span>
               </div>
-              <h4 className="font-bold text-gray-900 mb-1">Enfoque Familiar</h4>
-              <p className="text-sm text-gray-500">Tu bienestar es nuestra prioridad</p>
+              <h4 className="font-bold text-gray-900 mb-1">Enfoque Humano</h4>
+              <p className="text-sm text-gray-500">La tranquilidad de tu familia y tu equipo es nuestra prioridad.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
               <div className="w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center mb-3">
-                <span className="material-icons-outlined text-brand-green">workspace_premium</span>
+                <span className="material-icons-outlined text-brand-green">biotech</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Excelencia Técnica</h4>
-              <p className="text-sm text-gray-500">Métodos certificados y seguros</p>
+              <p className="text-sm text-gray-500">Métodos de grado hospitalario y cumplimiento normativo.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
@@ -272,7 +272,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">eco</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Productos Seguros</h4>
-              <p className="text-sm text-gray-500">Sin riesgos para tu familia</p>
+              <p className="text-sm text-gray-500">Fórmulas avaladas, sin riesgos de intoxicación.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
@@ -280,7 +280,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">handshake</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Compromiso Real</h4>
-              <p className="text-sm text-gray-500">Garantía por escrito</p>
+              <p className="text-sm text-gray-500">Resultados garantizados por escrito desde la 1ª visita.</p>
             </div>
           </div>
         </div>
@@ -357,23 +357,11 @@ const ExperienceSection = () => (
         </div>
         
         {/* Iconos de sectores */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
-          <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-            <span className="material-icons-outlined text-brand-green text-3xl mb-2">apartment</span>
-            <p className="text-white text-sm font-medium">Corporativos</p>
-          </div>
-          <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-            <span className="material-icons-outlined text-brand-green text-3xl mb-2">factory</span>
-            <p className="text-white text-sm font-medium">Industrias</p>
-          </div>
-          <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-            <span className="material-icons-outlined text-brand-green text-3xl mb-2">directions_bus</span>
-            <p className="text-white text-sm font-medium">Transporte</p>
-          </div>
-          <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-            <span className="material-icons-outlined text-brand-green text-3xl mb-2">home</span>
-            <p className="text-white text-sm font-medium">Hogares</p>
-          </div>
+        <div className="flex flex-wrap justify-center gap-3 mt-10">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium cursor-default"><span className="material-icons-outlined text-sm">apartment</span> Corporativos</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium cursor-default"><span className="material-icons-outlined text-sm">factory</span> Industrias</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium cursor-default"><span className="material-icons-outlined text-sm">directions_bus</span> Transporte</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium cursor-default"><span className="material-icons-outlined text-sm">home</span> Hogares</span>
         </div>
       </div>
     </div>
@@ -381,25 +369,36 @@ const ExperienceSection = () => (
 );
 
 const PilaresSection = () => {
-  const pilares = [
-    {
-      icon: 'verified',
-      title: 'Certificación',
-      hogar: 'Paz mental para tu familia.',
-      empresa: 'Cumplimiento estricto con COFEPRIS y normativas.',
+  const [activeTab, setActiveTab] = React.useState<'hogar' | 'comercio' | 'clinica'>('hogar');
+
+  const sectors = {
+    hogar: {
+      items: [
+        { icon: 'health_and_safety', title: 'Salud', desc: 'Fórmulas 100% inofensivas para niños y mascotas. Cero olores tóxicos.' },
+        { icon: 'bolt', title: 'Rapidez', desc: 'Resultados garantizados desde la 1ª visita.' },
+        { icon: 'weekend', title: 'Comodidad', desc: 'Tratamientos sin que tengas que vaciar tu casa.' },
+      ],
     },
-    {
-      icon: 'science',
-      title: 'Tecnología',
-      hogar: 'Productos inodoros y seguros.',
-      empresa: 'Métodos de alta eficiencia que no detienen tu operación.',
+    comercio: {
+      items: [
+        { icon: 'schedule', title: 'Operación', desc: 'Servicio 24/7. Intervenimos sin detener tus horarios comerciales.' },
+        { icon: 'description', title: 'Normativa', desc: 'Entrega de certificados válidos ante COFEPRIS y autoridades.' },
+        { icon: 'shield', title: 'Prevención', desc: 'Monitoreo continuo (MIP) para evitar clausuras o daño a tu reputación.' },
+      ],
     },
-    {
-      icon: 'schedule',
-      title: 'Disponibilidad',
-      hogar: 'Atención rápida y puntual.',
-      empresa: 'Servicio 24/7 para no afectar tus horarios comerciales.',
+    clinica: {
+      items: [
+        { icon: 'biotech', title: 'Bioseguridad', desc: 'Desinfección de alto nivel y control de plagas en zonas estériles.' },
+        { icon: 'science', title: 'Tecnología', desc: 'Termonebulización y productos con validación de grado hospitalario.' },
+        { icon: 'assignment', title: 'Trazabilidad', desc: 'Bitácoras estrictas y reportes técnicos para auditorías sanitarias.' },
+      ],
     },
+  };
+
+  const tabs = [
+    { key: 'hogar' as const, label: 'Hogar y Residencial', icon: 'home' },
+    { key: 'comercio' as const, label: 'Comercio e Industria', icon: 'business' },
+    { key: 'clinica' as const, label: 'Clínicas y Hospitales', icon: 'local_hospital' },
   ];
 
   return (
@@ -407,81 +406,39 @@ const PilaresSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Soluciones para cada necesidad
+            Soluciones exactas para el nivel de exigencia de tu entorno
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Ya sea para proteger a tu familia o cumplir con las normativas de tu negocio, tenemos la solución perfecta.
+            Selecciona tu sector para conocer nuestro protocolo específico.
           </p>
         </div>
 
-        {/* Desktop Table */}
-        <div className="hidden md:block max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-            {/* Header */}
-            <div className="grid grid-cols-3 bg-gray-900 text-white">
-              <div className="p-6 font-bold text-lg">Pilar</div>
-              <div className="p-6 font-bold text-lg text-center bg-brand-green">
-                <span className="flex items-center justify-center gap-2">
-                  <span className="material-icons-outlined">home</span>
-                  Para tu Hogar
-                </span>
-              </div>
-              <div className="p-6 font-bold text-lg text-center bg-brand-forest">
-                <span className="flex items-center justify-center gap-2">
-                  <span className="material-icons-outlined">business</span>
-                  Para tu Empresa
-                </span>
-              </div>
-            </div>
-            
-            {/* Rows */}
-            <div className="divide-y divide-gray-100">
-              {pilares.map((pilar, index) => (
-                <div key={index} className="grid grid-cols-3 items-center">
-                  <div className="p-6 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center">
-                      <span className="material-icons-outlined text-brand-green">{pilar.icon}</span>
-                    </div>
-                    <span className="font-bold text-gray-900">{pilar.title}</span>
-                  </div>
-                  <div className="p-6 text-center text-gray-600 bg-green-50/50">
-                    {pilar.hogar}
-                  </div>
-                  <div className="p-6 text-center text-gray-600 bg-emerald-50/50">
-                    {pilar.empresa}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* Tabs */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mb-10 max-w-3xl mx-auto">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`px-6 py-4 rounded-xl font-bold text-sm sm:text-base transition-all flex-1 ${
+                activeTab === tab.key
+                  ? 'bg-brand-green text-white shadow-lg shadow-green-200'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              <span className="material-icons-outlined text-sm">{tab.icon}</span> {tab.label}
+            </button>
+          ))}
         </div>
 
-        {/* Mobile Cards */}
-        <div className="md:hidden space-y-6">
-          {pilares.map((pilar, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-              <div className="bg-gray-900 p-4 flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-green/20 rounded-lg flex items-center justify-center">
-                  <span className="material-icons-outlined text-brand-green">{pilar.icon}</span>
-                </div>
-                <span className="font-bold text-white text-lg">{pilar.title}</span>
+        {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {sectors[activeTab].items.map((item, i) => (
+            <div key={i} className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 transition-all duration-300">
+              <div className="w-14 h-14 bg-brand-green/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+                <span className="material-icons-outlined text-brand-green text-3xl">{item.icon}</span>
               </div>
-              <div className="divide-y divide-gray-100">
-                <div className="p-4 bg-green-50">
-                  <div className="flex items-center gap-2 text-brand-green text-xs font-bold uppercase tracking-wide mb-2">
-                    <span className="material-icons-outlined text-sm">home</span>
-                    Para tu Hogar
-                  </div>
-                  <p className="text-gray-700">{pilar.hogar}</p>
-                </div>
-                <div className="p-4 bg-emerald-50">
-                  <div className="flex items-center gap-2 text-brand-forest text-xs font-bold uppercase tracking-wide mb-2">
-                    <span className="material-icons-outlined text-sm">business</span>
-                    Para tu Empresa
-                  </div>
-                  <p className="text-gray-700">{pilar.empresa}</p>
-                </div>
-              </div>
+              <h4 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -490,46 +447,90 @@ const PilaresSection = () => {
   );
 };
 
-const Stats = () => (
-  <section className="py-16 bg-gray-50">
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <p className="text-3xl md:text-4xl font-black text-brand-green">+15,000</p>
-          <p className="text-sm text-gray-500 mt-1">Hogares protegidos</p>
-        </div>
-        <div>
-          <p className="text-3xl md:text-4xl font-black text-brand-green">+8</p>
-          <p className="text-sm text-gray-500 mt-1">Años de experiencia</p>
-        </div>
-        <div>
-          <p className="text-3xl md:text-4xl font-black text-brand-green">100%</p>
-          <p className="text-sm text-gray-500 mt-1">Satisfacción garantizada</p>
-        </div>
-        <div>
-          <p className="text-3xl md:text-4xl font-black text-brand-green">24/7</p>
-          <p className="text-sm text-gray-500 mt-1">Atención disponible</p>
+// Animated counter hook
+function useCountUp(end: number, duration = 2000, startCounting: boolean) {
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!startCounting || hasAnimated.current) return;
+    hasAnimated.current = true;
+
+    let startTime: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // easeOutQuart for a satisfying deceleration
+      const eased = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(eased * end));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [startCounting, end, duration]);
+
+  return count;
+}
+
+const Stats = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const espacios = useCountUp(15000, 2200, visible);
+  const anios = useCountUp(15, 1600, visible);
+  const satisfaccion = useCountUp(100, 1800, visible);
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4" ref={ref}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <p className="text-3xl md:text-4xl font-black text-brand-green">+{espacios.toLocaleString('es-MX')}</p>
+            <p className="text-sm text-gray-500 mt-1">Espacios protegidos</p>
+          </div>
+          <div>
+            <p className="text-3xl md:text-4xl font-black text-brand-green">{anios}+</p>
+            <p className="text-sm text-gray-500 mt-1">Años de experiencia</p>
+          </div>
+          <div>
+            <p className="text-3xl md:text-4xl font-black text-brand-green">{satisfaccion}%</p>
+            <p className="text-sm text-gray-500 mt-1">Satisfacción garantizada</p>
+          </div>
+          <div>
+            <p className="text-3xl md:text-4xl font-black text-brand-green">24/7</p>
+            <p className="text-sm text-gray-500 mt-1">Operación continua</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const CallToAction = () => (
   <section className="py-16 md:py-20 bg-brand-forest">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-        ¿Listo para proteger tu hogar?
+        ¿Listo para recuperar tu tranquilidad y proteger tu espacio?
       </h2>
       <p className="text-white/80 mb-8 max-w-xl mx-auto">
-        Contáctanos hoy y recibe una inspección gratuita. Nuestros especialistas están listos para ayudarte.
+        Contáctanos hoy. Un especialista evaluará tu nivel de riesgo y te dará un protocolo exacto, sin compromisos ocultos.
       </p>
-      <Link 
-        to="/#contacto" 
+      <a 
+        href="https://wa.me/5520872132?text=Hola%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20sin%20costo%20para%20evaluar%20el%20nivel%20de%20riesgo%20en%20mi%20espacio.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F"
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-block px-8 py-4 bg-white text-brand-forest rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
       >
-        Solicitar Inspección Gratis
-      </Link>
+        Solicitar mi diagnóstico sin costo
+      </a>
     </div>
   </section>
 );

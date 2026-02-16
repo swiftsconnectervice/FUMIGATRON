@@ -216,31 +216,37 @@ const PlagasHero = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
-          ¿Qué estás experimentando en tu hogar?
+          ¿En qué área detectaste la amenaza?
         </h1>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
-          Identifica los síntomas de una plaga y conoce el protocolo científico para recuperar tu tranquilidad.
+          Selecciona la zona afectada. Identifica los síntomas de la plaga y descubre nuestro protocolo exacto (MIP) para erradicarla de raíz y recuperar la seguridad de tu espacio.
         </p>
         
         {/* Iconos de anclaje visual */}
-        <div className="flex justify-center gap-8 md:gap-12">
+        <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-orange-300 flex items-center justify-center">
               <span className="material-icons-outlined text-orange-500 text-2xl">kitchen</span>
             </div>
-            <span className="text-xs text-gray-500 font-medium">Cocina</span>
+            <span className="text-xs text-gray-500 font-medium">Cocina y Alimentos</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-red-300 flex items-center justify-center">
               <span className="material-icons-outlined text-red-500 text-2xl">hotel</span>
             </div>
-            <span className="text-xs text-gray-500 font-medium">Descanso</span>
+            <span className="text-xs text-gray-500 font-medium">Habitaciones y Descanso</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-purple-300 flex items-center justify-center">
               <span className="material-icons-outlined text-purple-500 text-2xl">foundation</span>
             </div>
-            <span className="text-xs text-gray-500 font-medium">Estructura</span>
+            <span className="text-xs text-gray-500 font-medium">Estructuras y Bodegas</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <div className="w-14 h-14 rounded-full border-2 border-green-300 flex items-center justify-center">
+              <span className="material-icons-outlined text-green-600 text-2xl">park</span>
+            </div>
+            <span className="text-xs text-gray-500 font-medium">Exteriores y Perímetros</span>
           </div>
         </div>
       </div>
@@ -257,24 +263,21 @@ interface PlagaCardProps {
   risk: string;
   riskTag: string;
   solution: string;
-  icon: string;
+  icon?: string;
   borderColor: string;
   tagBg: string;
   tagText: string;
 }
 
 const PlagaCard: React.FC<PlagaCardProps> = ({ 
-  name, subtitle, symptom, risk, riskTag, solution, icon, borderColor, tagBg, tagText 
+  name, subtitle, symptom, risk, riskTag, solution, borderColor, tagBg, tagText 
 }) => (
   <div className={`bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow border-t-4 ${borderColor}`}>
     {/* Header */}
     <div className="p-5 pb-4">
-      <div className="flex items-center gap-3">
-        <span className={`material-icons-outlined text-2xl ${tagText}`}>{icon}</span>
-        <div>
-          <h3 className="font-bold text-gray-900">{name}</h3>
-          <p className="text-sm text-gray-500">{subtitle}</p>
-        </div>
+      <div>
+        <h3 className="font-bold text-gray-900">{name}</h3>
+        <p className="text-sm text-gray-500">{subtitle}</p>
       </div>
     </div>
     
@@ -311,15 +314,16 @@ const PlagaCard: React.FC<PlagaCardProps> = ({
       </div>
     </div>
     
-    {/* CTA - Verde Unificado */}
+    {/* CTA - WhatsApp Hiper-Personalizado */}
     <div className="px-5 pb-5">
-      <Link 
-        to="/#contacto"
-        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-sm transition-all bg-brand-green text-white hover:bg-brand-forest"
+      <a 
+        href={`https://wa.me/5520872132?text=${encodeURIComponent(`Hola, detecté los síntomas de ${name} y necesito un diagnóstico urgente.`)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-sm transition-all bg-amber-500 text-white hover:bg-amber-600"
       >
-        Solicitar Inspección
-        <span className="material-icons-outlined text-sm">arrow_forward</span>
-      </Link>
+        <span className="material-icons-outlined text-sm">chat</span> Cotizar control de {name}
+      </a>
     </div>
   </div>
 );
@@ -495,6 +499,51 @@ const PlagasSections = () => {
         },
       ],
     },
+    {
+      id: 'exteriores',
+      icon: 'park',
+      title: 'Amenazas en Exteriores y Perímetros',
+      subtitle: 'Jardines, patios, estacionamientos y áreas abiertas',
+      accentColor: 'border-green-300',
+      plagas: [
+        {
+          name: 'Mosquitos',
+          subtitle: 'Vectores de enfermedades graves',
+          symptom: '¿Hay zonas con agua estancada, jardines húmedos o áreas donde los mosquitos no te dejan estar?',
+          risk: 'Transmiten Dengue, Zika y Chikungunya. Se reproducen en cualquier recipiente con agua estancada.',
+          riskTag: 'Riesgo de Salud',
+          solution: 'Nebulización perimetral + eliminación de criaderos. Barrera protectora de larga duración para exteriores.',
+          icon: 'flight',
+          borderColor: 'border-t-green-500',
+          tagBg: 'bg-green-50',
+          tagText: 'text-green-700',
+        },
+        {
+          name: 'Avispas y Abejas',
+          subtitle: 'Nidos peligrosos en tu perímetro',
+          symptom: '¿Detectas panales en techos, árboles, bardas o esquinas de tu propiedad?',
+          risk: 'Las picaduras pueden causar reacciones alérgicas graves (anafilaxia). Los nidos crecen rápidamente.',
+          riskTag: 'Riesgo de Salud',
+          solution: 'Retiro seguro de nidos y aplicación de repelente perimetral. Reubicación responsable cuando es posible.',
+          icon: 'hive',
+          borderColor: 'border-t-green-500',
+          tagBg: 'bg-green-50',
+          tagText: 'text-green-700',
+        },
+        {
+          name: 'Garrapatas',
+          subtitle: 'Parásitos en jardines y áreas verdes',
+          symptom: '¿Tus mascotas traen garrapatas del jardín? ¿Has encontrado garrapatas en muros o vegetación?',
+          risk: 'Transmiten la enfermedad de Lyme y Ehrlichiosis. Se adhieren a humanos y animales para alimentarse.',
+          riskTag: 'Riesgo de Salud',
+          solution: 'Aspersión de áreas verdes y perímetros con producto residual. Control en zonas de tránsito de mascotas.',
+          icon: 'bug_report',
+          borderColor: 'border-t-green-500',
+          tagBg: 'bg-green-50',
+          tagText: 'text-green-700',
+        },
+      ],
+    },
   ];
 
   return (
@@ -519,11 +568,13 @@ const EmergencyCTA = () => (
           ¿Emergencia de plagas?
         </h2>
         <p className="text-gray-600 mb-6">
-          Si tienes una infestación severa o necesitas atención urgente, contáctanos ahora. Respondemos en menos de 2 horas.
+          Si tienes una infestación severa o necesitas atención urgente, contáctanos ahora. Respondemos en menos de 15 minutos.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a 
-            href="https://wa.me/5520872132"
+            href="https://wa.me/5520872132?text=Hola%2C%20tengo%20una%20emergencia%20de%20plagas%20y%20necesito%20atenci%C3%B3n%20urgente.%20%C2%BFPueden%20enviar%20a%20un%20especialista%20lo%20antes%20posible%3F"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-green text-white rounded-lg font-bold transition-all hover:bg-brand-forest"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>

@@ -80,9 +80,9 @@ export function ActivityLog() {
                   onChange={(e) => setActionType(e.target.value as ActionType)}
                   className="w-full bg-gray-50 border-transparent focus:border-brand-green focus:ring-0 rounded-xl px-4 py-3"
                 >
-                  <option value="security">🛡️ Seguridad</option>
-                  <option value="speed">⚡ Rendimiento</option>
-                  <option value="content">📝 Contenido</option>
+                  <option value="security">Seguridad</option>
+                  <option value="speed">Rendimiento</option>
+                  <option value="content">Contenido</option>
                 </select>
               </div>
               

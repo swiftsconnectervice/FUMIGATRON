@@ -16,7 +16,7 @@ export interface SystemLog {
 export type ActionType = 'security' | 'speed' | 'content';
 
 export const ACTION_TYPE_ICONS: Record<ActionType, string> = {
-  security: '🛡️',
-  speed: '⚡',
-  content: '📝',
+  security: 'shield',
+  speed: 'bolt',
+  content: 'edit_note',
 };

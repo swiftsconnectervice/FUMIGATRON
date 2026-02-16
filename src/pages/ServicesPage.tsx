@@ -219,17 +219,70 @@ const ServicesHero = () => (
       </div>
     </div>
     <div className="container mx-auto px-4 relative z-10">
-      <div className="max-w-3xl">
+      <div className="max-w-4xl">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold tracking-wide uppercase mb-6">
-          <span className="material-icons-outlined text-sm">verified</span>
-          Tecnología de Vanguardia
+          <span className="material-icons-outlined text-sm">biotech</span> Fumigación | Control de Plagas | Desinfección
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-          Soluciones a tu medida, no solo aplicaciones.
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          Fumigación, Control o Desinfección: El protocolo exacto para tu nivel de riesgo.
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-          Tú nos cuentas el problema, nosotros diseñamos el protocolo. Utilizamos tecnología de vanguardia para garantizar un hogar libre de invasores.
+        <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+          No creemos en rociar químicos a ciegas. Desplegamos la técnica correcta según tu urgencia.
         </p>
+      </div>
+    </div>
+  </section>
+);
+
+const ServicesArsenal = () => (
+  <section className="py-16 md:py-20 bg-white">
+    <div className="container mx-auto px-4 max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
+          <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">1</span>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Fumigación de choque</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Para erradicar infestaciones masivas o críticas al instante.</p>
+        </div>
+        <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
+          <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">2</span>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Control de Plagas (MIP)</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Estrategia y prevención a largo plazo para que no regresen (ideal para hogares y negocios).</p>
+        </div>
+        <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
+          <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">3</span>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Desinfección</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Neutralización de virus y patógenos con grado de esterilidad clínica.</p>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-4">Habla con un asesor para definir tu protocolo</p>
+        <div className="flex flex-col sm:flex-row justify-center gap-3">
+          <a
+            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
+          >
+            <span className="material-icons-outlined text-sm">home</span> Para mi Hogar
+          </a>
+          <a
+            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
+          >
+            <span className="material-icons-outlined text-sm">business</span> Para mi Empresa
+          </a>
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20requiero%20informaci%C3%B3n%20sobre%20protocolos%20de%20bioseguridad%20y%20desinfecci%C3%B3n%20para%20mi%20cl%C3%ADnica%2Fhospital."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-blue-700 hover:bg-blue-800 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
+          >
+            <span className="material-icons-outlined text-sm">local_hospital</span> Clínicas y Hospitales
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -238,40 +291,32 @@ const ServicesHero = () => (
 const ServicesMatrix = () => {
   const services = [
     {
-      icon: 'pest_control',
-      title: 'Control de Insectos',
-      emotional: 'Recupera la higiene de tu cocina.',
-      technical: 'Uso de micro-encapsulados y cebos de alta atracción.',
-      color: 'bg-blue-500',
-      lightColor: 'bg-blue-50',
-      textColor: 'text-blue-600',
+      tag: 'Prevención y Mantenimiento',
+      title: 'Control de Plagas Urbanas (MIP)',
+      para: 'Hogares y negocios que buscan blindar su espacio antes de una crisis o controlar infestaciones leves.',
+      ataca: 'Cucarachas, Hormigas, Arañas, Chinches (fase inicial).',
+      tecnica: 'Geles, cebos y aspersión focalizada de nula toxicidad.',
     },
     {
-      icon: 'cruelty_free',
-      title: 'Protección contra Roedores',
-      emotional: 'Silencio y salud en cada rincón.',
-      technical: 'Métodos mecánicos y físicos sin riesgos para mascotas.',
-      color: 'bg-amber-500',
-      lightColor: 'bg-amber-50',
-      textColor: 'text-amber-600',
+      tag: 'Erradicación de Choque',
+      title: 'Fumigación y Desratización',
+      para: 'Bodegas, restaurantes y espacios con presencia activa, visible y urgente de plagas o roedores.',
+      ataca: 'Infestaciones masivas, Ratas y Ratones.',
+      tecnica: 'Intervención táctica de alta eficacia para recuperar el control inmediato del área.',
     },
     {
-      icon: 'air',
-      title: 'Sanitización de Espacios',
-      emotional: 'Respira aire puro y seguro.',
-      technical: 'Termonebulización de amplio espectro (Grado Hospitalario).',
-      color: 'bg-purple-500',
-      lightColor: 'bg-purple-50',
-      textColor: 'text-purple-600',
+      tag: 'Bioseguridad Estricta',
+      title: 'Desinfección Patógena',
+      para: 'Clínicas, hospitales, gimnasios y oficinas que requieren cumplir normativas de salud.',
+      ataca: 'Virus, Bacterias, Hongos.',
+      tecnica: 'Termonebulización y aspersión de grado hospitalario (inodoro y sin residuos).',
     },
     {
-      icon: 'shield',
-      title: 'Barrera Preventiva',
-      emotional: 'Blindaje total antes de la invasión.',
-      technical: 'Aspersión perimetral manual para zonas críticas.',
-      color: 'bg-brand-green',
-      lightColor: 'bg-green-50',
-      textColor: 'text-brand-green',
+      tag: 'Intervención Estructural',
+      title: 'Tratamiento contra Termitas (Madera)',
+      para: 'Patrimonio, muebles, vigas y estructuras en riesgo de colapso por plagas xilófagas.',
+      ataca: 'Termitas subterráneas y de madera seca, polilla.',
+      tecnica: 'Inyección localizada y barreras químicas de larga duración.',
     },
   ];
 
@@ -279,181 +324,44 @@ const ServicesMatrix = () => {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-brand-green text-xs font-bold tracking-wide uppercase mb-4">
-            <span className="material-icons-outlined text-sm">category</span>
-            Matriz de Soluciones
-          </div>
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Identifica tu problema, nosotros lo resolvemos
+            Protocolos especializados para cada tipo de amenaza
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Cada servicio está diseñado para atacar el problema desde la raíz, con la promesa de devolverte la tranquilidad.
+            Nuestros especialistas determinan el nivel de intervención exacto según la gravedad de tu caso, desde prevención hasta erradicación de choque.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
-            >
-              {/* Header */}
-              <div className={`${service.color} p-6 flex items-center gap-4`}>
-                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
-                  <span className="material-icons-outlined text-white text-3xl">{service.icon}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
-              </div>
-              
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                {/* Emotional Promise */}
-                <div className={`${service.lightColor} rounded-xl p-4`}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`material-icons-outlined ${service.textColor} text-sm`}>favorite</span>
-                    <span className={`text-xs font-bold ${service.textColor} uppercase tracking-wide`}>Promesa</span>
-                  </div>
-                  <p className="text-gray-800 font-medium text-lg italic">"{service.emotional}"</p>
-                </div>
-                
-                {/* Technical Backup */}
-                <div className="bg-gray-50 rounded-xl p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="material-icons-outlined text-gray-500 text-sm">science</span>
-                    <span className="text-xs font-bold text-gray-500 uppercase tracking-wide">Respaldo Técnico</span>
-                  </div>
-                  <p className="text-gray-600">{service.technical}</p>
-                </div>
-              </div>
-              
-              {/* CTA */}
-              <div className="px-6 pb-6">
-                <Link 
-                  to="/#contacto"
-                  className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold transition-all ${service.lightColor} ${service.textColor} hover:opacity-80`}
-                >
-                  Solicitar este servicio
-                  <span className="material-icons-outlined text-sm">arrow_forward</span>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const ServiceLevels = () => {
-  const levels = [
-    {
-      id: 'preventivo',
-      icon: 'shield',
-      title: 'Servicio Preventivo',
-      subtitle: 'El Escudo',
-      trigger: 'Quiero que mi casa siga siendo mi santuario.',
-      includes: 'Aspersión manual en áreas perimetrales sin presencia de plagas.',
-      color: 'brand-green',
-      bgGradient: 'from-green-500 to-brand-green',
-    },
-    {
-      id: 'correctivo',
-      icon: 'build',
-      title: 'Servicio Correctivo',
-      subtitle: 'La Solución Profunda',
-      trigger: 'He visto actividad y necesito ayuda urgente.',
-      includes: 'Inspección visual, evaluación de infestación y métodos de profundidad.',
-      color: 'amber-600',
-      bgGradient: 'from-amber-500 to-orange-600',
-    },
-    {
-      id: 'desinfeccion',
-      icon: 'sanitizer',
-      title: 'Limpieza y Desinfección',
-      subtitle: 'Grado Bioseguridad',
-      trigger: 'Busco un entorno 100% libre de virus y bacterias.',
-      includes: 'Eliminación de patógenos en cocinas, oficinas y áreas de proceso.',
-      color: 'purple-600',
-      bgGradient: 'from-purple-500 to-indigo-600',
-    },
-  ];
-
-  return (
-    <section className="py-16 md:py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold tracking-wide uppercase mb-4">
-            <span className="material-icons-outlined text-sm">layers</span>
-            Niveles de Servicio
-          </div>
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Comparativa Rápida
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Elige el nivel de intervención que necesitas según tu situación.
-          </p>
-        </div>
-
-        {/* Desktop Table */}
-        <div className="hidden md:block max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          <div className="grid grid-cols-4 bg-gray-900 text-white">
-            <div className="p-4 font-bold">Nivel de Servicio</div>
-            <div className="p-4 font-bold text-center">Cuándo lo necesitas</div>
-            <div className="p-4 font-bold text-center">Qué incluye</div>
-            <div className="p-4 font-bold text-center"></div>
-          </div>
-          
-          <div className="divide-y divide-gray-100">
-            {levels.map((level) => (
-              <div key={level.id} className="grid grid-cols-4 items-center">
-                <div className="p-4">
-                  <div className="flex items-center gap-2">
-                    <span className={`material-icons-outlined text-${level.color}`}>{level.icon}</span>
-                    <div>
-                      <p className="font-bold text-gray-900">{level.id === 'desinfeccion' ? 'Desinfección' : level.title.split(' ')[1]}</p>
-                      <p className="text-xs text-gray-500">{level.subtitle}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-4 text-center text-gray-600 text-sm">
-                  "{level.trigger}"
-                </div>
-                <div className="p-4 text-center text-gray-600 text-sm">
-                  {level.includes}
-                </div>
-                <div className="p-4 text-center">
-                  <Link 
-                    to="/#contacto"
-                    className={`inline-flex items-center gap-1 px-4 py-2 bg-${level.color}/10 text-${level.color} rounded-lg font-bold text-sm hover:opacity-80 transition-all`}
-                  >
-                    Cotizar
-                    <span className="material-icons-outlined text-sm">arrow_forward</span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile Cards */}
-        <div className="md:hidden space-y-4 max-w-md mx-auto">
-          {levels.map((level) => (
-            <div key={level.id} className="bg-white rounded-xl shadow-lg p-4 border border-gray-100">
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`material-icons-outlined text-${level.color}`}>{level.icon}</span>
+            <div key={index} className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:shadow-lg transition-all duration-300">
+              <span className="inline-block text-xs font-bold text-gray-500 uppercase tracking-wide bg-gray-100 px-3 py-1.5 rounded-full mb-4">
+                {service.tag}
+              </span>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <div className="space-y-3 text-sm">
                 <div>
-                  <p className="font-bold text-gray-900">{level.id === 'desinfeccion' ? 'Desinfección' : level.title.split(' ')[1]}</p>
-                  <p className="text-xs text-gray-500">{level.subtitle}</p>
+                  <span className="font-semibold text-gray-700">Para: </span>
+                  <span className="text-gray-600">{service.para}</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-700">Ataca: </span>
+                  <span className="text-gray-600">{service.ataca}</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-gray-700">Técnica: </span>
+                  <span className="text-gray-600">{service.tecnica}</span>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mb-2 italic">"{level.trigger}"</p>
-              <p className="text-gray-500 text-xs mb-3">{level.includes}</p>
-              <Link 
-                to="/#contacto"
-                className={`w-full flex items-center justify-center gap-1 px-4 py-2 bg-gradient-to-r ${level.bgGradient} text-white rounded-lg font-bold text-sm`}
+              <a 
+                href={`https://wa.me/5520872132?text=${encodeURIComponent(`Hola, me interesa el protocolo de ${service.title}. ¿Me pueden dar más información y precios?`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all pt-4 text-sm"
               >
-                Cotizar
-              </Link>
+                Cotizar este protocolo
+                <span className="material-icons-outlined text-sm">arrow_forward</span>
+              </a>
             </div>
           ))}
         </div>
@@ -461,43 +369,6 @@ const ServiceLevels = () => {
     </section>
   );
 };
-
-const ProcessSection = () => (
-  <section className="py-16 md:py-20 bg-gray-900">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-          ¿Cómo trabajamos?
-        </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Un proceso simple y efectivo para garantizar resultados.
-        </p>
-      </div>
-      
-      <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-        {[
-          { step: '1', icon: 'call', title: 'Contacto', desc: 'Cuéntanos tu problema' },
-          { step: '2', icon: 'search', title: 'Diagnóstico', desc: 'Inspección gratuita' },
-          { step: '3', icon: 'water_drop', title: 'Aplicación', desc: 'Tratamiento especializado' },
-          { step: '4', icon: 'verified', title: 'Garantía', desc: 'Seguimiento y respaldo' },
-        ].map((item, index) => (
-          <div key={index} className="text-center relative">
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[60px] font-black text-white/5 leading-none select-none">
-              {item.step}
-            </div>
-            <div className="relative z-10">
-              <div className="w-16 h-16 mx-auto mb-4 bg-brand-green/20 rounded-full flex items-center justify-center">
-                <span className="material-icons-outlined text-brand-green text-3xl">{item.icon}</span>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 const GuaranteeSection = () => (
   <section className="py-16 md:py-20 bg-white">
@@ -547,14 +418,16 @@ const CallToAction = () => (
         ¿Listo para eliminar el problema?
       </h2>
       <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-        Contáctanos hoy y recibe un diagnóstico gratuito. Nuestros especialistas diseñarán el protocolo perfecto para tu situación.
+        Contáctanos hoy. Un especialista analizará el riesgo de tu espacio (hogar, industria o clínica) y te entregará un protocolo exacto y sin compromisos en menos de 15 minutos.
       </p>
-      <Link 
-        to="/#contacto" 
+      <a 
+        href="https://wa.me/5520872132?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20para%20un%20problema%20de%20plagas%20en%20mi%20espacio.%20%C2%BFPueden%20enviar%20un%20especialista%20para%20evaluar%20mi%20caso%3F"
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-block px-8 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
       >
         Solicitar Diagnóstico Gratis
-      </Link>
+      </a>
     </div>
   </section>
 );
@@ -564,9 +437,8 @@ export function ServicesPage() {
     <div className="min-h-screen">
       <Navbar />
       <ServicesHero />
+      <ServicesArsenal />
       <ServicesMatrix />
-      <ServiceLevels />
-      <ProcessSection />
       <GuaranteeSection />
       <CallToAction />
       <Footer />

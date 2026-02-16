@@ -38,7 +38,7 @@ export function LogEntry({ log }: LogEntryProps) {
   return (
     <div className="flex gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
       <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${getActionColor(log.action_type)}`}>
-        <span className="text-xl">{ACTION_TYPE_ICONS[log.action_type]}</span>
+        <span className="material-icons-outlined text-xl">{ACTION_TYPE_ICONS[log.action_type]}</span>
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1">
