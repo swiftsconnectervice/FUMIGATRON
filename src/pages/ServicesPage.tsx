@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { trackCTA } from '../lib/tracking';
 // --- Shared Components ---
 
 const TopBar = () => (
@@ -262,6 +262,7 @@ const ServicesArsenal = () => (
             href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackCTA('arsenal_hogar', 'servicios')}
             className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
           >
             <span className="material-icons-outlined text-sm">home</span> Para mi Hogar
@@ -270,6 +271,7 @@ const ServicesArsenal = () => (
             href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackCTA('arsenal_empresa', 'servicios')}
             className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
           >
             <span className="material-icons-outlined text-sm">business</span> Para mi Empresa
@@ -278,6 +280,7 @@ const ServicesArsenal = () => (
             href="https://wa.me/5520872132?text=Hola%2C%20requiero%20informaci%C3%B3n%20sobre%20protocolos%20de%20bioseguridad%20y%20desinfecci%C3%B3n%20para%20mi%20cl%C3%ADnica%2Fhospital."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackCTA('arsenal_clinicas', 'servicios')}
             className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-blue-700 hover:bg-blue-800 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
           >
             <span className="material-icons-outlined text-sm">local_hospital</span> Clínicas y Hospitales
@@ -357,6 +360,7 @@ const ServicesMatrix = () => {
                 href={`https://wa.me/5520872132?text=${encodeURIComponent(`Hola, me interesa el protocolo de ${service.title}. ¿Me pueden dar más información y precios?`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackCTA(`protocolo_${service.title.toLowerCase().replace(/\s+/g, '_')}`, 'servicios')}
                 className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all pt-4 text-sm"
               >
                 Cotizar este protocolo
@@ -424,6 +428,7 @@ const CallToAction = () => (
         href="https://wa.me/5520872132?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20para%20un%20problema%20de%20plagas%20en%20mi%20espacio.%20%C2%BFPueden%20enviar%20un%20especialista%20para%20evaluar%20mi%20caso%3F"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackCTA('cta_diagnostico', 'servicios')}
         className="inline-block px-8 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
       >
         Solicitar Diagnóstico Gratis

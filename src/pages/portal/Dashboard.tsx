@@ -3,6 +3,7 @@ import { PortalLayout } from '../../components/portal/PortalLayout';
 import { StatCard } from '../../components/portal/StatCard';
 import { LeadCard } from '../../components/portal/LeadCard';
 import { getLeadsThisMonth, getRecentLeads } from '../../lib/leads';
+import { getClicksThisMonth, getTopButtons } from '../../lib/tracking';
 import { Lead } from '../../types';
 
 const LEAD_VALUE = 500; // $500 per lead
@@ -10,18 +11,24 @@ const LEAD_VALUE = 500; // $500 per lead
 export function Dashboard() {
   const [leadsThisMonth, setLeadsThisMonth] = useState<Lead[]>([]);
   const [recentLeads, setRecentLeads] = useState<Lead[]>([]);
+  const [clicksThisMonth, setClicksThisMonth] = useState(0);
+  const [topButtons, setTopButtons] = useState<{ button_id: string; count: number }[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [monthLeads, recent] = await Promise.all([
+        const [monthLeads, recent, clicks, top] = await Promise.all([
           getLeadsThisMonth(),
-          getRecentLeads(10)
+          getRecentLeads(10),
+          getClicksThisMonth(),
+          getTopButtons(5)
         ]);
         setLeadsThisMonth(monthLeads);
         setRecentLeads(recent);
+        setClicksThisMonth(clicks);
+        setTopButtons(top);
       } catch (err) {
         setError('No se pudieron cargar los datos');
       } finally {
@@ -53,7 +60,7 @@ export function Dashboard() {
         ) : (
           <>
             {/* Stats */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <StatCard
                 title="Leads Este Mes"
                 value={leadsThisMonth.length}
@@ -62,11 +69,37 @@ export function Dashboard() {
               />
               <StatCard
                 title="Valor del Pipeline"
-                value={`$${pipelineValue.toLocaleString()}`}
+                value={`${pipelineValue.toLocaleString()}`}
                 icon="attach_money"
-                trend={pipelineValue > 0 ? `$${LEAD_VALUE} por lead` : undefined}
+                trend={pipelineValue > 0 ? `${LEAD_VALUE} por lead` : undefined}
+              />
+              <StatCard
+                title="Clicks en CTAs"
+                value={clicksThisMonth}
+                icon="ads_click"
+                trend={clicksThisMonth > 0 ? `${clicksThisMonth} este mes` : undefined}
               />
             </div>
+
+            {/* Top CTAs */}
+            {topButtons.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Top CTAs del Mes</h2>
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="space-y-3">
+                    {topButtons.map((btn, i) => (
+                      <div key={btn.button_id} className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0">
+                        <div className="flex items-center gap-3">
+                          <span className="text-xs font-bold text-gray-400 w-5">{i + 1}</span>
+                          <span className="text-sm font-medium text-gray-700">{btn.button_id.replace(/_/g, ' ')}</span>
+                        </div>
+                        <span className="text-sm font-bold text-brand-green">{btn.count} clicks</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Recent Leads */}
             <div>

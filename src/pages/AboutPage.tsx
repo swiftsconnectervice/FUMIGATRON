@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
+import { trackCTA } from '../lib/tracking';
 // --- Shared Components ---
 
 const TopBar = () => (
@@ -527,6 +527,7 @@ const CallToAction = () => (
         href="https://wa.me/5520872132?text=Hola%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20sin%20costo%20para%20evaluar%20el%20nivel%20de%20riesgo%20en%20mi%20espacio.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackCTA('cta_diagnostico', 'nosotros')}
         className="inline-block px-8 py-4 bg-white text-brand-forest rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
       >
         Solicitar mi diagnóstico sin costo

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { trackCTA } from './src/lib/tracking';
 
 // --- Helper Components ---
 
@@ -200,6 +201,7 @@ const Hero = () => (
             href="https://wa.me/5520872132?text=Hola%2C%20estaba%20viendo%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20sobre%20sus%20servicios."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackCTA('hero_especialista', 'inicio')}
             className="inline-block px-6 sm:px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg"
           >
             Hablar con un Especialista ahora
@@ -251,13 +253,13 @@ const BenefitsAndTestimonials = () => (
               <span className="material-icons-outlined text-3xl">home</span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold mb-1">Libres de plagas en 1 visita</h3>
-            <p className="text-lg md:text-xl opacity-90">O la reaplicación es 100% gratis.</p>
+            <p className="text-lg md:text-xl opacity-90">Aplicamos métodos innovadores y efectivos</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">health_and_safety</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Escudo contra enfermedades</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Prevención contra enfermedades</h3>
             <p className="text-lg md:text-xl opacity-90">Desinfección de alto nivel que neutraliza virus y bacterias al contacto.</p>
           </div>
           <div className="flex flex-col items-center">
@@ -265,7 +267,7 @@ const BenefitsAndTestimonials = () => (
               <span className="material-icons-outlined text-3xl">verified_user</span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold mb-1">Garantía y reporte por escrito</h3>
-            <p className="text-lg md:text-xl opacity-90">Respaldo para tu empresa y paz mental absoluta para tu hogar.</p>
+            <p className="text-lg md:text-xl opacity-90">Contamos con licencia sanitaria.</p>
           </div>
         </div>
       </div>
@@ -276,7 +278,7 @@ const BenefitsAndTestimonials = () => (
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">¿Cómo podemos ayudarte?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Selecciona la opción que mejor se adapte a tu situación y te atenderemos de inmediato.</p>
+          <p className="text-gray-600 max-w-2xl mx-auto">Selecciona la opción que mejor se adapte a tus necesidades y te atenderemos de inmediato.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Hogar / B2C */}
@@ -286,12 +288,13 @@ const BenefitsAndTestimonials = () => (
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Hogar</h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Protege a tu familia con fórmulas 100% seguras para niños y mascotas. Evaluación urgente sin compromiso.
+              Protege a tu familia con productos 100% seguros para niños y mascotas. Evaluación urgente sin compromiso.
             </p>
             <a
               href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackCTA('dual_cta_hogar', 'inicio')}
               className="inline-flex items-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -306,12 +309,13 @@ const BenefitsAndTestimonials = () => (
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Empresa</h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Cumplimiento normativo estricto para clínicas, restaurantes, oficinas y más. Certificados válidos ante autoridades.
+              Soluciones de cumplimiento normativo para clínicas, restaurantes, oficinas y más. Certificación con validez oficial.
             </p>
             <a
               href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackCTA('dual_cta_empresa', 'inicio')}
               className="inline-flex items-center gap-2 px-6 py-4 bg-blue-700 hover:bg-blue-800 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -408,7 +412,7 @@ const ProcessSteps = () => (
           <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">gps_fixed</span></div>
           <h3 className="text-lg font-bold text-white mb-3">Intervención Precisa</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Nuestros técnicos acuden con puntualidad táctica. Aplicamos el tratamiento de grado hospitalario (MIP) de forma rápida, discreta y sin que tengas que abandonar el lugar por horas.
+            Nuestros técnicos acuden con puntualidad y aplican un tratamiento de grado alimenticio de forma rápida y segura, sin que tengas que abandonar el lugar por horas.
           </p>
         </div>
 
@@ -418,9 +422,9 @@ const ProcessSteps = () => (
             Paso 3
           </div>
           <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">verified_user</span></div>
-          <h3 className="text-lg font-bold text-white mb-3">Certificación y Paz Mental</h3>
+          <h3 className="text-lg font-bold text-white mb-3">Certificación y Licencia Sanitaria</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            El problema queda resuelto desde la primera visita. Te entregamos tu garantía por escrito, recomendaciones de prevención y tu certificado de sanidad válido para autoridades.
+            El problema queda resuelto desde la primera visita. Te entregamos tu garantía por escrito, recomendaciones de prevención y tu certificado de sanidad avalado por Cofepris.
           </p>
         </div>
       </div>
@@ -431,6 +435,7 @@ const ProcessSteps = () => (
           href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Quiero%20empezar%20con%20el%20diagn%C3%B3stico%20de%20mi%20problema%20de%20plagas."
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackCTA('pasos_diagnostico', 'inicio')}
           className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-base transition-all hover:scale-105 shadow-lg"
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -445,28 +450,28 @@ const ComparisonTable = () => {
   const rows = [
     {
       benefit: 'Velocidad de Resultados',
-      us: 'Erradicación en 1 sola visita. Tratamiento de choque exacto.',
-      others: 'Múltiples visitas (hasta 3 o más). Tratan el síntoma, no el nido, alargando tu problema.',
+      us: 'Servicios focalizados. Resultados inmediatos.',
+      others: 'Múltiples visitas (hasta 3 o más). Tratan el síntoma, no las anidaciones, alargando tu problema.',
     },
     {
       benefit: 'Enfoque del Tratamiento',
-      us: 'Prevención a largo plazo. Analizamos el origen y evitamos que regresen.',
+      us: 'Analizamos el origen y evitamos que regresen. Prevención a largo plazo.',
       others: 'Reactivo. Solo matan lo que ves hoy. El problema vuelve en semanas.',
     },
     {
       benefit: 'Seguridad y Productos',
-      us: 'Dosis mínimas y responsables. Fórmulas biodegradables avaladas.',
+      us: 'Dosis mínimas y responsables. Fórmulas biodegradables avanzadas.',
       others: 'Exceso de toxicidad. Riesgo de intoxicación por químicos baratos.',
     },
     {
       benefit: 'Nivel de Experiencia',
       us: 'Asesores certificados. Expertos en Manejo Integral de Plagas (MIP).',
-      others: 'Prueba y error. Basado en "tutoriales de Google" o informales.',
+      others: 'Prueba y error. Basado en "tutoriales de Google" o remedios caseros.',
     },
     {
       benefit: 'Respaldo y Tranquilidad',
-      us: 'Garantía y Certificados válidos. Somos tu aliado estratégico.',
-      others: 'Sin respaldo. Si la plaga sigue, pierdes tu dinero y tu tiempo.',
+      us: 'Somos tu aliado estratégico. Contamos con técnicos especializados.',
+      others: 'Sin respaldo y sin soluciones concretas, pierdes tu dinero y tu tiempo.',
     },
   ];
 
@@ -475,7 +480,7 @@ const ComparisonTable = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
-            ¿Por qué elegir a un Asesor Profesional en lugar de arriesgarte?
+            ¿Por qué elegir a un Asesor Profesional?
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
             El verdadero costo de las soluciones temporales es la salud de tu familia y la reputación de tu negocio.
@@ -565,9 +570,9 @@ const ServiceDetails = () => (
         </div>
         
         <div className="w-full lg:w-1/2 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Especialistas en lo difícil</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Especialistas de lo complejo</h2>
           <p className="text-gray-600 text-lg">
-            Mientras otros solo rocían las esquinas, nosotros atacamos el ciclo reproductivo de las plagas más resistentes de la ciudad.
+            Mientras otros solo rocían químicos, nosotros estudiamos el ciclo reproductivo y atacamos el problema de raíz de las plagas más resistentes.
           </p>
           
           <ul className="space-y-6">
@@ -614,7 +619,7 @@ const FAQ = () => {
     },
     {
       question: '¿Entregan certificado para negocios?',
-      answer: 'Sí, entregamos constancia de servicio con validez oficial para inspecciones de salubridad.'
+      answer: 'Sí, entregamos constancia de servicio con validez oficial para inspecciones oficiales.'
     }
   ];
   
@@ -661,7 +666,7 @@ const ObjectionKiller = () => (
           <span className="font-bold text-white underline decoration-green-400">No.</span> Nuestra tecnología de micro-aspersión en frío no mancha muebles, no moja telas y es inolora. Puede reingresar a su hogar y continuar su vida normal tan solo 40 minutos después del servicio.
         </p>
       </div>
-      <a href="#contacto" className="shrink-0 bg-white text-brand-forest hover:bg-green-50 px-10 py-5 rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 active:scale-95">
+      <a href="#contacto" onClick={() => trackCTA('objection_agendar', 'inicio')} className="shrink-0 bg-white text-brand-forest hover:bg-green-50 px-10 py-5 rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 active:scale-95">
         Agendar Cita Sin Estrés
       </a>
     </div>
@@ -774,7 +779,7 @@ const ContactSection = () => {
                   <div className="w-10 h-10 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green">
                      <span className="material-icons-outlined">mail</span>
                   </div>
-                  <span className="text-gray-300">contacto@fumigatron.com.mx</span>
+                  <span className="text-gray-300">servicios@fumigatron.com.mx</span>
                 </div>
               </div>
             </div>
@@ -911,7 +916,7 @@ const Footer = () => (
             </span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
-            Nosotros sí podemos. Protegiendo hogares y empresas desde 2017.
+            Nosotros sí podemos. Protegiendo hogares y empresas desde 2010.
           </p>
           <div className="flex items-center gap-4">
             <a href="https://www.facebook.com/fumigalex" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-green transition-colors" aria-label="Facebook">
@@ -943,7 +948,7 @@ const Footer = () => (
           <ul className="space-y-3">
             <li className="flex items-center gap-2 text-sm">
               <span className="material-icons-outlined text-brand-green text-base">phone</span>
-              <span className="text-gray-400">55 7029 7410 | 55 4632 9117</span>
+              <span className="text-gray-400">55 4632 9117 | 55 7029 7410</span>
             </li>
             <li className="flex items-center gap-2 text-sm">
               <svg className="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -951,11 +956,11 @@ const Footer = () => (
             </li>
             <li className="flex items-center gap-2 text-sm">
               <span className="material-icons-outlined text-brand-green text-base">mail</span>
-              <a href="mailto:contacto@fumigatron.com.mx" className="text-gray-400 hover:text-brand-green transition-colors">contacto@fumigatron.com.mx</a>
+              <a href="mailto:servicios@fumigatron.com.mx" className="text-gray-400 hover:text-brand-green transition-colors">servicios@fumigatron.com.mx</a>
             </li>
             <li className="flex items-center gap-2 text-sm">
               <span className="material-icons-outlined text-brand-green text-base">schedule</span>
-              <span className="text-gray-400">Lun - Vie: 9:00am a 6:00pm</span>
+              <span className="text-gray-400">Lun - Sab: 9:00am a 6:00pm</span>
             </li>
           </ul>
         </div>
