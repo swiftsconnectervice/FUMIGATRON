@@ -175,10 +175,10 @@ const Hero = () => (
           Cobertura inmediata en CDMX y Edo. Méx.
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight italic">
-          Erradicación de Plagas con Precisión y Cero Riesgos.
+          Control de Plagas con Técnicas de Precisión y Cero Riesgos.
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-xl leading-relaxed">
-          Especialistas en fumigación, control de plagas y desinfección con protocolos adaptados a tu entorno. <span className="font-bold text-gray-900">Resultados garantizados desde la primera visita.</span>
+          Especialistas en fumigación, desinfección y control de fauna nociva con protocolos de seguridad adaptados a tu entorno. <span className="font-bold text-gray-900">Resultados garantizados desde la primera visita.</span>
         </p>
         <div className="flex flex-col gap-3 max-w-xl">
           <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
