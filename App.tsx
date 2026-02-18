@@ -185,14 +185,14 @@ const Hero = () => (
             <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
             <div>
               <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Hogar</p>
-              <p className="text-gray-600 text-sm">Fórmulas 100% seguras para niños y mascotas.</p>
+              <p className="text-gray-600 text-sm">Productos 100% seguras para niños y mascotas.</p>
             </div>
           </div>
           <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
             <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
             <div>
               <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Empresa</p>
-              <p className="text-gray-600 text-sm">Cumplimiento normativo estricto (clínicas, restaurantes, oficinas).</p>
+              <p className="text-gray-600 text-sm">Cumplimiento normativo estricto (industria alimentaria, corporativa y hospitalaria).</p>
             </div>
           </div>
         </div>
