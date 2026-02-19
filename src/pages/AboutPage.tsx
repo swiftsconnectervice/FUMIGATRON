@@ -152,10 +152,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-white mb-4">Servicios</h4>
           <ul className="space-y-3">
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control de Insectos</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Protección contra Roedores</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Sanitización de Espacios</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Barrera Preventiva</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
           </ul>
         </div>
 
@@ -242,11 +242,11 @@ const AboutContent = () => (
         <div className="space-y-8">
           <div className="space-y-6">
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Desde nuestros inicios, dejamos de ver el control de plagas como una simple labor de erradicación para convertirlo en una <span className="font-bold">misión de salud integral</span>.
+              Para nosotros, eliminar plagas no es solo un trabajo; es nuestra forma de cuidar la <span className="font-bold">salud, la paz y la tranquilidad</span> de tu familia o de tu equipo de trabajo.
             </p>
             
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              No solo aplicamos los protocolos más estrictos y novedosos en el sector empresarial e industrial; llevamos esa misma <span className="font-bold">excelencia técnica y cero toxicidad</span> a tu sala, tu cocina y tu descanso.
+              Usamos la misma calidad y exigencia que aplicamos en las grandes industrias, pero adaptada para ser <span className="font-bold">100% segura en tu sala, tu cocina y las habitaciones donde duermes</span>. Sin químicos peligrosos y sin poner en riesgo a los que más amas.
             </p>
           </div>
           
@@ -256,23 +256,23 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">family_restroom</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Enfoque Humano</h4>
-              <p className="text-sm text-gray-500">La tranquilidad de tu familia y tu equipo es nuestra prioridad.</p>
+              <p className="text-sm text-gray-500">Tu tranquilidad y la de los tuyos es lo más importante para nosotros.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
               <div className="w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center mb-3">
                 <span className="material-icons-outlined text-brand-green">biotech</span>
               </div>
-              <h4 className="font-bold text-gray-900 mb-1">Excelencia Técnica</h4>
-              <p className="text-sm text-gray-500">Métodos de grado hospitalario y cumplimiento normativo.</p>
+              <h4 className="font-bold text-gray-900 mb-1">Calidad Garantizada</h4>
+              <p className="text-sm text-gray-500">Usamos métodos súper seguros y efectivos, justo como los que exigen los hospitales.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
               <div className="w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center mb-3">
                 <span className="material-icons-outlined text-brand-green">eco</span>
               </div>
-              <h4 className="font-bold text-gray-900 mb-1">Productos Seguros</h4>
-              <p className="text-sm text-gray-500">Fórmulas avaladas, sin riesgos de intoxicación.</p>
+              <h4 className="font-bold text-gray-900 mb-1">Productos 100% Seguros</h4>
+              <p className="text-sm text-gray-500">Fórmulas amigables que cuidan de ti, tus hijos y tus mascotas. ¡Cero riesgos de intoxicación!</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
@@ -280,7 +280,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">handshake</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Compromiso Real</h4>
-              <p className="text-sm text-gray-500">Resultados garantizados por escrito desde la 1ª visita.</p>
+              <p className="text-sm text-gray-500">Te damos resultados garantizados por escrito desde el primer día que nos visitas.</p>
             </div>
           </div>
         </div>
@@ -297,7 +297,7 @@ const AboutContent = () => (
           
           <div className="absolute -bottom-6 -left-6 bg-brand-green text-white p-6 rounded-2xl shadow-xl">
             <p className="text-3xl md:text-4xl font-black">+8</p>
-            <p className="text-sm opacity-90">Años de experiencia</p>
+            <p className="text-sm opacity-90">Años de experiencia comprobada</p>
           </div>
           
           <div className="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-gray-100 max-w-[200px]">
@@ -306,7 +306,7 @@ const AboutContent = () => (
               <span className="font-bold text-gray-900 text-sm">Nuestra Misión</span>
             </div>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Proteger la salud de las familias mexicanas
+              Proteger la salud y la paz de las familias mexicanas.
             </p>
           </div>
         </div>
@@ -331,15 +331,15 @@ const ExperienceSection = () => (
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-bold tracking-wide uppercase mb-4">
             <span className="material-icons-outlined text-sm">military_tech</span>
-            Experiencia Comprobada
+            Experiencia que te da tranquilidad
           </div>
           <h2 className="text-2xl md:text-3xl font-black text-white leading-tight">
-            Forjados en los entornos más exigentes
+            Listos para resolver los retos más difíciles
           </h2>
         </div>
         
         <p className="text-gray-300 text-base md:text-lg leading-relaxed text-center mb-10">
-          Nacimos enfrentando los desafíos más tenaces del <span className="text-white font-semibold">sector público y privado</span>. Esa experiencia en entornos de alta exigencia nos enseñó que no hay margen de error cuando se trata de <span className="text-brand-green font-semibold">salud y economía</span>.
+          Llevamos años resolviendo problemas de plagas en los lugares más exigentes (como grandes fábricas y transporte público). Sabemos que cuando se trata de <span className="text-brand-green font-semibold">tu salud y tu dinero</span>, las cosas se tienen que hacer bien a la primera y sin margen de error.
         </p>
         
         {/* El Gancho */}
@@ -350,7 +350,7 @@ const ExperienceSection = () => (
             </div>
             <div>
               <p className="text-white text-lg md:text-xl font-medium leading-relaxed italic">
-                "Si somos capaces de proteger un sistema de transporte masivo o una planta industrial, <span className="text-brand-green font-bold">imagina lo que podemos hacer por tu sala o tu oficina.</span>"
+                "Si podemos mantener libre de plagas una gran fábrica o el transporte público, <span className="text-brand-green font-bold">imagina lo impecable y seguro que dejaremos tu hogar o tu negocio.</span>"
               </p>
             </div>
           </div>
@@ -374,31 +374,31 @@ const PilaresSection = () => {
   const sectors = {
     hogar: {
       items: [
-        { icon: 'health_and_safety', title: 'Salud', desc: 'Fórmulas 100% inofensivas para niños y mascotas. Cero olores tóxicos.' },
-        { icon: 'bolt', title: 'Rapidez', desc: 'Resultados garantizados desde la 1ª visita.' },
-        { icon: 'weekend', title: 'Comodidad', desc: 'Tratamientos sin que tengas que vaciar tu casa.' },
+        { icon: 'health_and_safety', title: 'Cuidamos tu Salud', desc: 'Usamos productos 100% inofensivos para tus hijos y mascotas. ¡Sin olores feos ni tóxicos!' },
+        { icon: 'bolt', title: 'Súper Rápido', desc: 'El problema queda resuelto desde la primera visita, garantizado.' },
+        { icon: 'weekend', title: 'Cero Estrés', desc: 'Hacemos el tratamiento sin que tengas que vaciar tu casa ni salirte todo el día.' },
       ],
     },
     comercio: {
       items: [
-        { icon: 'schedule', title: 'Operación', desc: 'Servicio 24/7. Intervenimos sin detener tus horarios comerciales.' },
-        { icon: 'description', title: 'Normativa', desc: 'Entrega de certificados válidos ante COFEPRIS y autoridades.' },
-        { icon: 'shield', title: 'Prevención', desc: 'Monitoreo continuo (MIP) para evitar clausuras o daño a tu reputación.' },
+        { icon: 'schedule', title: 'Sin Pausas', desc: 'Trabajamos 24/7. Hacemos el servicio en tus horarios libres para no interrumpir tus ventas ni tu operación.' },
+        { icon: 'description', title: 'Cero Multas', desc: 'Te entregamos tu certificado oficial (válido ante Cofepris) para que pases cualquier inspección sin problemas.' },
+        { icon: 'shield', title: 'Tranquilidad Continua', desc: 'Hacemos monitoreo constante para prevenir plagas y mantener tu reputación siempre impecable.' },
       ],
     },
     clinica: {
       items: [
-        { icon: 'biotech', title: 'Bioseguridad', desc: 'Desinfección de alto nivel y control de plagas en zonas estériles.' },
-        { icon: 'science', title: 'Tecnología', desc: 'Termonebulización y productos con validación de grado hospitalario.' },
-        { icon: 'assignment', title: 'Trazabilidad', desc: 'Bitácoras estrictas y reportes técnicos para auditorías sanitarias.' },
+        { icon: 'biotech', title: 'Higiene Total', desc: 'Desinfección profunda y control de plagas en zonas que requieren limpieza y cuidado extremo.' },
+        { icon: 'science', title: 'Tecnología Avanzada', desc: 'Tratamientos especializados y productos avalados con grado hospitalario.' },
+        { icon: 'assignment', title: 'Todo en Regla', desc: 'Te entregamos reportes detallados y bitácoras listas para tus auditorías sanitarias.' },
       ],
     },
   };
 
   const tabs = [
-    { key: 'hogar' as const, label: 'Hogar y Residencial', icon: 'home' },
-    { key: 'comercio' as const, label: 'Comercio e Industria', icon: 'business' },
-    { key: 'clinica' as const, label: 'Clínicas y Hospitales', icon: 'local_hospital' },
+    { key: 'hogar' as const, label: 'Para tu Casa', icon: 'home' },
+    { key: 'comercio' as const, label: 'Para tu Negocio', icon: 'business' },
+    { key: 'clinica' as const, label: 'Para Clínicas y Hospitales', icon: 'local_hospital' },
   ];
 
   return (
@@ -406,10 +406,10 @@ const PilaresSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Soluciones exactas para el nivel de exigencia de tu entorno
+            Soluciones a la medida de lo que necesitas
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Selecciona tu sector para conocer nuestro protocolo específico.
+            Elige tu espacio y descubre cómo te ayudamos de forma rápida y segura.
           </p>
         </div>
 
@@ -494,19 +494,19 @@ const Stats = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <p className="text-3xl md:text-4xl font-black text-brand-green">+{espacios.toLocaleString('es-MX')}</p>
-            <p className="text-sm text-gray-500 mt-1">Espacios protegidos</p>
+            <p className="text-sm text-gray-500 mt-1">Hogares y negocios que ya viven en paz</p>
           </div>
           <div>
             <p className="text-3xl md:text-4xl font-black text-brand-green">{anios}+</p>
-            <p className="text-sm text-gray-500 mt-1">Años de experiencia</p>
+            <p className="text-sm text-gray-500 mt-1">Años de experiencia cuidando a nuestros clientes</p>
           </div>
           <div>
             <p className="text-3xl md:text-4xl font-black text-brand-green">{satisfaccion}%</p>
-            <p className="text-sm text-gray-500 mt-1">Satisfacción garantizada</p>
+            <p className="text-sm text-gray-500 mt-1">Clientes satisfechos con garantía por escrito</p>
           </div>
           <div>
             <p className="text-3xl md:text-4xl font-black text-brand-green">24/7</p>
-            <p className="text-sm text-gray-500 mt-1">Operación continua</p>
+            <p className="text-sm text-gray-500 mt-1">Disponibles para ti a cualquier hora del día</p>
           </div>
         </div>
       </div>
@@ -518,13 +518,13 @@ const CallToAction = () => (
   <section className="py-16 md:py-20 bg-brand-forest">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-        ¿Listo para recuperar tu tranquilidad y proteger tu espacio?
+        ¿Listo para recuperar tu tranquilidad y disfrutar de tus espacios?
       </h2>
       <p className="text-white/80 mb-8 max-w-xl mx-auto">
-        Contáctanos hoy. Un especialista evaluará tu nivel de riesgo y te dará un protocolo exacto, sin compromisos ocultos.
+        Escríbenos hoy mismo. Un experto revisará tu caso súper rápido y te dirá exactamente qué necesitas y cuánto cuesta, sin letras chiquitas ni compromisos ocultos.
       </p>
       <a 
-        href="https://wa.me/5520872132?text=Hola%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20sin%20costo%20para%20evaluar%20el%20nivel%20de%20riesgo%20en%20mi%20espacio.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F"
+        href="https://wa.me/5520872132?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20diagn%C3%B3stico%20gratuito%20para%20mi%20espacio%20y%20saber%20c%C3%B3mo%20pueden%20ayudarme.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackCTA('cta_diagnostico', 'nosotros')}

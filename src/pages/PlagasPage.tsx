@@ -152,10 +152,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-white mb-4">Servicios</h4>
           <ul className="space-y-3">
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control de Insectos</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Protección contra Roedores</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Sanitización de Espacios</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Barrera Preventiva</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
           </ul>
         </div>
 
@@ -216,37 +216,37 @@ const PlagasHero = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
-          ¿En qué área detectaste la amenaza?
+          ¿En dónde encontraste el problema?
         </h1>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
-          Selecciona la zona afectada. Identifica los síntomas de la plaga y descubre nuestro protocolo exacto (MIP) para erradicarla de raíz y recuperar la seguridad de tu espacio.
+          Dinos en qué parte de tu casa o negocio viste a los bichitos. Te explicaremos cómo los eliminamos de raíz, de forma súper segura y sin complicaciones, para que recuperes tu tranquilidad.
         </p>
         
         {/* Iconos de anclaje visual */}
         <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-orange-300 flex items-center justify-center">
-              <span className="material-icons-outlined text-orange-500 text-2xl">kitchen</span>
+              <span className="material-icons-outlined text-2xl text-orange-500">restaurant</span>
             </div>
             <span className="text-xs text-gray-500 font-medium">Cocina y Alimentos</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-red-300 flex items-center justify-center">
-              <span className="material-icons-outlined text-red-500 text-2xl">hotel</span>
+              <span className="material-icons-outlined text-2xl text-red-500">bed</span>
             </div>
             <span className="text-xs text-gray-500 font-medium">Habitaciones y Descanso</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-purple-300 flex items-center justify-center">
-              <span className="material-icons-outlined text-purple-500 text-2xl">foundation</span>
+              <span className="material-icons-outlined text-2xl text-purple-500">inventory_2</span>
             </div>
-            <span className="text-xs text-gray-500 font-medium">Estructuras y Bodegas</span>
+            <span className="text-xs text-gray-500 font-medium">Bodegas y Estructuras</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 rounded-full border-2 border-green-300 flex items-center justify-center">
-              <span className="material-icons-outlined text-green-600 text-2xl">park</span>
+              <span className="material-icons-outlined text-2xl text-green-500">park</span>
             </div>
-            <span className="text-xs text-gray-500 font-medium">Exteriores y Perímetros</span>
+            <span className="text-xs text-gray-500 font-medium">Patios y Exteriores</span>
           </div>
         </div>
       </div>
@@ -263,6 +263,8 @@ interface PlagaCardProps {
   risk: string;
   riskTag: string;
   solution: string;
+  ctaText: string;
+  ctaMsg: string;
   icon?: string;
   borderColor: string;
   tagBg: string;
@@ -270,7 +272,7 @@ interface PlagaCardProps {
 }
 
 const PlagaCard: React.FC<PlagaCardProps> = ({ 
-  name, subtitle, symptom, risk, riskTag, solution, borderColor, tagBg, tagText 
+  name, subtitle, symptom, risk, riskTag, solution, ctaText, ctaMsg, borderColor, tagBg, tagText 
 }) => (
   <div className={`bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow border-t-4 ${borderColor}`}>
     {/* Header */}
@@ -287,7 +289,7 @@ const PlagaCard: React.FC<PlagaCardProps> = ({
       <div>
         <div className="flex items-center gap-2 mb-1">
           <span className="material-icons-outlined text-gray-400 text-sm">search</span>
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">El Síntoma</span>
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">¿Cómo saber si las tienes?</span>
         </div>
         <p className="text-gray-700 text-sm leading-relaxed">{symptom}</p>
       </div>
@@ -296,7 +298,7 @@ const PlagaCard: React.FC<PlagaCardProps> = ({
       <div>
         <div className="flex items-center gap-2 mb-1">
           <span className="material-icons-outlined text-gray-400 text-sm">warning_amber</span>
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Riesgo Real</span>
+          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">¿Por qué son un problema?</span>
           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${tagBg} ${tagText}`}>
             {riskTag}
           </span>
@@ -308,22 +310,22 @@ const PlagaCard: React.FC<PlagaCardProps> = ({
       <div>
         <div className="flex items-center gap-2 mb-1">
           <span className="material-icons-outlined text-brand-green text-sm">check_circle</span>
-          <span className="text-xs font-semibold text-brand-green uppercase tracking-wide">Nuestra Solución</span>
+          <span className="text-xs font-semibold text-brand-green uppercase tracking-wide">Nuestra solución</span>
         </div>
         <p className="text-brand-forest text-sm leading-relaxed font-medium">{solution}</p>
       </div>
     </div>
     
-    {/* CTA - WhatsApp Hiper-Personalizado */}
+    {/* CTA - WhatsApp */}
     <div className="px-5 pb-5">
       <a 
-        href={`https://wa.me/5520872132?text=${encodeURIComponent(`Hola, detecté los síntomas de ${name} y necesito un diagnóstico urgente.`)}`}
+        href={`https://wa.me/5520872132?text=${encodeURIComponent(ctaMsg)}`}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackCTA(`plaga_${name.toLowerCase().replace(/\s+/g, '_')}`, 'plagas')}
         className="w-full flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-sm transition-all bg-amber-500 text-white hover:bg-amber-600"
       >
-        <span className="material-icons-outlined text-sm">chat</span> Cotizar control de {name}
+        <span className="material-icons-outlined text-sm">chat</span> {ctaText}
       </a>
     </div>
   </div>
@@ -369,16 +371,18 @@ const PlagasSections = () => {
       id: 'cocina',
       icon: 'kitchen',
       title: 'Invasores de Cocina y Alimentos',
-      subtitle: 'Riesgos de higiene que amenazan tu hogar',
+      subtitle: 'Protegemos tu comida y la higiene de tu familia.',
       accentColor: 'border-orange-300',
       plagas: [
         {
           name: 'Cucarachas',
           subtitle: 'El riesgo invisible en tu cocina',
-          symptom: '¿Encuentras manchas pequeñas en las esquinas, un olor extraño o las ves correr al encender la luz?',
-          risk: 'Transmiten más de 30 tipos de bacterias, incluyendo Salmonella y E. coli. Una sola hembra puede producir hasta 400 crías.',
+          symptom: '¿Ves manchitas en las esquinas, notas un olor raro o salen corriendo cuando prendes la luz de noche?',
+          risk: 'Contaminan tu comida con bacterias muy peligrosas y se multiplican rapidísimo (¡una sola puede tener 400 crías!).',
           riskTag: 'Riesgo de Higiene',
-          solution: 'Protocolo de gel de atracción hormonal que elimina el nido completo, no solo las que ves. Resultados desde la primera aplicación.',
+          solution: 'Usamos un gel inteligente y cero tóxico. Ellas mismas se lo llevan a su escondite, eliminando el nido completo desde el primer día, no solo a las que ves por encimita.',
+          ctaText: '¡Quiero eliminar las cucarachas!',
+          ctaMsg: 'Hola, vi cucarachas en mi espacio y necesito ayuda urgente.',
           icon: 'pest_control',
           borderColor: 'border-t-orange-400',
           tagBg: 'bg-orange-50',
@@ -387,10 +391,12 @@ const PlagasSections = () => {
         {
           name: 'Hormigas',
           subtitle: 'Invasión silenciosa y organizada',
-          symptom: '¿Ves filas de hormigas cerca de alimentos, azúcar o en grietas de paredes y pisos?',
-          risk: 'Las colonias pueden tener millones de individuos. Contaminan alimentos y algunas especies dañan instalaciones eléctricas.',
+          symptom: '¿Hay caminitos de hormigas cerca del azúcar, la comida o saliendo de los contactos de la luz?',
+          risk: '¡Pueden ser millones! Echan a perder tus alimentos y hasta pueden dañar tus aparatos eléctricos.',
           riskTag: 'Riesgo de Higiene',
-          solution: 'Cebos de transferencia que las obreras llevan al nido, eliminando la colonia desde la reina.',
+          solution: 'Aplicamos un producto especial que las hormiguitas obreras llevan de regreso a su casa, acabando con el problema de raíz (desde la reina).',
+          ctaText: '¡Quiero eliminar las hormigas!',
+          ctaMsg: 'Hola, tengo un problema de hormigas y necesito ayuda.',
           icon: 'bug_report',
           borderColor: 'border-t-orange-400',
           tagBg: 'bg-orange-50',
@@ -398,11 +404,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Moscas',
-          subtitle: 'Vectores de enfermedades',
-          symptom: '¿Hay moscas rondando la cocina, botes de basura o áreas de preparación de alimentos?',
-          risk: 'Pueden transmitir más de 100 patógenos diferentes. Vomitan enzimas sobre los alimentos antes de consumirlos.',
+          subtitle: 'Adiós a la suciedad',
+          symptom: '¿No te dejan en paz cerca de la basura o mientras preparas de comer?',
+          risk: 'Son portadoras de muchísimas bacterias y ensucian tus superficies cada vez que se paran en ellas.',
           riskTag: 'Riesgo de Higiene',
-          solution: 'Control integrado con trampas UV, tratamiento larvicida y eliminación de focos de reproducción.',
+          solution: 'Colocamos trampas de luz súper discretas y tratamientos seguros para que desaparezcan de tu vista y de tu comida.',
+          ctaText: '¡Quiero eliminar las moscas!',
+          ctaMsg: 'Hola, tengo un problema de moscas y necesito ayuda.',
           icon: 'flight',
           borderColor: 'border-t-orange-400',
           tagBg: 'bg-orange-50',
@@ -413,17 +421,19 @@ const PlagasSections = () => {
     {
       id: 'descanso',
       icon: 'hotel',
-      title: 'Amenazas al Descanso y Salud',
-      subtitle: 'Riesgos que afectan tu bienestar y el de tu familia',
+      title: 'Amenazas al Descanso y la Salud',
+      subtitle: 'Cuidamos tu sueño y la salud de los que más amas.',
       accentColor: 'border-red-300',
       plagas: [
         {
           name: 'Chinches de Cama',
           subtitle: 'El enemigo nocturno',
-          symptom: '¿Despiertas con picaduras en línea, manchas de sangre en sábanas o puntos negros en el colchón?',
-          risk: 'Pueden sobrevivir meses sin alimentarse. Las soluciones caseras suelen ser inútiles. Se esconden en costuras y enchufes.',
+          symptom: '¿Amaneces con piquetes en hilera, ves manchitas de sangre en tus sábanas o puntitos negros en el colchón?',
+          risk: 'No se van con remedios caseros, se esconden súper bien y te roban la paz a la hora de dormir.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Protocolo de micro-inyección en grietas y sellado de puntos de refugio. Garantía por escrito.',
+          solution: 'Aplicamos un tratamiento detallado en cada grieta, base y costura para acabar con ellas. ¡Vuelve a dormir tranquilo, garantizado!',
+          ctaText: '¡Quiero volver a dormir en paz!',
+          ctaMsg: 'Hola, creo que tengo chinches de cama y necesito ayuda urgente.',
           icon: 'bed',
           borderColor: 'border-t-red-400',
           tagBg: 'bg-red-50',
@@ -431,11 +441,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Pulgas',
-          subtitle: 'No solo afectan a tus mascotas',
-          symptom: '¿Tus mascotas se rascan constantemente? ¿Tienes picaduras en tobillos y piernas?',
-          risk: 'Transmiten parásitos y enfermedades. Una sola pulga pone hasta 50 huevos diarios que caen en alfombras y muebles.',
+          subtitle: 'Protegemos a tus mascotas',
+          symptom: '¿Tus perritos o gatitos se rascan mucho o te han picado en los tobillos?',
+          risk: 'Se reproducen a lo loco, dejando sus huevecillos en tus alfombras o sillones, y transmiten parásitos.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Tratamiento integral: fumigación de espacios + recomendaciones para mascotas. Rompemos el ciclo reproductivo.',
+          solution: 'Fumigamos tus espacios de forma segura para cortar su ciclo (para que no nazcan más) y te damos tips fáciles para cuidar a tus mascotas.',
+          ctaText: '¡Quiero eliminar las pulgas!',
+          ctaMsg: 'Hola, tengo un problema de pulgas y necesito ayuda.',
           icon: 'pets',
           borderColor: 'border-t-red-400',
           tagBg: 'bg-red-50',
@@ -443,11 +455,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Alacranes',
-          subtitle: 'Peligro real para tu familia',
-          symptom: '¿Has visto alacranes en rincones oscuros, baños o cerca de áreas húmedas?',
-          risk: 'El piquete puede ser mortal, especialmente en niños y adultos mayores. Son nocturnos y se esconden durante el día.',
+          subtitle: 'Protección vital para tu familia',
+          symptom: '¿Has visto alguno en lugares oscuros, cerca del baño o en zonas húmedas?',
+          risk: 'Su picadura es muy peligrosa, sobre todo para niños chiquitos y adultos mayores.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Aspersión perimetral + sellado de accesos. Creamos una barrera protectora alrededor de tu hogar.',
+          solution: 'Creamos un escudo protector alrededor de tu casa y sellamos las entradas para que no puedan pasar.',
+          ctaText: '¡Quiero protegerme de los alacranes!',
+          ctaMsg: 'Hola, he visto alacranes en mi casa y necesito protección urgente.',
           icon: 'coronavirus',
           borderColor: 'border-t-red-400',
           tagBg: 'bg-red-50',
@@ -459,16 +473,18 @@ const PlagasSections = () => {
       id: 'estructura',
       icon: 'foundation',
       title: 'Destructores de Patrimonio',
-      subtitle: 'Riesgos estructurales que dañan tu propiedad',
+      subtitle: 'Cuidamos tus muebles, tu casa y tu inversión.',
       accentColor: 'border-purple-300',
       plagas: [
         {
           name: 'Roedores',
-          subtitle: 'Silencio y salud en cada rincón',
-          symptom: '¿Escuchas ruidos en paredes o techo por la noche? ¿Encuentras excrementos pequeños o cables roídos?',
-          risk: 'Transmiten Leptospirosis y Hantavirus. Pueden causar incendios al roer cables eléctricos. Se reproducen exponencialmente.',
+          subtitle: 'Ratas y Ratones',
+          symptom: '¿Escuchas ruiditos en el techo por la noche, encuentras cables mordidos o bolitas negras (excremento)?',
+          risk: 'Ensucian todo, rompen tus cosas y pueden causar cortocircuitos al morder cables.',
           riskTag: 'Riesgo Estructural',
-          solution: 'Métodos mecánicos y estaciones de cebo seguras para mascotas. Sellado de accesos para evitar reinfestación.',
+          solution: 'Usamos trampas seguras (¡sin riesgo para tus mascotas!) y tapamos los huecos por donde entran para que no regresen jamás.',
+          ctaText: '¡Quiero eliminar los roedores!',
+          ctaMsg: 'Hola, tengo un problema de roedores y necesito ayuda urgente.',
           icon: 'cruelty_free',
           borderColor: 'border-t-purple-400',
           tagBg: 'bg-purple-50',
@@ -476,11 +492,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Termitas',
-          subtitle: 'El enemigo silencioso de la madera',
-          symptom: '¿Ves pequeños túneles de barro en paredes? ¿La madera suena hueca al golpearla? ¿Encuentras alas transparentes?',
-          risk: 'Pueden destruir la estructura de una casa en pocos años sin que lo notes. Trabajan 24/7 desde el interior.',
+          subtitle: 'El enemigo silencioso de tu casa',
+          symptom: '¿Ves caminitos de tierra en la pared, madera que suena hueca o alitas transparentes en el piso?',
+          risk: 'Se comen la madera por dentro. Pueden dañar la estructura de tu casa o negocio sin que te des cuenta.',
           riskTag: 'Riesgo Estructural',
-          solution: 'Inyección de termiticida en suelo y madera afectada. Sistema de monitoreo para prevención continua.',
+          solution: 'Aplicamos un tratamiento directo para salvar tu madera y creamos una barrera para proteger tu casa por muchos años.',
+          ctaText: '¡Quiero eliminar las termitas!',
+          ctaMsg: 'Hola, creo que tengo termitas y necesito una evaluación urgente.',
           icon: 'carpenter',
           borderColor: 'border-t-purple-400',
           tagBg: 'bg-purple-50',
@@ -488,11 +506,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Polilla de Madera',
-          subtitle: 'Carcoma que destruye muebles',
-          symptom: '¿Ves pequeños agujeros en muebles de madera? ¿Encuentras polvillo fino debajo de ellos?',
-          risk: 'Puede destruir muebles antiguos, vigas y estructuras de madera. El daño es interno y progresivo.',
+          subtitle: 'Cuidamos tus muebles',
+          symptom: '¿Notaste hoyitos en tus muebles de madera o un polvito fino en el piso?',
+          risk: 'Destruyen tus muebles favoritos, vigas y puertas desde adentro.',
           riskTag: 'Riesgo Estructural',
-          solution: 'Tratamiento con inyección directa y fumigación localizada. Protegemos tu patrimonio y recuerdos.',
+          solution: 'Inyectamos el producto justo donde se necesita para salvar tu patrimonio y tus recuerdos.',
+          ctaText: '¡Quiero salvar mis muebles!',
+          ctaMsg: 'Hola, tengo polilla en mis muebles de madera y necesito ayuda.',
           icon: 'chair',
           borderColor: 'border-t-purple-400',
           tagBg: 'bg-purple-50',
@@ -503,17 +523,19 @@ const PlagasSections = () => {
     {
       id: 'exteriores',
       icon: 'park',
-      title: 'Amenazas en Exteriores y Perímetros',
-      subtitle: 'Jardines, patios, estacionamientos y áreas abiertas',
+      title: 'Amenazas en Patios y Exteriores',
+      subtitle: 'Disfruta de tu jardín, terraza o estacionamiento sin molestias.',
       accentColor: 'border-green-300',
       plagas: [
         {
           name: 'Mosquitos',
-          subtitle: 'Vectores de enfermedades graves',
-          symptom: '¿Hay zonas con agua estancada, jardines húmedos o áreas donde los mosquitos no te dejan estar?',
-          risk: 'Transmiten Dengue, Zika y Chikungunya. Se reproducen en cualquier recipiente con agua estancada.',
+          subtitle: 'Tu patio libre de picaduras',
+          symptom: '¿Tienes charquitos de agua cerca o simplemente no puedes salir al patio sin que te piquen?',
+          risk: 'Además de ser muy molestos, pueden contagiar enfermedades como el Dengue.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Nebulización perimetral + eliminación de criaderos. Barrera protectora de larga duración para exteriores.',
+          solution: 'Aplicamos una niebla protectora en todo tu jardín y te ayudamos a identificar los lugares donde nacen para eliminarlos.',
+          ctaText: '¡Quiero mi patio sin mosquitos!',
+          ctaMsg: 'Hola, tengo un problema de mosquitos en mi patio y necesito ayuda.',
           icon: 'flight',
           borderColor: 'border-t-green-500',
           tagBg: 'bg-green-50',
@@ -521,11 +543,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Avispas y Abejas',
-          subtitle: 'Nidos peligrosos en tu perímetro',
-          symptom: '¿Detectas panales en techos, árboles, bardas o esquinas de tu propiedad?',
-          risk: 'Las picaduras pueden causar reacciones alérgicas graves (anafilaxia). Los nidos crecen rápidamente.',
+          subtitle: 'Retiro seguro de panales',
+          symptom: '¿Viste un panal en el techo, un árbol o la barda de tu casa?',
+          risk: 'Sus picaduras duelen mucho y pueden ser peligrosas si alguien en casa es alérgico.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Retiro seguro de nidos y aplicación de repelente perimetral. Reubicación responsable cuando es posible.',
+          solution: 'Retiramos el nido con muchísimo cuidado y aplicamos un repelente para que no vuelvan. (¡Siempre reubicamos a las abejas de forma responsable!).',
+          ctaText: '¡Quiero retirar un panal de forma segura!',
+          ctaMsg: 'Hola, tengo un panal de avispas/abejas y necesito que lo retiren de forma segura.',
           icon: 'hive',
           borderColor: 'border-t-green-500',
           tagBg: 'bg-green-50',
@@ -533,11 +557,13 @@ const PlagasSections = () => {
         },
         {
           name: 'Garrapatas',
-          subtitle: 'Parásitos en jardines y áreas verdes',
-          symptom: '¿Tus mascotas traen garrapatas del jardín? ¿Has encontrado garrapatas en muros o vegetación?',
-          risk: 'Transmiten la enfermedad de Lyme y Ehrlichiosis. Se adhieren a humanos y animales para alimentarse.',
+          subtitle: 'Jardín libre de parásitos',
+          symptom: '¿Tus mascotas salieron al jardín y regresaron con garrapatas o las viste caminando por las paredes?',
+          risk: 'Transmiten enfermedades complicadas tanto a tus perritos como a tu familia.',
           riskTag: 'Riesgo de Salud',
-          solution: 'Aspersión de áreas verdes y perímetros con producto residual. Control en zonas de tránsito de mascotas.',
+          solution: 'Rociamos el pasto y las paredes de afuera con un producto súper seguro para que tu jardín vuelva a ser zona libre de parásitos.',
+          ctaText: '¡Quiero un jardín libre de garrapatas!',
+          ctaMsg: 'Hola, tengo un problema de garrapatas en mi jardín y necesito ayuda.',
           icon: 'bug_report',
           borderColor: 'border-t-green-500',
           tagBg: 'bg-green-50',
@@ -563,37 +589,38 @@ const EmergencyCTA = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-2xl mx-auto text-center">
         <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="material-icons-outlined text-red-500 text-2xl">emergency</span>
+          <span className="material-icons-outlined text-red-500 text-3xl">warning</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-          ¿Emergencia de plagas?
+          ¿Tienes una emergencia y necesitas ayuda YA?
         </h2>
         <p className="text-gray-600 mb-6">
-          Si tienes una infestación severa o necesitas atención urgente, contáctanos ahora. Respondemos en menos de 15 minutos.
+          Si la situación se salió de control, la plaga es masiva o necesitas que vayamos urgentísimo, escríbenos o llámanos ahora mismo. ¡Te contestamos en menos de 15 minutos!
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a 
-            href="https://wa.me/5520872132?text=Hola%2C%20tengo%20una%20emergencia%20de%20plagas%20y%20necesito%20atenci%C3%B3n%20urgente.%20%C2%BFPueden%20enviar%20a%20un%20especialista%20lo%20antes%20posible%3F"
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20tengo%20una%20emergencia%20y%20necesito%20que%20venga%20un%20experto%20lo%20antes%20posible."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTA('emergencia_whatsapp', 'plagas')}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-green text-white rounded-lg font-bold transition-all hover:bg-brand-forest"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Urgente
+            <span className="material-icons-outlined text-sm">warning</span> WhatsApp Urgente
           </a>
-          <a 
+          <a
             href="tel:5520872132"
+            onClick={() => trackCTA('emergencia_llamar', 'plagas')}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-bold transition-all hover:bg-gray-200"
           >
-            <span className="material-icons-outlined text-xl">phone</span>
-            Llamar Ahora
+            <span className="material-icons-outlined text-sm">phone</span> Llamar Ahora
           </a>
         </div>
       </div>
     </div>
   </section>
 );
+
 
 export function PlagasPage() {
   return (

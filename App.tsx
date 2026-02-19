@@ -171,28 +171,28 @@ const Hero = () => (
     <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       <div className="fade-in space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-brand-green text-xs font-bold tracking-wide uppercase">
-          <span className="material-icons-outlined text-sm">location_on</span>
-          Cobertura inmediata en CDMX y Edo. Méx.
+          <span className="material-icons-outlined text-sm">bolt</span>
+          ¡Servicio de Fumigación en CDMX y Edo. Mex!
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight italic">
-          Control de Plagas con Técnicas de Precisión y Cero Riesgos.
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+          Eliminamos plagas con cero riesgos y tecnología de precisión.
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-xl leading-relaxed">
-          Especialistas en fumigación, desinfección y control de fauna nociva con protocolos de seguridad adaptados a tu entorno. <span className="font-bold text-gray-900">Resultados garantizados desde la primera visita.</span>
+          Olvídate de insectos y roedores. Somos <span className="font-semibold text-gray-900">expertos en control de plagas</span> residencial y comercial. Te ofrecemos soluciones <span className="font-semibold text-gray-900">efectivas, seguras y garantizadas</span> desde la <span className="font-semibold text-gray-900">primera visita</span>, cuidando tu salud y la de tu familia.
         </p>
         <div className="flex flex-col gap-3 max-w-xl">
           <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
             <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
             <div>
-              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Hogar</p>
-              <p className="text-gray-600 text-sm">Productos 100% seguras para niños y mascotas.</p>
+              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Casa</p>
+              <p className="text-gray-600 text-sm">Productos 100% seguros para niños y mascotas.</p>
             </div>
           </div>
           <div className="flex items-start gap-3 bg-green-50 rounded-xl p-4">
             <span className="material-icons-outlined text-brand-green mt-0.5">check_circle</span>
             <div>
-              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Empresa</p>
-              <p className="text-gray-600 text-sm">Cumplimiento normativo estricto (industria alimentaria, corporativa y hospitalaria).</p>
+              <p className="font-bold text-gray-900 text-sm md:text-base">Para tu Negocio</p>
+              <p className="text-gray-600 text-sm">Cumplimos con todas las normas de sanidad para que operes sin problemas y con total tranquilidad.</p>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ const Hero = () => (
             onClick={() => trackCTA('hero_especialista', 'inicio')}
             className="inline-block px-6 sm:px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg"
           >
-            Hablar con un Especialista ahora
+            Cotizar fumigación con un especialista
           </a>
         </div>
       </div>
@@ -219,7 +219,7 @@ const Hero = () => (
           {/* Stats Card */}
           <div className="absolute -bottom-4 left-4 md:bottom-6 md:left-6 bg-brand-green text-white p-4 md:p-5 rounded-xl shadow-xl">
             <p className="text-2xl md:text-3xl font-black">+15,000</p>
-            <p className="text-xs md:text-sm opacity-90">Hogares protegidos</p>
+            <p className="text-xs md:text-sm opacity-90">familias ya viven sin plagas</p>
           </div>
         </div>
       </div>
@@ -230,7 +230,7 @@ const Hero = () => (
 const TrustBar = () => (
   <div className="bg-gray-50 py-12 border-y border-gray-100">
     <div className="container mx-auto px-4 text-center">
-      <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">Tecnología biológica respaldada por:</p>
+      <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">Usamos los mejores productos para el control de plagas:</p>
       <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
         <img src="/images/Bayer.png" alt="Bayer" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
         <img src="/images/bell.png" alt="Bell Labs" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
@@ -250,24 +250,24 @@ const BenefitsAndTestimonials = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 text-center text-white">
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-              <span className="material-icons-outlined text-3xl">home</span>
+              <span className="material-icons-outlined text-3xl">bolt</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Libres de plagas en 1 visita</h3>
-            <p className="text-lg md:text-xl opacity-90">Aplicamos métodos innovadores y efectivos</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Libre de plagas a la primera</h3>
+            <p className="text-lg md:text-xl opacity-90">Tratamientos efectivos que sí funcionan desde el día uno.</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">health_and_safety</span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold mb-1">Prevención contra enfermedades</h3>
-            <p className="text-lg md:text-xl opacity-90">Desinfección de alto nivel que neutraliza virus y bacterias al contacto.</p>
+            <p className="text-lg md:text-xl opacity-90">Eliminamos virus y bacterias al instante para proteger tu salud.</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
               <span className="material-icons-outlined text-3xl">verified_user</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-1">Garantía y reporte por escrito</h3>
-            <p className="text-lg md:text-xl opacity-90">Contamos con licencia sanitaria.</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">Garantía total por escrito</h3>
+            <p className="text-lg md:text-xl opacity-90">Somos profesionales con licencia sanitaria y te lo demostramos.</p>
           </div>
         </div>
       </div>
@@ -277,8 +277,8 @@ const BenefitsAndTestimonials = () => (
     <div className="bg-white py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">¿Cómo podemos ayudarte?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Selecciona la opción que mejor se adapte a tus necesidades y te atenderemos de inmediato.</p>
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">Expertos en Control de Plagas para cada necesidad</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Selecciona el servicio que necesitas y enviaremos a un experto a cualquier zona de la CDMX o el Estado de México hoy mismo.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Hogar / B2C */}
@@ -286,9 +286,9 @@ const BenefitsAndTestimonials = () => (
             <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mb-6">
               <span className="material-icons-outlined text-4xl text-brand-green">home</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Hogar</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Fumigación Residencial (Casa y Jardín)</h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Protege a tu familia con productos 100% seguros para niños y mascotas. Evaluación urgente sin compromiso.
+              Protegemos tu hogar de chinches, cucarachas y más. Aplicamos productos sin olor y seguros para niños y mascotas. Pide tu revisión sin compromiso.
             </p>
             <a
               href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
@@ -298,7 +298,7 @@ const BenefitsAndTestimonials = () => (
               className="inline-flex items-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Solicitar ayuda urgente para mi casa
+              ¡Quiero proteger mi casa!
             </a>
           </div>
 
@@ -307,9 +307,9 @@ const BenefitsAndTestimonials = () => (
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
               <span className="material-icons-outlined text-4xl text-blue-700">business</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Para tu Empresa</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Control de Plagas Comercial e Industrial</h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Soluciones de cumplimiento normativo para clínicas, restaurantes, oficinas y más. Certificación con validez oficial.
+              Soluciones para que tu clínica, restaurante u oficina cumpla con Cofepris. Te entregamos tu certificado de fumigación con validez oficial ante la autoridad.
             </p>
             <a
               href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
@@ -319,7 +319,7 @@ const BenefitsAndTestimonials = () => (
               className="inline-flex items-center gap-2 px-6 py-4 bg-blue-700 hover:bg-blue-800 text-white rounded-lg font-bold text-sm sm:text-base transition-all hover:scale-105 shadow-lg mt-auto"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Cotizar servicio corporativo
+              Cotizar servicio para mi negocio
             </a>
           </div>
         </div>
@@ -331,20 +331,24 @@ const BenefitsAndTestimonials = () => (
 const Testimonials = () => (
   <section className="bg-gray-50 py-16 md:py-20">
     <div className="container mx-auto px-4">
+      <div className="text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">Lo que dicen nuestros clientes</h2>
+        <div className="h-1 w-16 bg-brand-green rounded-full mx-auto mt-4"></div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-8">
         {/* Testimonial 1 */}
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg relative pt-14">
           <div className="absolute -top-8 left-1/2 -translate-x-1/2">
             <img 
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" 
-              alt="Elena R." 
+              alt="Elena R. (Col. Del Valle)" 
               className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
             />
           </div>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
             "Había intentado de todo para las cucarachas y nada funcionaba. Vinieron ellos y en una sola sesión el problema desapareció. ¡Por fin puedo dormir tranquila!"
           </p>
-          <p className="font-bold text-brand-green">Elena R.</p>
+          <p className="font-bold text-brand-green">— Elena R. (Col. Del Valle)</p>
         </div>
         
         {/* Testimonial 2 */}
@@ -352,14 +356,14 @@ const Testimonials = () => (
           <div className="absolute -top-8 left-1/2 -translate-x-1/2">
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-              alt="Ricardo M." 
+              alt="Ricardo M. (Satélite)" 
               className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
             />
           </div>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
             "Lo que más me gustó es que no huele a nada. Tengo dos gatos y un bebé, y me explicaron perfectamente por qué era seguro para ellos."
           </p>
-          <p className="font-bold text-brand-green">Ricardo M.</p>
+          <p className="font-bold text-brand-green">— Ricardo M. (Satélite)</p>
         </div>
         
         {/* Testimonial 3 */}
@@ -367,14 +371,14 @@ const Testimonials = () => (
           <div className="absolute -top-8 left-1/2 -translate-x-1/2">
             <img 
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-              alt="Javier T." 
+              alt="Javier T. (Restaurante en Roma Norte)" 
               className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
             />
           </div>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
             "Puntuales y muy profesionales. Me entregaron mi certificado de fumigación válido para mi negocio ante las autoridades sanitarias."
           </p>
-          <p className="font-bold text-brand-green">Javier T. (Dueño de Restaurante)</p>
+          <p className="font-bold text-brand-green">— Javier T. (Restaurante en Roma Norte)</p>
         </div>
       </div>
     </div>
@@ -386,7 +390,7 @@ const ProcessSteps = () => (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
-          Tu espacio libre de plagas en 3 pasos sencillos
+          Tu proceso de fumigación en 3 simples pasos
         </h2>
         <div className="h-1 w-16 bg-emerald-400 rounded-full mx-auto"></div>
       </div>
@@ -398,9 +402,9 @@ const ProcessSteps = () => (
             Paso 1
           </div>
           <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">smartphone</span></div>
-          <h3 className="text-lg font-bold text-white mb-3">Diagnóstico por WhatsApp</h3>
+          <h3 className="text-lg font-bold text-white mb-3">Cuéntanos por WhatsApp</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Escríbenos o envíanos una foto de tu problema. Un experto evaluará tu nivel de riesgo y te dará una cotización exacta en minutos, sin compromisos.
+            Escríbenos o mándanos una foto del problema. Un experto te dará el precio exacto en minutos, sin compromisos.
           </p>
         </div>
 
@@ -410,9 +414,9 @@ const ProcessSteps = () => (
             Paso 2
           </div>
           <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">gps_fixed</span></div>
-          <h3 className="text-lg font-bold text-white mb-3">Intervención Precisa</h3>
+          <h3 className="text-lg font-bold text-white mb-3">Vamos a tu domicilio</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Nuestros técnicos acuden con puntualidad y aplican un tratamiento de grado alimenticio de forma rápida y segura, sin que tengas que abandonar el lugar por horas.
+            Nuestros técnicos llegan puntuales a cualquier zona de CDMX y Edo. Mex. Aplicamos el tratamiento de control de plagas de forma rápida y súper segura. ¡No tienes que salirte de casa todo el día!
           </p>
         </div>
 
@@ -422,9 +426,9 @@ const ProcessSteps = () => (
             Paso 3
           </div>
           <div className="text-4xl mb-5 mt-2"><span className="material-icons-outlined text-emerald-400 text-4xl">verified_user</span></div>
-          <h3 className="text-lg font-bold text-white mb-3">Certificación y Licencia Sanitaria</h3>
+          <h3 className="text-lg font-bold text-white mb-3">Disfruta tu tranquilidad</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            El problema queda resuelto desde la primera visita. Te entregamos tu garantía por escrito, recomendaciones de prevención y tu certificado de sanidad avalado por Cofepris.
+            El problema se resuelve desde el primer día. Te damos garantía por escrito, tips para evitar que regresen y tu certificado oficial (Cofepris).
           </p>
         </div>
       </div>
@@ -449,29 +453,29 @@ const ProcessSteps = () => (
 const ComparisonTable = () => {
   const rows = [
     {
-      benefit: 'Velocidad de Resultados',
-      us: 'Servicios focalizados. Resultados inmediatos.',
-      others: 'Múltiples visitas (hasta 3 o más). Tratan el síntoma, no las anidaciones, alargando tu problema.',
+      benefit: 'Velocidad de resultados',
+      us: <><strong className="text-brand-green">Resultados inmediatos.</strong> Solucionamos el problema en una visita.</>,
+      others: 'Te hacen dar muchas vueltas (3 o más visitas) y el problema sigue.',
     },
     {
-      benefit: 'Enfoque del Tratamiento',
-      us: 'Analizamos el origen y evitamos que regresen. Prevención a largo plazo.',
-      others: 'Reactivo. Solo matan lo que ves hoy. El problema vuelve en semanas.',
+      benefit: 'Enfoque del tratamiento',
+      us: <><strong className="text-brand-green">Atacamos el nido.</strong> Nos aseguramos de que no regresen.</>,
+      others: 'Solo matan lo que se ve por encimita. Los bichos vuelven en semanas.',
     },
     {
-      benefit: 'Seguridad y Productos',
-      us: 'Dosis mínimas y responsables. Fórmulas biodegradables avanzadas.',
-      others: 'Exceso de toxicidad. Riesgo de intoxicación por químicos baratos.',
+      benefit: 'Seguridad y productos',
+      us: <><strong className="text-brand-green">Cero riesgos.</strong> Productos amigables, seguros para ti y tus mascotas.</>,
+      others: 'Químicos baratos, tóxicos y que huelen muy mal.',
     },
     {
-      benefit: 'Nivel de Experiencia',
-      us: 'Asesores certificados. Expertos en Manejo Integral de Plagas (MIP).',
-      others: 'Prueba y error. Basado en "tutoriales de Google" o remedios caseros.',
+      benefit: 'Nivel de experiencia',
+      us: <><strong className="text-brand-green">Fumigadores certificados</strong> por Cofepris que saben exactamente lo que hacen.</>,
+      others: 'Improvisan probando a ver qué funciona o usan remedios caseros.',
     },
     {
-      benefit: 'Respaldo y Tranquilidad',
-      us: 'Somos tu aliado estratégico. Contamos con técnicos especializados.',
-      others: 'Sin respaldo y sin soluciones concretas, pierdes tu dinero y tu tiempo.',
+      benefit: 'Respaldo y tranquilidad',
+      us: <><strong className="text-brand-green">Garantía total.</strong> Somos profesionales y respondemos por nuestro trabajo.</>,
+      others: 'Si la plaga vuelve, no te contestan ni se hacen responsables.',
     },
   ];
 
@@ -480,10 +484,10 @@ const ComparisonTable = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
-            ¿Por qué elegir a un Asesor Profesional?
+            ¿Por qué elegir a FUMIGATRON como tu empresa de fumigación?
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
-            El verdadero costo de las soluciones temporales es la salud de tu familia y la reputación de tu negocio.
+            Lo barato sale caro cuando se trata de la tranquilidad de tu familia o la reputación de tu negocio.
           </p>
         </div>
 
@@ -491,8 +495,8 @@ const ComparisonTable = () => {
         <div className="hidden md:block max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="grid grid-cols-[1fr_1.3fr_1.3fr] bg-gray-800 text-white">
             <div className="p-5 font-bold text-sm">Lo que realmente necesitas</div>
-            <div className="p-5 font-bold text-sm text-center bg-brand-green/90"><span className="material-icons-outlined text-sm align-middle mr-1">verified_user</span> FUMIGATRON — Tu Socio Experto</div>
-            <div className="p-5 font-bold text-sm text-center"><span className="material-icons-outlined text-sm align-middle mr-1">cancel</span> Servicios Tradicionales</div>
+            <div className="p-5 font-bold text-sm text-center bg-brand-green/90"><span className="material-icons-outlined text-sm align-middle mr-1">verified_user</span> FUMIGATRON — Tu experto en control de plagas</div>
+            <div className="p-5 font-bold text-sm text-center"><span className="material-icons-outlined text-sm align-middle mr-1">cancel</span> Fumigadores no certificados o informales</div>
           </div>
           <div className="divide-y divide-gray-100">
             {rows.map((row, i) => (
@@ -529,25 +533,25 @@ const ComparisonTable = () => {
 const Features = () => (
   <section className="py-24 bg-white">
     <div className="container mx-auto px-4">
-      <SectionHeading title="Por qué somos la opción segura para su hogar" />
+      <SectionHeading title="Por qué somos la opción más segura para ti" />
       <div className="grid md:grid-cols-3 gap-8">
         <FeatureCard 
           icon="thermostat"
-          title="DIAGNÓSTICO TÉRMICO"
-          desc="No adivinamos dónde está el nido. Usamos cámaras térmicas para detectar la actividad biológica detrás de sus muros sin romper nada."
+          title="Encontramos el nido sin romper nada"
+          desc="Usamos tecnología especial (cámaras térmicas) para ver a través de las paredes y saber exactamente dónde se esconden las plagas, sin adivinar."
           color="bg-blue-50 text-blue-600"
         />
         <FeatureCard 
           icon="science"
           isPopular={true}
-          title="LA BOMBA INTELIGENTE"
-          desc="Micro-aspersión de moléculas activas que solo afectan el sistema nervioso de los insectos. Totalmente inocuo para humanos y mamíferos."
+          title="Fórmula inteligente y sin olores"
+          desc="Aplicamos un tratamiento que solo afecta a los insectos. Es 100% inofensivo para humanos, perritos y gatitos."
           color="bg-green-50 text-brand-green"
         />
         <FeatureCard 
           icon="shield"
-          title="ESCUDO 30 DÍAS"
-          desc="Nuestro producto crea una barrera invisible que sigue trabajando. Si una plaga intenta entrar en los próximos 30 días, será eliminada."
+          title="Escudo protector de 30 días"
+          desc="Creamos una barrera invisible en tu casa que sigue trabajando sola. Si algún bicho intenta entrar durante el próximo mes, será eliminado al instante."
           color="bg-purple-50 text-purple-600"
         />
       </div>
@@ -570,16 +574,16 @@ const ServiceDetails = () => (
         </div>
         
         <div className="w-full lg:w-1/2 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Especialistas de lo complejo</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Expertos en fumigación y control de las plagas más difíciles</h2>
           <p className="text-gray-600 text-lg">
-            Mientras otros solo rocían químicos, nosotros estudiamos el ciclo reproductivo y atacamos el problema de raíz de las plagas más resistentes.
+            Olvídate de los remedios que solo funcionan por unos días. Nuestro tratamiento ataca el problema desde la raíz para que no tengas que preocuparte más, por más complicada que sea la plaga.
           </p>
           
           <ul className="space-y-6">
             {[
-              { t: 'Chinches de Cama', d: 'Tratamiento térmico + químico. Garantía por escrito.' },
-              { t: 'Cucaracha Alemana', d: 'Gel de atracción hormonal. Eliminación de nidos ocultos.' },
-              { t: 'Roedores', d: 'Estaciones de cebo seguras para mascotas.' }
+              { t: 'Chinches de Cama', d: 'Acabamos con ellas por completo para que vuelvas a dormir en paz. ¡Garantizado por escrito!' },
+              { t: 'Cucarachas (incluso las más necias)', d: 'Usamos geles especiales que las atraen y eliminan hasta el último nido oculto.' },
+              { t: 'Ratones y Ratas', d: 'Colocamos trampas súper seguras para que tus mascotas no corran ningún riesgo.' }
             ].map((item, idx) => (
               <li key={idx} className="flex gap-4">
                 <span className="material-icons-outlined text-brand-green mt-1">check_circle</span>
@@ -592,7 +596,7 @@ const ServiceDetails = () => (
           </ul>
           
           <Link to="/servicios" className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all group pt-4">
-            CONOCE NUESTRA METODOLOGÍA
+            CONOCE CÓMO LO HACEMOS
             <span className="material-icons-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
@@ -606,20 +610,20 @@ const FAQ = () => {
   
   const faqs = [
     {
-      question: '¿Tengo que salir de mi casa durante la fumigación?',
-      answer: 'En la mayoría de nuestros tratamientos residenciales no es necesario, ya que usamos productos de nulo olor y baja toxicidad.'
+      question: '¿Tengo que salir de mi casa durante el servicio?',
+      answer: '¡Para nada! En la mayoría de los casos puedes quedarte tranquilamente en casa. Usamos productos sin olores molestos y súper seguros para ti y tu familia.'
     },
     {
-      question: '¿Es peligroso para mis mascotas?',
-      answer: 'No, utilizamos métodos de aplicación focalizados y productos que, una vez secos (15-30 min), son totalmente inofensivos para perros y gatos.'
+      question: '¿Es seguro para mis perritos y gatitos?',
+      answer: '¡100% seguro! Aplicamos el tratamiento justo donde se necesita. En cuanto seca (solo toma de 15 a 30 minutos), tus mascotas pueden andar por toda la casa sin correr ningún riesgo.'
     },
     {
-      question: '¿Cuánto tiempo dura el efecto?',
-      answer: 'Nuestras barreras residuales tienen una efectividad de hasta 3 a 6 meses, dependiendo del entorno y la higiene del lugar.'
+      question: '¿Cuánto tiempo dura la protección?',
+      answer: 'Nuestro escudo protector sigue cuidando tu espacio de 3 a 6 meses. Además, te daremos tips súper sencillos para mantener tu hogar impecable y alargar este efecto.'
     },
     {
-      question: '¿Entregan certificado para negocios?',
-      answer: 'Sí, entregamos constancia de servicio con validez oficial para inspecciones oficiales.'
+      question: '¿Me dan un certificado para mi negocio?',
+      answer: '¡Claro que sí! Al terminar, te entregamos un certificado oficial con validez para cualquier revisión o inspección sanitaria (Cofepris).'
     }
   ];
   
@@ -627,7 +631,7 @@ const FAQ = () => {
     <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-2xl md:text-3xl font-black text-gray-900 text-center mb-10 md:mb-14">
-          FAQ
+          Preguntas Frecuentes
         </h2>
         <div className="divide-y divide-gray-200">
           {faqs.map((faq, index) => (
@@ -661,13 +665,13 @@ const ObjectionKiller = () => (
     </div>
     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
       <div className="max-w-3xl">
-        <h2 className="text-3xl font-bold text-white mb-6">¿Tengo que lavar todo después?</h2>
+        <h2 className="text-3xl font-bold text-white mb-6">¿Tengo que lavar todo o mover mis muebles después?</h2>
         <p className="text-green-50 text-xl leading-relaxed">
-          <span className="font-bold text-white underline decoration-green-400">No.</span> Nuestra tecnología de micro-aspersión en frío no mancha muebles, no moja telas y es inolora. Puede reingresar a su hogar y continuar su vida normal tan solo 40 minutos después del servicio.
+          <span className="font-bold text-white underline decoration-green-400">¡Cero estrés!</span> Nuestro tratamiento en frío es una maravilla: no mancha tus muebles, no moja tus telas y no deja malos olores. Solo esperas unos 40 minutos y puedes seguir con tu día a día como si nada hubiera pasado. No tienes que hacer limpieza extrema ni lavar tu ropa.
         </p>
       </div>
       <a href="#contacto" onClick={() => trackCTA('objection_agendar', 'inicio')} className="shrink-0 bg-white text-brand-forest hover:bg-green-50 px-10 py-5 rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 active:scale-95">
-        Agendar Cita Sin Estrés
+        Agendar mi cita sin estrés
       </a>
     </div>
   </section>
@@ -677,8 +681,8 @@ const MapSection = () => (
   <section className="py-24 bg-white">
     <div className="container mx-auto px-4">
       <SectionHeading 
-        title="Llegamos a donde usted esté" 
-        subtitle="Cobertura total en las 16 alcaldías de la CDMX y municipios del Estado de México (Naucalpan, Tlalnepantla, Ecatepec, Neza, Huixquilucan)."
+        title="¡Atención inmediata para tu casa o negocio en toda la CDMX y Edo. Mex!" 
+        subtitle="Tenemos cobertura total en todas las alcaldías de la CDMX y los principales municipios del Estado de México (Naucalpan, Tlalnepantla, Ecatepec, Neza, Huixquilucan y más)."
       />
       
       <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl h-[280px] sm:h-[350px] md:h-[450px] bg-gray-100 border-4 md:border-8 border-white">
@@ -699,8 +703,8 @@ const MapSection = () => (
             C. Colima 20, Hab Valle Ceylan, 54150 Tlalnepantla, Méx.
           </p>
           <div className="flex items-center gap-2 mt-3">
-            <span className="material-icons-outlined text-brand-green text-sm">shield</span>
-            <p className="text-xs text-gray-500">Base central de operaciones. Cobertura a toda la CDMX y Estado de México.</p>
+            <span className="material-icons-outlined text-sm text-brand-green">location_on</span>
+            <p className="text-xs text-gray-500">Base central: ¡Listos para proteger tu espacio en CDMX y Edomex!</p>
           </div>
         </div>
       </div>
@@ -720,12 +724,12 @@ const ContactSection = () => {
 
   const testimonials = {
     hogar: {
-      quote: '"Excelente servicio, llegaron puntual y explicaron todo el proceso. Adiós cucarachas."',
-      author: '— María G. (Polanco)',
+      quote: '"Excelente servicio, llegaron súper puntuales y me explicaron todo el proceso. Por fin le dije adiós a las cucarachas."',
+      author: '— María G. (Servicio en Hogar)',
     },
     empresa: {
-      quote: '"Puntuales y muy profesionales. Me entregaron mi certificado de fumigación válido para mi negocio ante las autoridades sanitarias."',
-      author: '— Javier T. (Dueño de Restaurante)',
+      quote: '"Puntuales y muy profesionales. Me entregaron mi certificado oficial de fumigación, listo para cualquier revisión de mi restaurante."',
+      author: '— Javier T. (Servicio en Negocio)',
     },
   };
 
@@ -734,7 +738,7 @@ const ContactSection = () => {
     if (!formData.name.trim()) newErrors.name = 'El nombre es requerido';
     if (!formData.phone.trim()) newErrors.phone = 'El teléfono es requerido';
     if (!formData.service || formData.service === 'Seleccione una opción...') {
-      newErrors.service = 'Seleccione un tipo de plaga';
+      newErrors.service = 'Selecciona qué problema tienes';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -765,8 +769,8 @@ const ContactSection = () => {
         <div className="bg-white rounded-2xl md:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
           <div className="md:w-5/12 bg-gray-900 text-white p-6 sm:p-10 lg:p-14 flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl font-black mb-4">Recibir Diagnóstico sin Costo</h2>
-              <p className="text-gray-400 mb-10">Déjenos sus datos. Un especialista le contactará en menos de 15 minutos para darle un presupuesto preliminar.</p>
+              <h2 className="text-3xl font-black mb-4">Obtén tu diagnóstico ¡totalmente gratis!</h2>
+              <p className="text-gray-400 mb-10">Déjanos tus datos de manera rápida y segura. Uno de nuestros expertos te escribirá en menos de 15 minutos para darte una solución y un presupuesto exacto, sin compromisos.</p>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -817,7 +821,7 @@ const ContactSection = () => {
                 <div className="grid gap-6">
                   {/* Client Type Selector */}
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">¿Para quién es el servicio?</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">¿Dónde necesitas nuestra ayuda?</label>
                     <div className="grid grid-cols-2 gap-3">
                       <button
                         type="button"
@@ -828,7 +832,7 @@ const ContactSection = () => {
                             : 'border-gray-200 bg-gray-50 text-gray-500 hover:border-gray-300'
                         }`}
                       >
-                        <span className="material-icons-outlined text-sm">home</span> Para mi Hogar
+                        <span className="material-icons-outlined text-sm">home</span> Para mi Casa
                       </button>
                       <button
                         type="button"
@@ -839,13 +843,13 @@ const ContactSection = () => {
                             : 'border-gray-200 bg-gray-50 text-gray-500 hover:border-gray-300'
                         }`}
                       >
-                        <span className="material-icons-outlined text-sm">business</span> Para mi Empresa
+                        <span className="material-icons-outlined text-sm">business</span> Para mi Negocio
                       </button>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Tu Nombre</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Tu nombre (¡Queremos conocerte!)</label>
                     <input 
                       type="text" 
                       placeholder="Ej. Juan Pérez" 
@@ -856,7 +860,7 @@ const ContactSection = () => {
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Teléfono / WhatsApp</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Tu teléfono o WhatsApp</label>
                     <input 
                       type="tel" 
                       placeholder="55 XXXX XXXX" 
@@ -867,7 +871,7 @@ const ContactSection = () => {
                     {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Tipo de Plaga</label>
+                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">¿Qué problema tienes?</label>
                     <select 
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
@@ -876,7 +880,7 @@ const ContactSection = () => {
                       <option>Seleccione una opción...</option>
                       <option value="Cucarachas">Cucarachas</option>
                       <option value="Chinches">Chinches</option>
-                      <option value="Roedores">Roedores</option>
+                      <option value="Roedores">Ratones / Ratas</option>
                       <option value="Otro">Otro / No estoy seguro</option>
                     </select>
                     {errors.service && <p className="text-red-500 text-xs mt-1">{errors.service}</p>}
@@ -888,11 +892,11 @@ const ContactSection = () => {
                   disabled={status === 'loading'}
                   className="w-full bg-brand-green hover:bg-brand-forest text-white py-5 rounded-xl font-bold text-lg shadow-xl shadow-green-100 transition-all hover:-translate-y-1 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === 'loading' ? 'ENVIANDO...' : 'RECIBIR DIAGNÓSTICO SIN COSTO'}
+                  {status === 'loading' ? 'ENVIANDO...' : '¡QUIERO MI DIAGNÓSTICO GRATIS!'}
                 </button>
                 
                 <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
-                   <span className="material-icons-outlined text-sm">lock</span> Tus datos están seguros. Garantía de solución desde la 1ª visita.
+                   <span className="material-icons-outlined text-sm">lock</span> Tus datos están 100% seguros con nosotros. Recuerda: te damos garantía de solución desde la primera visita.
                 </div>
               </form>
             )}
@@ -935,10 +939,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-white mb-4">Servicios</h4>
           <ul className="space-y-3">
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control de Insectos</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Protección contra Roedores</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Sanitización de Espacios</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Barrera Preventiva</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
           </ul>
         </div>
 

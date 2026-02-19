@@ -152,10 +152,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-white mb-4">Servicios</h4>
           <ul className="space-y-3">
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control de Insectos</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Protección contra Roedores</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Sanitización de Espacios</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Barrera Preventiva</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
           </ul>
         </div>
 
@@ -224,10 +224,10 @@ const ServicesHero = () => (
           <span className="material-icons-outlined text-sm">biotech</span> Fumigación | Control de Plagas | Desinfección
         </div>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-          Fumigación, Control o Desinfección: El protocolo exacto para tu nivel de riesgo.
+          La solución exacta que necesitas para despedirte de las plagas.
         </h1>
         <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-          No creemos en rociar químicos a ciegas. Desplegamos la técnica correcta según tu urgencia.
+          No rociamos químicos nada más porque sí. Evaluamos tu problema y aplicamos el tratamiento perfecto para eliminarlo rápido, de raíz y sin riesgos para ti.
         </p>
       </div>
     </div>
@@ -240,44 +240,44 @@ const ServicesArsenal = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">1</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Fumigación de choque</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">Para erradicar infestaciones masivas o críticas al instante.</p>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Acción Inmediata (Choque)</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Acabamos al instante con problemas grandes, urgentes o fuera de control.</p>
         </div>
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">2</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Control de Plagas (MIP)</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">Estrategia y prevención a largo plazo para que no regresen (ideal para hogares y negocios).</p>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Protección Continua (Control Inteligente)</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Prevenimos y protegemos tu casa o negocio a largo plazo para que los bichos no vuelvan jamás.</p>
         </div>
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">3</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Desinfección</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">Neutralización de virus y patógenos con grado de esterilidad clínica.</p>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Limpieza Profunda (Desinfección)</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Eliminamos virus y bacterias para dejar tu espacio tan seguro y limpio como un hospital.</p>
         </div>
       </div>
 
       <div className="text-center">
-        <p className="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-4">Habla con un asesor para definir tu protocolo</p>
+        <p className="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-4">Platica con uno de nuestros expertos para saber cuál es la mejor opción para ti</p>
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <a
-            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20hogar%20y%20necesito%20una%20evaluaci%C3%B3n%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
+            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20problema%20de%20plagas%20en%20mi%20casa%20y%20necesito%20ayuda%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTA('arsenal_hogar', 'servicios')}
             className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
           >
-            <span className="material-icons-outlined text-sm">home</span> Para mi Hogar
+            <span className="material-icons-outlined text-sm">home</span> Para mi Casa
           </a>
           <a
-            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Represento%20a%20una%20empresa%2Fnegocio%20y%20requiero%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20cumplimiento%20normativo."
+            href="https://wa.me/5520872132?text=Hola%20Fumigatron.%20Tengo%20un%20negocio%20y%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas%20y%20certificados%20oficiales."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTA('arsenal_empresa', 'servicios')}
             className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-lg"
           >
-            <span className="material-icons-outlined text-sm">business</span> Para mi Empresa
+            <span className="material-icons-outlined text-sm">business</span> Para mi Negocio
           </a>
           <a
-            href="https://wa.me/5520872132?text=Hola%2C%20requiero%20informaci%C3%B3n%20sobre%20protocolos%20de%20bioseguridad%20y%20desinfecci%C3%B3n%20para%20mi%20cl%C3%ADnica%2Fhospital."
+            href="https://wa.me/5520872132?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20desinfecci%C3%B3n%20profunda%20y%20segura%20para%20mi%20cl%C3%ADnica%2Fhospital."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTA('arsenal_clinicas', 'servicios')}
@@ -294,32 +294,40 @@ const ServicesArsenal = () => (
 const ServicesMatrix = () => {
   const services = [
     {
-      tag: 'Prevención y Mantenimiento',
-      title: 'Control de Plagas Urbanas (MIP)',
-      para: 'Hogares y negocios que buscan blindar su espacio antes de una crisis o controlar infestaciones leves.',
-      ataca: 'Cucarachas, Hormigas, Arañas, Chinches (fase inicial).',
-      tecnica: 'Geles, cebos y aspersión focalizada de nula toxicidad.',
+      tag: 'Control Preventivo para tu Tranquilidad',
+      title: 'Control Preventivo',
+      para: 'Casas y negocios que quieren protegerse antes de tener un problema grave o que apenas empiezan a ver bichitos.',
+      ataca: 'Cucarachas, hormigas, arañas y chinches (en fase inicial).',
+      tecnica: 'Usamos geles y gotitas súper seguras. ¡Cero tóxicas y sin olores para tu familia!',
+      cta: '¡Quiero proteger mi espacio!',
+      msg: 'Hola, me interesa el servicio de Control Preventivo. ¿Me pueden dar más información y precios?',
     },
     {
-      tag: 'Erradicación de Choque',
-      title: 'Fumigación y Desratización',
-      para: 'Bodegas, restaurantes y espacios con presencia activa, visible y urgente de plagas o roedores.',
-      ataca: 'Infestaciones masivas, Ratas y Ratones.',
-      tecnica: 'Intervención táctica de alta eficacia para recuperar el control inmediato del área.',
+      tag: 'Eliminación Total y Urgente',
+      title: 'Eliminación Total y Urgente',
+      para: 'Bodegas, restaurantes o lugares donde la plaga ya es un problema grande, visible y que no puede esperar.',
+      ataca: 'Plagas fuera de control, ratas y ratones.',
+      tecnica: 'Actuamos rápido y con mucha fuerza para que recuperes la tranquilidad y el control de tu espacio de inmediato.',
+      cta: '¡Necesito ayuda urgente!',
+      msg: 'Hola, me interesa el servicio de Eliminación Total y Urgente. ¿Me pueden dar más información y precios?',
     },
     {
-      tag: 'Bioseguridad Estricta',
-      title: 'Desinfección Patógena',
-      para: 'Clínicas, hospitales, gimnasios y oficinas que requieren cumplir normativas de salud.',
-      ataca: 'Virus, Bacterias, Hongos.',
-      tecnica: 'Termonebulización y aspersión de grado hospitalario (inodoro y sin residuos).',
+      tag: 'Desinfección de Nivel Hospitalario',
+      title: 'Desinfección de Nivel Hospitalario',
+      para: 'Clínicas, hospitales, gimnasios y oficinas que necesitan cumplir con normas estrictas de salud y limpieza.',
+      ataca: 'Virus, bacterias y hongos invisibles.',
+      tecnica: 'Aplicamos una niebla súper fina que desinfecta todo sin dejar malos olores ni manchar tus muebles.',
+      cta: '¡Quiero desinfectar mi negocio!',
+      msg: 'Hola, me interesa el servicio de Desinfección de Nivel Hospitalario. ¿Me pueden dar más información y precios?',
     },
     {
-      tag: 'Intervención Estructural',
-      title: 'Tratamiento contra Termitas (Madera)',
-      para: 'Patrimonio, muebles, vigas y estructuras en riesgo de colapso por plagas xilófagas.',
-      ataca: 'Termitas subterráneas y de madera seca, polilla.',
-      tecnica: 'Inyección localizada y barreras químicas de larga duración.',
+      tag: 'Rescate de Madera (Termitas)',
+      title: 'Rescate de Madera',
+      para: 'Proteger tus muebles, puertas y la estructura de tu casa antes de que se echen a perder y te cuesten muy caro.',
+      ataca: 'Termitas y polillas que se comen la madera.',
+      tecnica: 'Aplicamos tratamientos directos en la madera para crear un escudo protector que dura muchísimo tiempo.',
+      cta: '¡Quiero salvar mi madera!',
+      msg: 'Hola, me interesa el servicio para eliminar termitas y polilla. ¿Me pueden dar más información y precios?',
     },
   ];
 
@@ -328,10 +336,10 @@ const ServicesMatrix = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Protocolos especializados para cada tipo de amenaza
+            Tratamientos especiales para cada tipo de problema
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Nuestros especialistas determinan el nivel de intervención exacto según la gravedad de tu caso, desde prevención hasta erradicación de choque.
+            Nuestros expertos revisan tu caso y aplican justo lo que necesitas: desde proteger tu espacio antes de que haya un problema, hasta eliminar una plaga difícil por completo.
           </p>
         </div>
 
@@ -344,27 +352,26 @@ const ServicesMatrix = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <span className="font-semibold text-gray-700">Para: </span>
+                  <span className="font-semibold text-gray-700">Ideal para: </span>
                   <span className="text-gray-600">{service.para}</span>
                 </div>
                 <div>
-                  <span className="font-semibold text-gray-700">Ataca: </span>
+                  <span className="font-semibold text-gray-700">Eliminamos: </span>
                   <span className="text-gray-600">{service.ataca}</span>
                 </div>
                 <div>
-                  <span className="font-semibold text-gray-700">Técnica: </span>
+                  <span className="font-semibold text-gray-700">Cómo lo hacemos: </span>
                   <span className="text-gray-600">{service.tecnica}</span>
                 </div>
               </div>
               <a 
-                href={`https://wa.me/5520872132?text=${encodeURIComponent(`Hola, me interesa el protocolo de ${service.title}. ¿Me pueden dar más información y precios?`)}`}
+                href={`https://wa.me/5520872132?text=${encodeURIComponent(service.msg)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackCTA(`protocolo_${service.title.toLowerCase().replace(/\s+/g, '_')}`, 'servicios')}
-                className="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-4 transition-all pt-4 text-sm"
+                className="inline-flex items-center gap-2 mt-5 px-5 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-md"
               >
-                Cotizar este protocolo
-                <span className="material-icons-outlined text-sm">arrow_forward</span>
+                {service.cta}
               </a>
             </div>
           ))}
@@ -389,22 +396,22 @@ const GuaranteeSection = () => (
           
           <div className="text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-              Garantía de Satisfacción
+              Tu tranquilidad está 100% garantizada
             </h2>
             <p className="text-white/90 text-lg leading-relaxed mb-6">
-              Todos nuestros servicios incluyen garantía por escrito. Si el problema persiste dentro del período de garantía, regresamos sin costo adicional.
+              Todos nuestros trabajos están respaldados por escrito. Si por alguna razón el problema sigue durante el tiempo de garantía, ¡regresamos y lo solucionamos totalmente gratis!
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span className="material-icons-outlined text-white text-sm">check_circle</span>
+                <span className="material-icons-outlined text-sm">check_circle</span>
                 <span className="text-white text-sm font-medium">Garantía por escrito</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span className="material-icons-outlined text-white text-sm">check_circle</span>
-                <span className="text-white text-sm font-medium">Seguimiento incluido</span>
+                <span className="material-icons-outlined text-sm">phone</span>
+                <span className="text-white text-sm font-medium">Seguimiento paso a paso</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span className="material-icons-outlined text-white text-sm">check_circle</span>
+                <span className="material-icons-outlined text-sm">description</span>
                 <span className="text-white text-sm font-medium">Certificado oficial</span>
               </div>
             </div>
@@ -419,19 +426,19 @@ const CallToAction = () => (
   <section className="py-16 md:py-20 bg-gray-50">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-        ¿Listo para eliminar el problema?
+        ¿Listo para decirle adiós al problema hoy mismo?
       </h2>
       <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-        Contáctanos hoy. Un especialista analizará el riesgo de tu espacio (hogar, industria o clínica) y te entregará un protocolo exacto y sin compromisos en menos de 15 minutos.
+        ¡Escríbenos ya! Uno de nuestros expertos revisará tu caso y te dará la solución exacta y el precio en menos de 15 minutos. Sin presiones y sin compromisos.
       </p>
       <a 
-        href="https://wa.me/5520872132?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20para%20un%20problema%20de%20plagas%20en%20mi%20espacio.%20%C2%BFPueden%20enviar%20un%20especialista%20para%20evaluar%20mi%20caso%3F"
+        href="https://wa.me/5520872132?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20gratis%20para%20un%20problema%20de%20plagas%20en%20mi%20espacio.%20%C2%BFMe%20ayudan%20a%20revisarlo%3F"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackCTA('cta_diagnostico', 'servicios')}
         className="inline-block px-8 py-4 bg-brand-green hover:bg-brand-forest text-white rounded-xl font-bold text-lg shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
       >
-        Solicitar Diagnóstico Gratis
+        Solicitar mi diagnóstico gratis
       </a>
     </div>
   </section>

@@ -131,10 +131,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-white mb-4">Servicios</h4>
           <ul className="space-y-3">
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control de Insectos</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Protección contra Roedores</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Sanitización de Espacios</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Barrera Preventiva</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
           </ul>
         </div>
 
@@ -198,10 +198,10 @@ const ContactHero = () => (
           <span className="material-icons-outlined text-brand-green text-3xl">support_agent</span>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
-          Toma el control hoy mismo
+          ¡Recupera la tranquilidad de tu espacio hoy mismo!
         </h1>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-          Atención personalizada para hogares y empresas. Diagnóstico inicial gratuito.
+          Te escuchamos y te ayudamos rápido. Ya sea para tu casa o tu negocio, tu primer diagnóstico va por nuestra cuenta.
         </p>
       </div>
     </div>
@@ -258,20 +258,20 @@ const ContactForm = () => {
             {/* Form */}
             <div className="md:col-span-3">
               <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
-                <h2 className="text-xl font-bold text-gray-900 mb-6">Cuéntanos tu situación</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-6">Cuéntanos, ¿cómo podemos ayudarte?</h2>
                 
                 {status === 'success' ? (
                   <div className="text-center py-8">
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="material-icons-outlined text-brand-green text-3xl">check_circle</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">¡Solicitud Enviada!</h3>
-                    <p className="text-gray-500 mb-6">Te contactaremos en menos de 2 horas.</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">¡Listo, recibimos tu mensaje!</h3>
+                    <p className="text-gray-500 mb-6">Un experto te escribirá en menos de 2 horas.</p>
                     <button
                       onClick={() => setStatus('idle')}
                       className="text-brand-green font-bold hover:underline"
                     >
-                      Enviar otra solicitud
+                      ¿Quieres enviar otra solicitud?
                     </button>
                   </div>
                 ) : (
@@ -279,18 +279,18 @@ const ContactForm = () => {
                     {status === 'error' && (
                       <div className="bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm flex items-center gap-2">
                         <span className="material-icons-outlined text-sm">error</span>
-                        No se pudo enviar. Por favor intente de nuevo.
+                        ¡Ups! Algo salió mal al enviar. Por favor, intenta de nuevo.
                       </div>
                     )}
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                          Nombre*
+                          Tu Nombre*
                         </label>
                         <input 
                           type="text" 
-                          placeholder="Ej. Juan Pérez"
+                          placeholder="Ej. Juan Pérez - ¡Queremos saber con quién hablamos!"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className={`w-full bg-gray-50 border ${errors.name ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
@@ -300,7 +300,7 @@ const ContactForm = () => {
                       
                       <div>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                          E-mail
+                          Tu Correo
                         </label>
                         <input 
                           type="email" 
@@ -318,7 +318,7 @@ const ContactForm = () => {
                       </label>
                       <input 
                         type="tel" 
-                        placeholder="55 XXXX XXXX"
+                        placeholder="Para contactarte súper rápido: 55 XXXX XXXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className={`w-full bg-gray-50 border ${errors.phone ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
@@ -329,7 +329,7 @@ const ContactForm = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                          Sector *
+                          ¿Dónde necesitas ayuda? *
                         </label>
                         <select 
                           value={formData.sector}
@@ -337,16 +337,16 @@ const ContactForm = () => {
                           className={`w-full bg-gray-50 border ${errors.sector ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
                         >
                           <option value="">Selecciona...</option>
-                          <option value="Hogar">Hogar</option>
-                          <option value="Empresa">Empresa</option>
-                          <option value="Industrial">Industrial</option>
+                          <option value="Hogar">Mi Casa</option>
+                          <option value="Empresa">Mi Negocio</option>
+                          <option value="Industrial">Industria</option>
                         </select>
                         {errors.sector && <p className="text-red-500 text-xs mt-1">{errors.sector}</p>}
                       </div>
                       
                       <div>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                          Servicio *
+                          ¿Qué problema tienes? *
                         </label>
                         <select 
                           value={formData.service}
@@ -354,11 +354,12 @@ const ContactForm = () => {
                           className={`w-full bg-gray-50 border ${errors.service ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
                         >
                           <option value="">Selecciona...</option>
-                          <option value="Control de Insectos">Control de Insectos</option>
-                          <option value="Control de Roedores">Control de Roedores</option>
-                          <option value="Fumigación Preventiva">Fumigación Preventiva</option>
+                          <option value="Control de Insectos">Insectos molestos</option>
+                          <option value="Control de Roedores">Ratas o ratones</option>
+                          <option value="Fumigación Preventiva">Quiero proteger mi espacio (Prevención)</option>
                           <option value="Desinfección">Desinfección</option>
-                          <option value="Otro">Otro / No estoy seguro</option>
+                          <option value="Otro">Otro</option>
+                          <option value="No estoy seguro">¡No estoy seguro, necesito que me asesoren!</option>
                         </select>
                         {errors.service && <p className="text-red-500 text-xs mt-1">{errors.service}</p>}
                       </div>
@@ -370,7 +371,7 @@ const ContactForm = () => {
                       </label>
                       <textarea 
                         rows={3}
-                        placeholder="Cuéntanos más sobre tu situación..."
+                        placeholder="Cuéntanos un poquito más de lo que está pasando..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full bg-gray-50 border border-transparent focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all resize-none"
@@ -382,12 +383,12 @@ const ContactForm = () => {
                       disabled={status === 'loading'}
                       className="w-full bg-brand-green hover:bg-brand-forest text-white py-4 rounded-lg font-bold text-lg transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {status === 'loading' ? 'Enviando...' : 'Enviar mi solicitud de inspección'}
+                      {status === 'loading' ? 'Enviando...' : '¡Quiero mi diagnóstico gratis!'}
                     </button>
 
                     <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1">
                       <span className="material-icons-outlined text-sm">lock</span>
-                      Tus datos están protegidos. Te contactaremos en menos de 15 min.
+                      Tus datos están 100% seguros con nosotros. Un experto te contactará en menos de 15 minutos.
                     </p>
                   </form>
                 )}
@@ -402,8 +403,8 @@ const ContactForm = () => {
                     <span className="material-icons-outlined text-brand-green">phone</span>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase">Teléfono</p>
-                    <a href="tel:5570297410" className="font-bold text-gray-900 hover:text-brand-green">557029 7410</a>
+                    <p className="text-xs text-gray-500 font-semibold uppercase">Llámanos</p>
+                    <a href="tel:5570297410" className="font-bold text-gray-900 hover:text-brand-green">55 7029 7410</a>
                   </div>
                 </div>
               </div>
@@ -414,7 +415,7 @@ const ContactForm = () => {
                     <svg className="w-5 h-5 text-brand-green" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase">WhatsApp</p>
+                    <p className="text-xs text-gray-500 font-semibold uppercase">WhatsApp Directo</p>
                     <a href="https://wa.me/5520872132" className="font-bold text-gray-900 hover:text-brand-green">55 2087 2132</a>
                   </div>
                 </div>
@@ -426,7 +427,7 @@ const ContactForm = () => {
                     <span className="material-icons-outlined text-brand-green">mail</span>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase">Email</p>
+                    <p className="text-xs text-gray-500 font-semibold uppercase">Correo</p>
                     <a href="mailto:servicios@fumigatron.com.mx" className="font-bold text-gray-900 hover:text-brand-green text-sm">servicios@fumigatron.com.mx</a>
                   </div>
                 </div>
@@ -438,8 +439,8 @@ const ContactForm = () => {
                     <span className="material-icons-outlined text-brand-green">schedule</span>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase">Horario</p>
-                    <p className="font-bold text-gray-900 text-sm">Lun - Sáb: 8:00 - 20:00</p>
+                    <p className="text-xs text-gray-500 font-semibold uppercase">Horario de atención</p>
+                    <p className="font-bold text-gray-900 text-sm">Lunes a Sábado de 8:00 am a 8:00 pm</p>
                   </div>
                 </div>
               </div>
@@ -459,19 +460,19 @@ const EmergencySection = () => (
         <div className="bg-white rounded-2xl border-2 border-red-200 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center shrink-0">
-              <span className="material-icons-outlined text-red-500 text-3xl">emergency</span>
+              <span className="material-icons-outlined text-red-500 text-3xl">warning</span>
             </div>
             <div className="text-center md:text-left flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">¿Emergencia de plagas?</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">¿Tienes una emergencia que no puede esperar?</h3>
               <p className="text-gray-600 text-sm mb-4">
-                Respondemos en menos de 15 min.
+                ¡Tranquilo, estamos listos! Escríbenos y te respondemos en menos de 15 minutos para darte una solución urgente.
               </p>
               <a 
-                href="https://wa.me/5520872132"
+                href="https://wa.me/5520872132?text=Hola%2C%20tengo%20una%20emergencia%20de%20plagas%20y%20necesito%20ayuda%20urgente.%20%C2%BFPueden%20enviar%20a%20alguien%20lo%20antes%20posible%3F"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg font-bold transition-all"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp Urgente: 55 2087 2132
+                Escríbenos por WhatsApp ahora
               </a>
             </div>
           </div>
@@ -516,13 +517,13 @@ const CoverageSection = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-bold tracking-wide uppercase mb-4">
               <span className="material-icons-outlined text-sm">location_on</span>
-              Cobertura
+              Nuestra Cobertura
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-              ¿Dónde brindamos protección?
+              ¡Llegamos rápido a donde estés!
             </h2>
             <p className="text-gray-600">
-              Servicio en CDMX, Estado de México y ciudades cercanas
+              Brindamos servicio de primera en toda la CDMX, Estado de México y ciudades cercanas. Selecciona tu zona:
             </p>
           </div>
 
@@ -568,7 +569,7 @@ const CoverageSection = () => {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-6">
-            ¿No encuentras tu zona? <a href="https://wa.me/5520872132" className="text-brand-green font-semibold hover:underline">Contáctanos</a> para verificar cobertura.
+            ¿No ves tu colonia o ciudad en la lista? ¡No te preocupes! <a href="https://wa.me/5520872132" className="text-brand-green font-semibold hover:underline">Escríbenos</a> y seguro encontramos la forma de ayudarte.
           </p>
         </div>
       </div>
