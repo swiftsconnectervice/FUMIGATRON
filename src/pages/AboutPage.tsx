@@ -323,12 +323,20 @@ const AboutContent = () => (
         
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop" 
-              alt="Equipo profesional de fumigación en CDMX certificado por COFEPRIS para eliminar chinches y cucarachas" 
+            <video 
+              src="/images/WhatsApp Video 2026-03-03 at 7.33.20 PM.mp4"
+              title="Fumigación profesional en CDMX - Fumigatron eliminando chinches y cucarachas en hogares"
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/images/especialistasenlodificl.jpg"
               className="w-full aspect-[4/3] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              aria-label="Video de técnicos certificados de Fumigatron realizando control de plagas profesional en Ciudad de México"
+            >
+              Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
           </div>
           
           <div className="absolute -bottom-6 -left-6 bg-brand-green text-white p-6 rounded-2xl shadow-xl">

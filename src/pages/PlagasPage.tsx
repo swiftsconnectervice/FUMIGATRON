@@ -254,6 +254,87 @@ const PlagasHero = () => (
   </section>
 );
 
+// Sección de Credibilidad con Estadísticas de Resultados
+const PlagasTrustSection = () => (
+  <section className="py-12 md:py-16 bg-white">
+    <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Imagen del técnico */}
+          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/servicios_1.jpeg"
+              alt="Técnico especialista de Fumigatron inspeccionando y eliminando chinches, cucarachas y plagas en CDMX"
+              title="Especialista en eliminación de plagas - Resultados garantizados CDMX"
+              className="w-full aspect-[4/3] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg">
+              <p className="text-sm font-bold text-gray-900">Técnico Certificado COFEPRIS</p>
+            </div>
+          </div>
+          
+          {/* Estadísticas y resultados */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+                Resultados Comprobados en Eliminación de Plagas
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                Más de 8 años de experiencia eliminando todo tipo de plagas en hogares y negocios de la CDMX. Nuestros números hablan por sí solos.
+              </p>
+            </div>
+            
+            {/* Grid de estadísticas */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-green-50 rounded-xl p-4 border border-green-100">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="material-icons-outlined text-brand-green text-xl">verified</span>
+                  <p className="text-2xl font-black text-brand-green">95%</p>
+                </div>
+                <p className="text-sm text-gray-700 font-medium">Eliminación de chinches en la primera visita</p>
+              </div>
+              
+              <div className="bg-amber-50 rounded-xl p-4 border border-amber-100">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="material-icons-outlined text-amber-600 text-xl">schedule</span>
+                  <p className="text-2xl font-black text-amber-600">48hrs</p>
+                </div>
+                <p className="text-sm text-gray-700 font-medium">Tiempo de respuesta máximo</p>
+              </div>
+              
+              <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="material-icons-outlined text-blue-600 text-xl">health_and_safety</span>
+                  <p className="text-2xl font-black text-blue-600">100%</p>
+                </div>
+                <p className="text-sm text-gray-700 font-medium">Productos seguros para niños y mascotas</p>
+              </div>
+              
+              <div className="bg-purple-50 rounded-xl p-4 border border-purple-100">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="material-icons-outlined text-purple-600 text-xl">workspace_premium</span>
+                  <p className="text-2xl font-black text-purple-600">15,000+</p>
+                </div>
+                <p className="text-sm text-gray-700 font-medium">Clientes satisfechos en CDMX</p>
+              </div>
+            </div>
+            
+            {/* Garantía destacada */}
+            <div className="bg-gray-900 rounded-xl p-5 flex items-start gap-3">
+              <span className="material-icons-outlined text-brand-green text-2xl">assignment_turned_in</span>
+              <div>
+                <p className="font-bold text-white mb-1">Garantía por Escrito</p>
+                <p className="text-sm text-gray-300">En todos nuestros tratamientos. Si la plaga regresa durante el periodo de garantía, volvemos sin costo adicional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 
 // Plague Card Component - Diseño Minimalista
 interface PlagaCardProps {
@@ -627,6 +708,7 @@ export function PlagasPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <PlagasHero />
+      <PlagasTrustSection />
       <PlagasSections />
       <EmergencyCTA />
       <Footer />

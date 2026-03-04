@@ -234,6 +234,40 @@ const ServicesHero = () => (
   </section>
 );
 
+// Sección de Credibilidad con Imagen Real
+const TrustImageSection = () => (
+  <section className="py-12 md:py-16 bg-white">
+    <div className="container mx-auto px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="/images/servicios_2.jpeg"
+            alt="Técnico certificado COFEPRIS de Fumigatron aplicando tratamiento profesional contra chinches y cucarachas en hogar de CDMX"
+            title="Fumigación profesional en CDMX - Técnico certificado eliminando plagas"
+            className="w-full aspect-[21/9] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div className="absolute bottom-6 left-6 right-6">
+            <div className="bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl max-w-2xl">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="material-icons-outlined text-brand-green text-2xl">verified</span>
+                <h3 className="text-lg font-bold text-gray-900">Técnicos Certificados COFEPRIS</h3>
+              </div>
+              <p className="text-sm text-gray-600">
+                Nuestro equipo cuenta con más de 8 años de experiencia aplicando tratamientos seguros y efectivos en hogares y negocios de toda la CDMX.
+              </p>
+            </div>
+          </div>
+          {/* Badge flotante */}
+          <div className="absolute top-6 right-6 bg-amber-500 text-white px-4 py-2 rounded-full shadow-lg">
+            <p className="text-xs font-bold">+15,000 clientes satisfechos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const ServicesArsenal = () => (
   <section className="py-16 md:py-20 bg-white">
     <div className="container mx-auto px-4 max-w-4xl">
@@ -301,6 +335,9 @@ const ServicesMatrix = () => {
       tecnica: 'Usamos geles y gotitas súper seguras. ¡Cero tóxicas y sin olores para tu familia!',
       cta: '¡Quiero proteger mi espacio!',
       msg: 'Hola, me interesa el servicio de Control Preventivo. ¿Me pueden dar más información y precios?',
+      image: '/images/servicios_5.jpeg',
+      imageAlt: 'Servicio de control preventivo de plagas en CDMX - Técnico aplicando gel contra cucarachas y hormigas en cocina',
+      imageTitle: 'Control preventivo de plagas - Fumigación residencial CDMX',
     },
     {
       tag: 'Eliminación Total y Urgente',
@@ -310,6 +347,9 @@ const ServicesMatrix = () => {
       tecnica: 'Actuamos rápido y con mucha fuerza para que recuperes la tranquilidad y el control de tu espacio de inmediato.',
       cta: '¡Necesito ayuda urgente!',
       msg: 'Hola, me interesa el servicio de Eliminación Total y Urgente. ¿Me pueden dar más información y precios?',
+      image: '/images/servicios_3.jpeg',
+      imageAlt: 'Eliminación urgente de plagas en CDMX - Técnico con equipo profesional fumigando contra ratas y cucarachas',
+      imageTitle: 'Fumigación urgente - Eliminación total de plagas CDMX',
     },
     {
       tag: 'Desinfección de Nivel Hospitalario',
@@ -319,6 +359,9 @@ const ServicesMatrix = () => {
       tecnica: 'Aplicamos una niebla súper fina que desinfecta todo sin dejar malos olores ni manchar tus muebles.',
       cta: '¡Quiero desinfectar mi negocio!',
       msg: 'Hola, me interesa el servicio de Desinfección de Nivel Hospitalario. ¿Me pueden dar más información y precios?',
+      image: 'https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&h=400&fit=crop',
+      imageAlt: 'Desinfección profesional COFEPRIS en CDMX - Técnico con nebulizador eliminando virus y bacterias',
+      imageTitle: 'Desinfección nivel hospitalario - Certificado COFEPRIS CDMX',
     },
     {
       tag: 'Rescate de Madera (Termitas)',
@@ -328,6 +371,9 @@ const ServicesMatrix = () => {
       tecnica: 'Aplicamos tratamientos directos en la madera para crear un escudo protector que dura muchísimo tiempo.',
       cta: '¡Quiero salvar mi madera!',
       msg: 'Hola, me interesa el servicio para eliminar termitas y polilla. ¿Me pueden dar más información y precios?',
+      image: '/images/madera.jpeg',
+      imageAlt: 'Tratamiento anti-termitas en CDMX - Técnico inyectando protección en madera contra termitas y polilla',
+      imageTitle: 'Eliminación de termitas - Rescate de madera CDMX',
     },
   ];
 
@@ -345,34 +391,51 @@ const ServicesMatrix = () => {
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:shadow-lg transition-all duration-300">
-              <span className="inline-block text-xs font-bold text-gray-500 uppercase tracking-wide bg-gray-100 px-3 py-1.5 rounded-full mb-4">
-                {service.tag}
-              </span>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <span className="font-semibold text-gray-700">Ideal para: </span>
-                  <span className="text-gray-600">{service.para}</span>
-                </div>
-                <div>
-                  <span className="font-semibold text-gray-700">Eliminamos: </span>
-                  <span className="text-gray-600">{service.ataca}</span>
-                </div>
-                <div>
-                  <span className="font-semibold text-gray-700">Cómo lo hacemos: </span>
-                  <span className="text-gray-600">{service.tecnica}</span>
+            <div key={index} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300">
+              {/* Imagen del servicio */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image}
+                  alt={service.imageAlt}
+                  title={service.imageTitle}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute top-3 left-3">
+                  <span className="inline-block text-xs font-bold text-gray-900 uppercase tracking-wide bg-white px-3 py-1.5 rounded-full shadow-md">
+                    {service.tag}
+                  </span>
                 </div>
               </div>
-              <a 
-                href={`https://wa.me/5520872132?text=${encodeURIComponent(service.msg)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackCTA(`protocolo_${service.title.toLowerCase().replace(/\s+/g, '_')}`, 'servicios')}
-                className="inline-flex items-center gap-2 mt-5 px-5 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-md"
-              >
-                {service.cta}
-              </a>
+              
+              {/* Contenido */}
+              <div className="p-6 md:p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <div className="space-y-3 text-sm mb-5">
+                  <div>
+                    <span className="font-semibold text-gray-700">Ideal para: </span>
+                    <span className="text-gray-600">{service.para}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-700">Eliminamos: </span>
+                    <span className="text-gray-600">{service.ataca}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-700">Cómo lo hacemos: </span>
+                    <span className="text-gray-600">{service.tecnica}</span>
+                  </div>
+                </div>
+                
+                <a 
+                  href={`https://wa.me/5520872132?text=${encodeURIComponent(service.msg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackCTA(`protocolo_${service.title.toLowerCase().replace(/\s+/g, '_')}`, 'servicios')}
+                  className="inline-flex items-center gap-2 w-full justify-center px-5 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-bold text-sm transition-all hover:scale-105 shadow-md"
+                >
+                  {service.cta}
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -449,6 +512,7 @@ export function ServicesPage() {
     <div className="min-h-screen">
       <Navbar />
       <ServicesHero />
+      <TrustImageSection />
       <ServicesArsenal />
       <ServicesMatrix />
       <GuaranteeSection />
