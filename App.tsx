@@ -175,7 +175,7 @@ const Hero = () => (
           ¡Servicio de Fumigación en CDMX y Edo. Mex!
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-          Eliminamos plagas con cero riesgos y tecnología de precisión.
+          Expertos en Eliminación de Chinches y Cucarachas en CDMX
         </h1>
         <p className="text-base md:text-lg text-gray-600 max-w-xl leading-relaxed">
           Olvídate de insectos y roedores. Somos <span className="font-semibold text-gray-900">expertos en control de plagas</span> residencial y comercial. Te ofrecemos soluciones <span className="font-semibold text-gray-900">efectivas, seguras y garantizadas</span> desde la <span className="font-semibold text-gray-900">primera visita</span>, cuidando tu salud y la de tu familia.
@@ -196,6 +196,16 @@ const Hero = () => (
             </div>
           </div>
         </div>
+        <div className="flex flex-wrap gap-3 pt-4">
+          <div className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">
+            <span className="material-icons-outlined text-brand-green text-sm">verified</span>
+            <span className="text-gray-700 text-sm font-medium">Productos 100% Seguros</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">
+            <span className="material-icons-outlined text-brand-green text-sm">shield</span>
+            <span className="text-gray-700 text-sm font-medium">Certificación COFEPRIS</span>
+          </div>
+        </div>
         <div className="pt-2">
           <a
             href="https://wa.me/5520872132?text=Hola%2C%20estaba%20viendo%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20precios%20sobre%20sus%20servicios."
@@ -213,7 +223,7 @@ const Hero = () => (
         <div className="relative">
           <img 
             src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=600&fit=crop" 
-            alt="Familia feliz en su hogar protegido" 
+            alt="Servicio profesional de fumigación en CDMX para eliminar chinches y cucarachas en hogares" 
             className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover"
           />
           {/* Stats Card */}
@@ -232,11 +242,11 @@ const TrustBar = () => (
     <div className="container mx-auto px-4 text-center">
       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-10">Usamos los mejores productos para el control de plagas:</p>
       <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-        <img src="/images/Bayer.png" alt="Bayer" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-        <img src="/images/bell.png" alt="Bell Labs" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-        <img src="/images/allister.png" alt="Allister" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-        <img src="/images/agromundo.png" alt="Agromundo" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
-        <img src="/images/bird.png" alt="Bird" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/Bayer.png" alt="Productos Bayer para fumigación profesional" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/bell.png" alt="Bell Labs control de plagas CDMX" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/allister.png" alt="Allister productos fumigación" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/agromundo.png" alt="Agromundo control de plagas" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+        <img src="/images/bird.png" alt="Bird productos control de plagas" className="h-10 md:h-14 object-contain opacity-60 hover:opacity-100 transition-opacity" />
       </div>
     </div>
   </div>
@@ -277,7 +287,7 @@ const BenefitsAndTestimonials = () => (
     <div className="bg-white py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">Expertos en Control de Plagas para cada necesidad</h2>
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">¿Necesitas Fumigación para tu Casa o tu Negocio?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Selecciona el servicio que necesitas y enviaremos a un experto a cualquier zona de la CDMX o el Estado de México hoy mismo.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -445,6 +455,110 @@ const ProcessSteps = () => (
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Quiero empezar el Paso 1 ahora
         </a>
+      </div>
+    </div>
+  </section>
+);
+
+const PricingSection = () => (
+  <section className="py-16 md:py-20 bg-gray-50">
+    <div className="container mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+            Precios de Fumigación en CDMX
+          </h2>
+          <p className="text-gray-600 text-lg">
+            Cotizaciones transparentes según el tamaño de tu espacio y tipo de plaga
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {/* Departamento */}
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20quiero%20cotizar%20fumigaci%C3%B3n%20para%20mi%20departamento%20(hasta%2080m%C2%B2).%20%C2%BFCu%C3%A1l%20ser%C3%ADa%20el%20precio%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTA('precios_departamento', 'inicio')}
+            className="bg-white p-8 rounded-2xl border border-gray-200 text-center hover:shadow-xl hover:border-brand-green transition-all hover:scale-105 cursor-pointer group"
+          >
+            <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-green/20 transition-colors">
+              <span className="material-icons-outlined text-brand-green">apartment</span>
+            </div>
+            <h3 className="font-bold text-xl mb-2">Departamento</h3>
+            <p className="text-gray-500 text-sm mb-4">Hasta 80m²</p>
+            <p className="text-gray-400 text-sm mb-2">Precio desde:</p>
+            <div className="inline-flex items-center gap-2 text-3xl font-black text-brand-green mb-4">
+              Cotizar
+              <span className="material-icons-outlined text-2xl">arrow_forward</span>
+            </div>
+            <p className="text-xs text-gray-500">Precio final según tipo de plaga</p>
+          </a>
+          
+          {/* Casa */}
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20quiero%20cotizar%20fumigaci%C3%B3n%20para%20mi%20casa%20(hasta%20200m%C2%B2).%20%C2%BFCu%C3%A1l%20ser%C3%ADa%20el%20precio%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTA('precios_casa', 'inicio')}
+            className="bg-white p-8 rounded-2xl border-2 border-brand-green text-center relative hover:shadow-2xl transition-all hover:scale-105 cursor-pointer group"
+          >
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-green text-white text-xs font-bold px-4 py-1 rounded-full">
+              Más Popular
+            </span>
+            <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-green/20 transition-colors">
+              <span className="material-icons-outlined text-brand-green">home</span>
+            </div>
+            <h3 className="font-bold text-xl mb-2">Casa</h3>
+            <p className="text-gray-500 text-sm mb-4">Hasta 200m²</p>
+            <p className="text-gray-400 text-sm mb-2">Precio desde:</p>
+            <div className="inline-flex items-center gap-2 text-3xl font-black text-brand-green mb-4">
+              Cotizar
+              <span className="material-icons-outlined text-2xl">arrow_forward</span>
+            </div>
+            <p className="text-xs text-gray-500">Precio final según tipo de plaga</p>
+          </a>
+          
+          {/* Negocio */}
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20necesito%20cotizaci%C3%B3n%20personalizada%20de%20fumigaci%C3%B3n%20para%20mi%20negocio.%20Tambi%C3%A9n%20requiero%20el%20certificado%20COFEPRIS."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTA('precios_negocio', 'inicio')}
+            className="bg-white p-8 rounded-2xl border border-gray-200 text-center hover:shadow-xl hover:border-blue-700 transition-all hover:scale-105 cursor-pointer group"
+          >
+            <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+              <span className="material-icons-outlined text-blue-700">business</span>
+            </div>
+            <h3 className="font-bold text-xl mb-2">Negocio</h3>
+            <p className="text-gray-500 text-sm mb-4">Cualquier tamaño</p>
+            <p className="text-gray-400 text-sm mb-2">Cotización:</p>
+            <div className="inline-flex items-center gap-2 text-3xl font-black text-blue-700 mb-4">
+              Personalizada
+              <span className="material-icons-outlined text-2xl">arrow_forward</span>
+            </div>
+            <p className="text-xs text-gray-500">Incluye certificado COFEPRIS</p>
+          </a>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-600 text-sm mb-3">
+            ¿No estás seguro del tamaño de tu espacio o tienes dudas?
+          </p>
+          <a
+            href="https://wa.me/5520872132?text=Hola%2C%20necesito%20ayuda%20para%20cotizar%20el%20servicio%20de%20fumigaci%C3%B3n.%20No%20estoy%20seguro%20del%20tama%C3%B1o%20exacto%20de%20mi%20espacio."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTA('precios_ayuda', 'inicio')}
+            className="inline-flex items-center gap-2 text-brand-green font-semibold hover:underline"
+          >
+            <span className="material-icons-outlined text-sm">support_agent</span>
+            Escríbenos y te ayudamos a elegir la mejor opción
+          </a>
+          <p className="text-gray-500 text-sm mt-3">
+            Respuesta en menos de 15 minutos
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -972,16 +1086,49 @@ const Footer = () => (
         {/* Column 4: Coverage */}
         <div>
           <h4 className="font-bold text-white mb-4">Zonas de Servicio</h4>
-          <ul className="space-y-3">
-            <li><span className="text-gray-400 text-sm">Fumigaciones en CDMX</span></li>
-            <li><span className="text-gray-400 text-sm">Fumigaciones en Estado de México</span></li>
-            <li><span className="text-gray-400 text-sm">Fumigaciones en Querétaro y Puebla</span></li>
+          <p className="text-gray-400 text-xs mb-3">Fumigación profesional en:</p>
+          <ul className="space-y-2">
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Benito Juárez
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Azcapotzalco
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Coyoacán
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Polanco
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Naucalpan
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Tlalpan
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Iztapalapa
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Cuauhtémoc
+            </li>
           </ul>
           <Link to="/contacto" className="inline-flex items-center gap-1 text-brand-green text-sm font-semibold mt-4 hover:underline">
-            Ver todas nuestras 45+ zonas
+            Ver todas las 45+ zonas
             <span className="material-icons-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
+      </div>
+      
+      {/* Cobertura Geográfica Completa */}
+      <div className="mt-8 pt-8 border-t border-white/10">
+        <p className="text-gray-400 text-xs text-center leading-relaxed max-w-6xl mx-auto">
+          También brindamos servicio en: <span className="text-gray-300">Miguel Hidalgo, Álvaro Obregón, Xochimilco, Tláhuac, 
+          Gustavo A. Madero, Venustiano Carranza, Iztacalco, Magdalena Contreras, Milpa Alta, Cuajimalpa, 
+          Ecatepec, Nezahualcóyotl, Tlalnepantla, Atizapán, Huixquilucan, Satélite, Interlomas, Santa Fe, 
+          Roma Norte, Condesa, Del Valle, Lindavista, Perisur, Insurgentes, Reforma, Chapultepec</span> y más zonas 
+          de la CDMX y Estado de México.
+        </p>
       </div>
       
       {/* Bottom Bar */}
@@ -1005,6 +1152,7 @@ export default function App() {
       <BenefitsAndTestimonials />
       <Testimonials />
       <ProcessSteps />
+      <PricingSection />
       <ComparisonTable />
       <ServiceDetails />
       <FAQ />

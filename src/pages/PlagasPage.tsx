@@ -216,7 +216,7 @@ const PlagasHero = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-6">
-          ¿En dónde encontraste el problema?
+          Eliminación de Chinches, Cucarachas y Plagas en CDMX
         </h1>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
           Dinos en qué parte de tu casa o negocio viste a los bichitos. Te explicaremos cómo los eliminamos de raíz, de forma súper segura y sin complicaciones, para que recuperes tu tranquilidad.
@@ -370,7 +370,7 @@ const PlagasSections = () => {
     {
       id: 'cocina',
       icon: 'kitchen',
-      title: 'Invasores de Cocina y Alimentos',
+      title: 'Control de Cucarachas y Hormigas en Cocinas de CDMX',
       subtitle: 'Protegemos tu comida y la higiene de tu familia.',
       accentColor: 'border-orange-300',
       plagas: [
@@ -421,7 +421,7 @@ const PlagasSections = () => {
     {
       id: 'descanso',
       icon: 'hotel',
-      title: 'Amenazas al Descanso y la Salud',
+      title: 'Eliminación de Chinches de Cama en CDMX - Expertos Certificados',
       subtitle: 'Cuidamos tu sueño y la salud de los que más amas.',
       accentColor: 'border-red-300',
       plagas: [
@@ -472,7 +472,7 @@ const PlagasSections = () => {
     {
       id: 'estructura',
       icon: 'foundation',
-      title: 'Destructores de Patrimonio',
+      title: 'Control de Roedores y Termitas - Protección Estructural',
       subtitle: 'Cuidamos tus muebles, tu casa y tu inversión.',
       accentColor: 'border-purple-300',
       plagas: [
@@ -523,7 +523,7 @@ const PlagasSections = () => {
     {
       id: 'exteriores',
       icon: 'park',
-      title: 'Amenazas en Patios y Exteriores',
+      title: 'Fumigación de Jardines y Patios en CDMX',
       subtitle: 'Disfruta de tu jardín, terraza o estacionamiento sin molestias.',
       accentColor: 'border-green-300',
       plagas: [
@@ -592,7 +592,7 @@ const EmergencyCTA = () => (
           <span className="material-icons-outlined text-red-500 text-3xl">warning</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-          ¿Tienes una emergencia y necesitas ayuda YA?
+          Servicio de Fumigación Urgente en CDMX - Respuesta Inmediata
         </h2>
         <p className="text-gray-600 mb-6">
           Si la situación se salió de control, la plaga es masiva o necesitas que vayamos urgentísimo, escríbenos o llámanos ahora mismo. ¡Te contestamos en menos de 15 minutos!

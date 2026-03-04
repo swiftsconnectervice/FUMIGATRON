@@ -224,7 +224,7 @@ const ServicesHero = () => (
           <span className="material-icons-outlined text-sm">biotech</span> Fumigación | Control de Plagas | Desinfección
         </div>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-          La solución exacta que necesitas para despedirte de las plagas.
+          Servicios de Fumigación en CDMX: Control de Plagas Profesional
         </h1>
         <p className="text-lg md:text-xl text-white/90 leading-relaxed">
           No rociamos químicos nada más porque sí. Evaluamos tu problema y aplicamos el tratamiento perfecto para eliminarlo rápido, de raíz y sin riesgos para ti.
@@ -336,7 +336,7 @@ const ServicesMatrix = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-            Tratamientos especiales para cada tipo de problema
+            Precios y Servicios de Fumigación para Chinches, Cucarachas y Más
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Nuestros expertos revisan tu caso y aplican justo lo que necesitas: desde proteger tu espacio antes de que haya un problema, hasta eliminar una plaga difícil por completo.
@@ -396,7 +396,7 @@ const GuaranteeSection = () => (
           
           <div className="text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4">
-              Tu tranquilidad está 100% garantizada
+              Garantía Certificada COFEPRIS en Todos Nuestros Servicios
             </h2>
             <p className="text-white/90 text-lg leading-relaxed mb-6">
               Todos nuestros trabajos están respaldados por escrito. Si por alguna razón el problema sigue durante el tiempo de garantía, ¡regresamos y lo solucionamos totalmente gratis!
@@ -426,7 +426,7 @@ const CallToAction = () => (
   <section className="py-16 md:py-20 bg-gray-50">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-        ¿Listo para decirle adiós al problema hoy mismo?
+        Cotiza tu Fumigación en CDMX Hoy - Respuesta en 15 Minutos
       </h2>
       <p className="text-gray-600 mb-8 max-w-xl mx-auto">
         ¡Escríbenos ya! Uno de nuestros expertos revisará tu caso y te dará la solución exacta y el precio en menos de 15 minutos. Sin presiones y sin compromisos.

@@ -198,7 +198,7 @@ const ContactHero = () => (
           <span className="material-icons-outlined text-brand-green text-3xl">support_agent</span>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
-          ¡Recupera la tranquilidad de tu espacio hoy mismo!
+          Contacto Fumigación CDMX - Cotización Gratis en 15 Minutos
         </h1>
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
           Te escuchamos y te ayudamos rápido. Ya sea para tu casa o tu negocio, tu primer diagnóstico va por nuestra cuenta.
@@ -258,7 +258,7 @@ const ContactForm = () => {
             {/* Form */}
             <div className="md:col-span-3">
               <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8">
-                <h2 className="text-xl font-bold text-gray-900 mb-6">Cuéntanos, ¿cómo podemos ayudarte?</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-6">Solicita tu Cotización de Fumigación - Precios Transparentes</h2>
                 
                 {status === 'success' ? (
                   <div className="text-center py-8">
@@ -463,7 +463,7 @@ const EmergencySection = () => (
               <span className="material-icons-outlined text-red-500 text-3xl">warning</span>
             </div>
             <div className="text-center md:text-left flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">¿Tienes una emergencia que no puede esperar?</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Fumigación de Emergencia en CDMX - Atención 24/7</h3>
               <p className="text-gray-600 text-sm mb-4">
                 ¡Tranquilo, estamos listos! Escríbenos y te respondemos en menos de 15 minutos para darte una solución urgente.
               </p>
@@ -520,7 +520,7 @@ const CoverageSection = () => {
               Nuestra Cobertura
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-              ¡Llegamos rápido a donde estés!
+              Zonas de Cobertura: Fumigación en Todas las Alcaldías de CDMX
             </h2>
             <p className="text-gray-600">
               Brindamos servicio de primera en toda la CDMX, Estado de México y ciudades cercanas. Selecciona tu zona:

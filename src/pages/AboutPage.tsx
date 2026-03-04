@@ -185,16 +185,49 @@ const Footer = () => (
         {/* Column 4: Coverage */}
         <div>
           <h4 className="font-bold text-white mb-4">Zonas de Servicio</h4>
-          <ul className="space-y-3">
-            <li><span className="text-gray-400 text-sm">Fumigaciones en CDMX</span></li>
-            <li><span className="text-gray-400 text-sm">Fumigaciones en Estado de México</span></li>
-            <li><span className="text-gray-400 text-sm">Fumigaciones en Querétaro y Puebla</span></li>
+          <p className="text-gray-400 text-xs mb-3">Fumigación profesional en:</p>
+          <ul className="space-y-2">
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Benito Juárez
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Azcapotzalco
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Coyoacán
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Polanco
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Naucalpan
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Tlalpan
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Iztapalapa
+            </li>
+            <li className="text-gray-400 text-sm hover:text-brand-green transition-colors">
+              <span className="text-brand-green">•</span> Cuauhtémoc
+            </li>
           </ul>
           <Link to="/contacto" className="inline-flex items-center gap-1 text-brand-green text-sm font-semibold mt-4 hover:underline">
-            Ver todas nuestras 45+ zonas
+            Ver todas las 45+ zonas
             <span className="material-icons-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
+      </div>
+      
+      {/* Cobertura Geográfica Completa */}
+      <div className="mt-8 pt-8 border-t border-white/10">
+        <p className="text-gray-400 text-xs text-center leading-relaxed max-w-6xl mx-auto">
+          También brindamos servicio en: <span className="text-gray-300">Miguel Hidalgo, Álvaro Obregón, Xochimilco, Tláhuac, 
+          Gustavo A. Madero, Venustiano Carranza, Iztacalco, Magdalena Contreras, Milpa Alta, Cuajimalpa, 
+          Ecatepec, Nezahualcóyotl, Tlalnepantla, Atizapán, Huixquilucan, Satélite, Interlomas, Santa Fe, 
+          Roma Norte, Condesa, Del Valle, Lindavista, Perisur, Insurgentes, Reforma, Chapultepec</span> y más zonas 
+          de la CDMX y Estado de México.
+        </p>
       </div>
       
       {/* Bottom Bar */}
@@ -225,7 +258,7 @@ const AboutHero = () => (
           Desde 2010
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-          Quiénes Somos
+          Empresa de Fumigación en CDMX con Certificación COFEPRIS
         </h1>
         <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
           Guardianes de la salud familiar. Aliados estratégicos de tu empresa.
@@ -240,6 +273,9 @@ const AboutContent = () => (
     <div className="container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-8">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
+            Expertos en Control de Chinches y Cucarachas desde 2010
+          </h2>
           <div className="space-y-6">
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
               Para nosotros, eliminar plagas no es solo un trabajo; es nuestra forma de cuidar la <span className="font-bold">salud, la paz y la tranquilidad</span> de tu familia o de tu equipo de trabajo.
@@ -289,7 +325,7 @@ const AboutContent = () => (
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop" 
-              alt="Equipo Fumigatron - Profesionales en control de plagas" 
+              alt="Equipo profesional de fumigación en CDMX certificado por COFEPRIS para eliminar chinches y cucarachas" 
               className="w-full aspect-[4/3] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -307,6 +343,53 @@ const AboutContent = () => (
             </div>
             <p className="text-xs text-gray-500 leading-relaxed">
               Proteger la salud y la paz de las familias mexicanas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const CertificationsSection = () => (
+  <section className="py-16 md:py-20 bg-gray-50">
+    <div className="container mx-auto px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+          Certificados y Avalados por las Autoridades Sanitarias
+        </h2>
+        <p className="text-gray-600 text-lg mb-12">
+          Cumplimos con todas las normas oficiales para brindarte un servicio seguro y confiable
+        </p>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="material-icons-outlined text-brand-green text-3xl">verified</span>
+            </div>
+            <h3 className="font-bold text-xl mb-3">Certificación COFEPRIS</h3>
+            <p className="text-gray-600 text-sm">
+              Cumplimos con todas las normas de la Comisión Federal para la Protección contra Riesgos Sanitarios
+            </p>
+          </div>
+          
+          <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="material-icons-outlined text-brand-green text-3xl">eco</span>
+            </div>
+            <h3 className="font-bold text-xl mb-3">Productos Certificados</h3>
+            <p className="text-gray-600 text-sm">
+              Usamos únicamente productos aprobados y seguros para uso residencial y comercial
+            </p>
+          </div>
+          
+          <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow">
+            <div className="w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="material-icons-outlined text-brand-green text-3xl">school</span>
+            </div>
+            <h3 className="font-bold text-xl mb-3">Personal Capacitado</h3>
+            <p className="text-gray-600 text-sm">
+              Nuestro equipo está certificado y en constante actualización sobre técnicas de control de plagas
             </p>
           </div>
         </div>
@@ -334,7 +417,7 @@ const ExperienceSection = () => (
             Experiencia que te da tranquilidad
           </div>
           <h2 className="text-2xl md:text-3xl font-black text-white leading-tight">
-            Listos para resolver los retos más difíciles
+            Experiencia Industrial Aplicada a tu Hogar y Negocio en CDMX
           </h2>
         </div>
         
@@ -542,6 +625,7 @@ export function AboutPage() {
       <Navbar />
       <AboutHero />
       <AboutContent />
+      <CertificationsSection />
       <ExperienceSection />
       <PilaresSection />
       <Stats />
