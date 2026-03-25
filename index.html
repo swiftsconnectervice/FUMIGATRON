@@ -48,7 +48,7 @@
       .animate-fadeIn {
         animation: fadeIn 0.3s ease-out forwards;
       }
-      /* Ant SVG march animation */
+      /* === OPCION A: Fila de hormigas (corregidas, mirando hacia adelante) === */
       .ant-trail {
         overflow: hidden;
         width: 120px;
@@ -74,6 +74,27 @@
       @keyframes antWalk {
         0%   { transform: translateX(-80px); }
         100% { transform: translateX(140px); }
+      }
+
+      /* === OPCION B: Hormigas orbitando alrededor del texto FUMIGATRON === */
+      .logo-orbit-wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 4px 6px;
+      }
+      .orbit-ant {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        offset-path: rect(0px 100% 100% 0px round 4px);
+        offset-rotate: auto;
+        animation: orbitMove 4s linear infinite;
+      }
+      .orbit-ant:nth-child(2) { animation-delay: -1.33s; }
+      .orbit-ant:nth-child(3) { animation-delay: -2.66s; }
+      @keyframes orbitMove {
+        0%   { offset-distance: 0%; }
+        100% { offset-distance: 100%; }
       }
     </style>
   <script type="importmap">

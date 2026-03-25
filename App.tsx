@@ -78,43 +78,59 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <TopBar />
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-        <Link to="/" className="flex flex-col">
-          <span className="font-display font-black text-xl md:text-2xl tracking-tight text-brand-green">
-            FUMIGATRON
-          </span>
+        <Link to="/" className="flex flex-col items-start">
+          {/* OPCION B: Hormigas orbitando alrededor del texto */}
+          <div className="logo-orbit-wrapper">
+            <span className="font-display font-black text-xl md:text-2xl tracking-tight text-brand-green">
+              FUMIGATRON
+            </span>
+            {[0,1,2].map(i => (
+              <svg key={i} className="orbit-ant" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="7" cy="5" rx="2.5" ry="1.8" fill="#2E7D32"/>
+                <ellipse cx="4" cy="5" rx="1.5" ry="1.4" fill="#2E7D32"/>
+                <ellipse cx="1.8" cy="5" rx="1.4" ry="1.5" fill="#2E7D32"/>
+                <line x1="1.5" y1="3.5" x2="0.5" y2="1.5" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+                <line x1="2" y1="3.5" x2="1.5" y2="1.5" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+                <line x1="6" y1="6" x2="7.5" y2="9" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+                <line x1="6" y1="4" x2="7.5" y2="1" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+                <line x1="4" y1="6.2" x2="3" y2="9" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+                <line x1="4" y1="3.8" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.7" strokeLinecap="round"/>
+              </svg>
+            ))}
+          </div>
+
+          {/* OPCION A: Fila de hormigas caminando hacia la derecha */}
           <div className="ant-trail">
             <div className="ant-svg-group">
               {[0,1,2].map(i => (
-                <svg key={i} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{animationDelay: `${i * 0.15}s`}}>
-                  {/* Body segments */}
-                  <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#2E7D32"/>
-                  <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="#2E7D32"/>
-                  <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="#2E7D32"/>
-                  {/* Antennae */}
-                  <g className="ant-antenna">
-                    <line x1="3" y1="4" x2="1" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="4" y1="4" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
-                  </g>
-                  {/* Front legs */}
-                  <g className="ant-leg-front">
-                    <line x1="11" y1="7" x2="13" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="11" y1="5" x2="13" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
-                  </g>
-                  {/* Mid legs */}
-                  <g className="ant-leg-mid">
-                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
-                  </g>
-                  {/* Back legs */}
-                  <g className="ant-leg-back">
-                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                <svg key={i} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="scale(-1,1) translate(-18,0)">
+                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#2E7D32"/>
+                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="#2E7D32"/>
+                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="#2E7D32"/>
+                    <g className="ant-antenna">
+                      <line x1="3" y1="4" x2="1" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                      <line x1="4" y1="4" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                    </g>
+                    <g className="ant-leg-front">
+                      <line x1="11" y1="7" x2="13" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="11" y1="5" x2="13" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    </g>
+                    <g className="ant-leg-mid">
+                      <line x1="8" y1="7.5" x2="6" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="8" y1="4.5" x2="6" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    </g>
+                    <g className="ant-leg-back">
+                      <line x1="5" y1="7.5" x2="3" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="5" y1="4.5" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    </g>
                   </g>
                 </svg>
               ))}
             </div>
           </div>
-          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-0.5">Nosotros sí podemos</span>
+
+          <span className="text-[10px] md:text-xs text-gray-500 italic">Nosotros sí podemos</span>
         </Link>
         
         {/* Desktop Navigation */}
