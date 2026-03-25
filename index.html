@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fumigación CDMX | Expertos en Chinches y Cucarachas - Fumigatron</title>
     <meta name="description" content="Fumigación profesional en CDMX y Edo. Mex. Eliminamos chinches, cucarachas y roedores. Precios transparentes, productos seguros y certificación COFEPRIS. Cotiza gratis.">
+    <link rel="canonical" href="https://fumigatron.com.mx/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +48,33 @@
       .animate-fadeIn {
         animation: fadeIn 0.3s ease-out forwards;
       }
+      /* Ant SVG march animation */
+      .ant-trail {
+        overflow: hidden;
+        width: 120px;
+        height: 14px;
+        position: relative;
+      }
+      .ant-svg-group {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: antWalk 6s linear infinite;
+        top: 1px;
+      }
+      .ant-leg-front { transform-origin: center; animation: legSwingF 0.35s ease-in-out infinite alternate; }
+      .ant-leg-mid   { transform-origin: center; animation: legSwingM 0.35s ease-in-out infinite alternate-reverse; }
+      .ant-leg-back  { transform-origin: center; animation: legSwingB 0.35s ease-in-out infinite alternate; }
+      @keyframes legSwingF { from { rotate: -25deg; } to { rotate: 25deg; } }
+      @keyframes legSwingM { from { rotate: -18deg; } to { rotate: 18deg; } }
+      @keyframes legSwingB { from { rotate: -25deg; } to { rotate: 25deg; } }
+      .ant-antenna { transform-origin: 0% 100%; animation: antennaWiggle 0.5s ease-in-out infinite alternate; }
+      @keyframes antennaWiggle { from { rotate: -12deg; } to { rotate: 12deg; } }
+      @keyframes antWalk {
+        0%   { transform: translateX(-80px); }
+        100% { transform: translateX(140px); }
+      }
     </style>
   <script type="importmap">
 {
@@ -57,7 +85,145 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <!-- Schema: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PestControlService",
+    "name": "Fumigatron",
+    "alternateName": "Fumigatron SA de CV",
+    "description": "Fumigación profesional y control de plagas en CDMX y Estado de México. Eliminamos chinches, cucarachas, roedores y termitas con productos seguros y certificación COFEPRIS.",
+    "url": "https://www.fumigatron.com.mx",
+    "telephone": ["+525546329117", "+525570297410"],
+    "email": "servicios@fumigatron.com.mx",
+    "image": "https://www.fumigatron.com.mx/images/servicios_4.jpeg",
+    "foundingDate": "2010",
+    "slogan": "Nosotros sí podemos",
+    "priceRange": "$$",
+    "currenciesAccepted": "MXN",
+    "paymentAccepted": "Efectivo, Transferencia, Tarjeta",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. Colima 20, Hab Valle Ceylan",
+      "addressLocality": "Tlalnepantla de Baz",
+      "addressRegion": "Estado de México",
+      "postalCode": "54150",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.538723,
+      "longitude": -99.182046
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Ciudad de México"},
+      {"@type": "City", "name": "Tlalnepantla"},
+      {"@type": "City", "name": "Naucalpan"},
+      {"@type": "City", "name": "Ecatepec"},
+      {"@type": "City", "name": "Nezahualcóyotl"},
+      {"@type": "City", "name": "Huixquilucan"},
+      {"@type": "City", "name": "Atizapán de Zaragoza"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Fumigación",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fumigación de Chinches de Cama en CDMX"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fumigación de Cucarachas en CDMX"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Control de Roedores (Ratas y Ratones)"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Eliminación de Termitas y Polilla"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desinfección Profesional Nivel Hospitalario"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Control Preventivo de Plagas"}}
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/fumigalex",
+      "https://www.instagram.com/fumigalex/",
+      "https://www.tiktok.com/@fumigatron"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "320",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Tengo que salir de mi casa durante la fumigación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del tipo de tratamiento. Si es preventivo, puedes quedarte tranquilamente en casa. Si es un tratamiento correctivo, una vez que concluimos te pedimos que dejes pasar por lo menos una hora antes de reingresar para que se asienten las partículas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La fumigación es segura para mis mascotas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, es seguro. Aplicamos el tratamiento justo donde se necesita. Te recomendamos dejar pasar como mínimo una hora para que se asienten las partículas, y al reingresar realizar un aseo general antes de que regresen tus mascotas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo dura la protección después de fumigar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del entorno. En una casa, oficina o bodega puede ser cada 3, 6 o hasta 12 meses sin problema. Pero en negocios de comida (restaurantes, cocinas, etc.) es por lo menos una vez al mes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Me dan un certificado de fumigación para mi negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Por supuesto. Al terminar, te entregamos un certificado oficial con validez para cualquier revisión o inspección sanitaria avalado por COFEPRIS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta fumigar una casa en CDMX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El precio depende del tamaño de tu espacio y del tipo de plaga que necesites eliminar. Escríbenos por WhatsApp con los detalles de tu caso y te damos una cotización exacta en menos de 15 minutos, sin compromiso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En qué zonas de la CDMX y Estado de México dan servicio de fumigación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cubrimos todas las alcaldías de la CDMX (Benito Juárez, Coyoacán, Cuauhtémoc, Miguel Hidalgo, Azcapotzalco, Tlalpan, Iztapalapa, Álvaro Obregón, Gustavo A. Madero, Xochimilco y más) y los principales municipios del Estado de México como Naucalpan, Tlalnepantla, Ecatepec, Nezahualcóyotl, Huixquilucan, Atizapán, Satélite, Interlomas y Santa Fe."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Fumigatron - Fumigación y Control de Plagas CDMX",
+    "url": "https://www.fumigatron.com.mx",
+    "description": "Fumigación profesional en CDMX y Estado de México. Eliminamos chinches, cucarachas, roedores y termitas. Certificación COFEPRIS y garantía por escrito."
+  }
+  </script>
 </head>
   <body class="bg-white text-gray-900">
     <div id="root"></div>

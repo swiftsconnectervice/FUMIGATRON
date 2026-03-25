@@ -53,9 +53,36 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="font-display font-black text-xl md:text-2xl tracking-tight text-brand-green">
-            FUMIGATRO<span className="text-brand-forest">N</span>
+            FUMIGATRON
           </span>
-          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-1">Nosotros sí podemos</span>
+          <div className="ant-trail">
+            <div className="ant-svg-group">
+              {[0,1,2].map(i => (
+                <svg key={i} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{animationDelay: `${i * 0.15}s`}}>
+                  <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#2E7D32"/>
+                  <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="#2E7D32"/>
+                  <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="#2E7D32"/>
+                  <g className="ant-antenna">
+                    <line x1="3" y1="4" x2="1" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                    <line x1="4" y1="4" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-front">
+                    <line x1="11" y1="7" x2="13" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="11" y1="5" x2="13" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-mid">
+                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-back">
+                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                </svg>
+              ))}
+            </div>
+          </div>
+          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-0.5">Nosotros sí podemos</span>
         </Link>
         
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -129,7 +156,7 @@ const Footer = () => (
         <div>
           <div className="mb-4">
             <span className="font-display font-black text-2xl tracking-tighter">
-              FUMIGATRO<span className="text-brand-green">N</span>
+              FUMIGATRON
             </span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -155,7 +182,7 @@ const Footer = () => (
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Tratamientos para los Muebles de Madera</Link></li>
           </ul>
         </div>
 
@@ -274,7 +301,7 @@ const AboutContent = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-8">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
-            Expertos en Control de Chinches y Cucarachas desde 2010
+            Expertos en Control de Plagas en CDMX y Edo. Mex.
           </h2>
           <div className="space-y-6">
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
@@ -300,7 +327,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">biotech</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Calidad Garantizada</h4>
-              <p className="text-sm text-gray-500">Usamos métodos súper seguros y efectivos, justo como los que exigen los hospitales.</p>
+              <p className="text-sm text-gray-500">Usamos métodos seguros y efectivos, justo como los que exigen los hospitales.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
@@ -308,7 +335,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">eco</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Productos 100% Seguros</h4>
-              <p className="text-sm text-gray-500">Fórmulas amigables que cuidan de ti, tus hijos y tus mascotas. ¡Cero riesgos de intoxicación!</p>
+              <p className="text-sm text-gray-500">Fórmulas amigables que cuidan de ti, tus hijos y tus mascotas. Cero riesgos de intoxicación.</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-lg transition-shadow">
@@ -316,7 +343,7 @@ const AboutContent = () => (
                 <span className="material-icons-outlined text-brand-green">handshake</span>
               </div>
               <h4 className="font-bold text-gray-900 mb-1">Compromiso Real</h4>
-              <p className="text-sm text-gray-500">Te damos resultados garantizados por escrito desde el primer día que nos visitas.</p>
+              <p className="text-sm text-gray-500">Te damos resultados garantizados por escrito desde el primer día que te visitamos.</p>
             </div>
           </div>
         </div>
@@ -340,7 +367,7 @@ const AboutContent = () => (
           </div>
           
           <div className="absolute -bottom-6 -left-6 bg-brand-green text-white p-6 rounded-2xl shadow-xl">
-            <p className="text-3xl md:text-4xl font-black">+8</p>
+            <p className="text-3xl md:text-4xl font-black">+10</p>
             <p className="text-sm opacity-90">Años de experiencia comprobada</p>
           </div>
           
@@ -387,7 +414,7 @@ const CertificationsSection = () => (
             </div>
             <h3 className="font-bold text-xl mb-3">Productos Certificados</h3>
             <p className="text-gray-600 text-sm">
-              Usamos únicamente productos aprobados y seguros para uso residencial y comercial
+              Usamos productos aprobados y seguros para uso residencial y comercial
             </p>
           </div>
           
@@ -430,7 +457,7 @@ const ExperienceSection = () => (
         </div>
         
         <p className="text-gray-300 text-base md:text-lg leading-relaxed text-center mb-10">
-          Llevamos años resolviendo problemas de plagas en los lugares más exigentes (como grandes fábricas y transporte público). Sabemos que cuando se trata de <span className="text-brand-green font-semibold">tu salud y tu dinero</span>, las cosas se tienen que hacer bien a la primera y sin margen de error.
+          Llevamos años resolviendo problemas de plagas en los lugares más exigentes (como grandes fábricas y transporte público). Sabemos que cuando se trata de <span className="text-brand-green font-semibold">tu salud y tu dinero</span>, las cosas se tienen que hacer bien a la primera, sin margen de error.
         </p>
         
         {/* El Gancho */}
@@ -465,9 +492,9 @@ const PilaresSection = () => {
   const sectors = {
     hogar: {
       items: [
-        { icon: 'health_and_safety', title: 'Cuidamos tu Salud', desc: 'Usamos productos 100% inofensivos para tus hijos y mascotas. ¡Sin olores feos ni tóxicos!' },
-        { icon: 'bolt', title: 'Súper Rápido', desc: 'El problema queda resuelto desde la primera visita, garantizado.' },
-        { icon: 'weekend', title: 'Cero Estrés', desc: 'Hacemos el tratamiento sin que tengas que vaciar tu casa ni salirte todo el día.' },
+        { icon: 'health_and_safety', title: 'Cuidamos tu Salud', desc: 'Usamos productos 100% inofensivos para tus hijos y mascotas. Sin olores desagradables ni tóxicos.' },
+        { icon: 'bolt', title: 'Rápido y Efectivo', desc: 'El problema queda resuelto desde la primera visita, garantizado.' },
+        { icon: 'weekend', title: 'Sin Complicaciones', desc: 'Realizamos el tratamiento sin que tengas que vaciar tu casa ni salirte todo el día.' },
       ],
     },
     comercio: {
@@ -612,7 +639,7 @@ const CallToAction = () => (
         ¿Listo para recuperar tu tranquilidad y disfrutar de tus espacios?
       </h2>
       <p className="text-white/80 mb-8 max-w-xl mx-auto">
-        Escríbenos hoy mismo. Un experto revisará tu caso súper rápido y te dirá exactamente qué necesitas y cuánto cuesta, sin letras chiquitas ni compromisos ocultos.
+        Escríbenos hoy mismo. Un experto revisará tu caso rápido y te dirá exactamente qué necesitas y cuánto cuesta, sin letras chiquitas ni compromisos ocultos.
       </p>
       <a 
         href="https://wa.me/5520872132?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20diagn%C3%B3stico%20gratuito%20para%20mi%20espacio%20y%20saber%20c%C3%B3mo%20pueden%20ayudarme.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F"

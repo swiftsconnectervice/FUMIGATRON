@@ -53,9 +53,36 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="font-display font-black text-xl md:text-2xl tracking-tight text-brand-green">
-            FUMIGATRO<span className="text-brand-forest">N</span>
+            FUMIGATRON
           </span>
-          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-1">Nosotros sí podemos</span>
+          <div className="ant-trail">
+            <div className="ant-svg-group">
+              {[0,1,2].map(i => (
+                <svg key={i} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{animationDelay: `${i * 0.15}s`}}>
+                  <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#2E7D32"/>
+                  <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="#2E7D32"/>
+                  <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="#2E7D32"/>
+                  <g className="ant-antenna">
+                    <line x1="3" y1="4" x2="1" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                    <line x1="4" y1="4" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-front">
+                    <line x1="11" y1="7" x2="13" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="11" y1="5" x2="13" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-mid">
+                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-back">
+                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                </svg>
+              ))}
+            </div>
+          </div>
+          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-0.5">Nosotros sí podemos</span>
         </Link>
         
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -108,7 +135,7 @@ const Footer = () => (
         <div>
           <div className="mb-4">
             <span className="font-display font-black text-2xl tracking-tighter">
-              FUMIGATRO<span className="text-brand-green">N</span>
+              FUMIGATRON
             </span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -134,7 +161,7 @@ const Footer = () => (
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Tratamientos para los Muebles de Madera</Link></li>
           </ul>
         </div>
 
@@ -265,7 +292,7 @@ const ContactForm = () => {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="material-icons-outlined text-brand-green text-3xl">check_circle</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">¡Listo, recibimos tu mensaje!</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Listo, recibimos tu mensaje.</h3>
                     <p className="text-gray-500 mb-6">Un experto te escribirá en menos de 2 horas.</p>
                     <button
                       onClick={() => setStatus('idle')}
@@ -279,7 +306,7 @@ const ContactForm = () => {
                     {status === 'error' && (
                       <div className="bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm flex items-center gap-2">
                         <span className="material-icons-outlined text-sm">error</span>
-                        ¡Ups! Algo salió mal al enviar. Por favor, intenta de nuevo.
+                        Ocurrió un error al enviar. Por favor, intenta de nuevo.
                       </div>
                     )}
 
@@ -290,7 +317,7 @@ const ContactForm = () => {
                         </label>
                         <input 
                           type="text" 
-                          placeholder="Ej. Juan Pérez - ¡Queremos saber con quién hablamos!"
+                          placeholder="Ej. Juan Pérez"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className={`w-full bg-gray-50 border ${errors.name ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
@@ -318,7 +345,7 @@ const ContactForm = () => {
                       </label>
                       <input 
                         type="tel" 
-                        placeholder="Para contactarte súper rápido: 55 XXXX XXXX"
+                        placeholder="Para contactarte rápido: 55 XXXX XXXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className={`w-full bg-gray-50 border ${errors.phone ? 'border-red-300' : 'border-transparent'} focus:border-brand-green focus:ring-0 rounded-lg px-4 py-3 transition-all`}
@@ -359,7 +386,7 @@ const ContactForm = () => {
                           <option value="Fumigación Preventiva">Quiero proteger mi espacio (Prevención)</option>
                           <option value="Desinfección">Desinfección</option>
                           <option value="Otro">Otro</option>
-                          <option value="No estoy seguro">¡No estoy seguro, necesito que me asesoren!</option>
+                          <option value="No estoy seguro">No estoy seguro, necesito asesoría</option>
                         </select>
                         {errors.service && <p className="text-red-500 text-xs mt-1">{errors.service}</p>}
                       </div>
@@ -383,7 +410,7 @@ const ContactForm = () => {
                       disabled={status === 'loading'}
                       className="w-full bg-brand-green hover:bg-brand-forest text-white py-4 rounded-lg font-bold text-lg transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {status === 'loading' ? 'Enviando...' : '¡Quiero mi diagnóstico gratis!'}
+                      {status === 'loading' ? 'Enviando...' : 'Solicitar mi diagnóstico gratuito'}
                     </button>
 
                     <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1">
@@ -465,7 +492,7 @@ const EmergencySection = () => (
             <div className="text-center md:text-left flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Fumigación de Emergencia en CDMX - Atención 24/7</h3>
               <p className="text-gray-600 text-sm mb-4">
-                ¡Tranquilo, estamos listos! Escríbenos y te respondemos en menos de 15 minutos para darte una solución urgente.
+                Estamos listos. Escríbenos y te respondemos en menos de 15 minutos para darte una solución urgente.
               </p>
               <a 
                 href="https://wa.me/5520872132?text=Hola%2C%20tengo%20una%20emergencia%20de%20plagas%20y%20necesito%20ayuda%20urgente.%20%C2%BFPueden%20enviar%20a%20alguien%20lo%20antes%20posible%3F"
@@ -569,7 +596,7 @@ const CoverageSection = () => {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-6">
-            ¿No ves tu colonia o ciudad en la lista? ¡No te preocupes! <a href="https://wa.me/5520872132" className="text-brand-green font-semibold hover:underline">Escríbenos</a> y seguro encontramos la forma de ayudarte.
+            ¿No ves tu colonia o ciudad en la lista? No te preocupes. <a href="https://wa.me/5520872132" className="text-brand-green font-semibold hover:underline">Escríbenos</a> y seguro encontramos la forma de ayudarte.
           </p>
         </div>
       </div>

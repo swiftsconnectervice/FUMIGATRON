@@ -53,9 +53,36 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="font-display font-black text-xl md:text-2xl tracking-tight text-brand-green">
-            FUMIGATRO<span className="text-brand-forest">N</span>
+            FUMIGATRON
           </span>
-          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-1">Nosotros sí podemos</span>
+          <div className="ant-trail">
+            <div className="ant-svg-group">
+              {[0,1,2].map(i => (
+                <svg key={i} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{animationDelay: `${i * 0.15}s`}}>
+                  <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#2E7D32"/>
+                  <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="#2E7D32"/>
+                  <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="#2E7D32"/>
+                  <g className="ant-antenna">
+                    <line x1="3" y1="4" x2="1" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                    <line x1="4" y1="4" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.8" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-front">
+                    <line x1="11" y1="7" x2="13" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="11" y1="5" x2="13" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-mid">
+                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                  <g className="ant-leg-back">
+                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="#2E7D32" strokeWidth="0.9" strokeLinecap="round"/>
+                  </g>
+                </svg>
+              ))}
+            </div>
+          </div>
+          <span className="text-[10px] md:text-xs text-gray-500 italic -mt-0.5">Nosotros sí podemos</span>
         </Link>
         
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -129,7 +156,7 @@ const Footer = () => (
         <div>
           <div className="mb-4">
             <span className="font-display font-black text-2xl tracking-tighter">
-              FUMIGATRO<span className="text-brand-green">N</span>
+              FUMIGATRON
             </span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -155,7 +182,7 @@ const Footer = () => (
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Control Preventivo</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Eliminación Total y Urgente</Link></li>
             <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Desinfección Profesional</Link></li>
-            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Rescate de Madera</Link></li>
+            <li><Link to="/servicios" className="text-gray-400 hover:text-brand-green transition-colors text-sm">Tratamientos para los Muebles de Madera</Link></li>
           </ul>
         </div>
 
@@ -227,7 +254,7 @@ const ServicesHero = () => (
           Servicios de Fumigación en CDMX: Control de Plagas Profesional
         </h1>
         <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-          No rociamos químicos nada más porque sí. Evaluamos tu problema y aplicamos el tratamiento perfecto para eliminarlo rápido, de raíz y sin riesgos para ti.
+          No aplicamos químicos sin un diagnóstico previo. Evaluamos tu problema y aplicamos el tratamiento adecuado para eliminarlo de raíz, de forma rápida y sin riesgos para ti.
         </p>
       </div>
     </div>
@@ -254,7 +281,7 @@ const TrustImageSection = () => (
                 <h3 className="text-lg font-bold text-gray-900">Técnicos Certificados COFEPRIS</h3>
               </div>
               <p className="text-sm text-gray-600">
-                Nuestro equipo cuenta con más de 8 años de experiencia aplicando tratamientos seguros y efectivos en hogares y negocios de toda la CDMX.
+                Nuestro equipo cuenta con amplia experiencia aplicando tratamientos seguros y efectivos en hogares y negocios de toda la CDMX.
               </p>
             </div>
           </div>
@@ -274,17 +301,17 @@ const ServicesArsenal = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">1</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Acción Inmediata (Choque)</h3>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Fumigación de Choque: Acción Inmediata</h3>
           <p className="text-gray-600 text-sm leading-relaxed">Acabamos al instante con problemas grandes, urgentes o fuera de control.</p>
         </div>
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">2</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Protección Continua (Control Inteligente)</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">Prevenimos y protegemos tu casa o negocio a largo plazo para que los bichos no vuelvan jamás.</p>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Control de Plagas Preventivo y Continuo</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">Prevenimos y protegemos tu casa o negocio a largo plazo para que los insectos no vuelvan.</p>
         </div>
         <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 text-center">
           <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-4">3</span>
-          <h3 className="font-bold text-gray-900 text-lg mb-2">Limpieza Profunda (Desinfección)</h3>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Desinfección Profesional de Espacios</h3>
           <p className="text-gray-600 text-sm leading-relaxed">Eliminamos virus y bacterias para dejar tu espacio tan seguro y limpio como un hospital.</p>
         </div>
       </div>
@@ -330,10 +357,10 @@ const ServicesMatrix = () => {
     {
       tag: 'Control Preventivo para tu Tranquilidad',
       title: 'Control Preventivo',
-      para: 'Casas y negocios que quieren protegerse antes de tener un problema grave o que apenas empiezan a ver bichitos.',
+      para: 'Casas y negocios que quieren protegerse antes de tener un problema grave o que apenas empiezan a ver insectos.',
       ataca: 'Cucarachas, hormigas, arañas y chinches (en fase inicial).',
-      tecnica: 'Usamos geles y gotitas súper seguras. ¡Cero tóxicas y sin olores para tu familia!',
-      cta: '¡Quiero proteger mi espacio!',
+      tecnica: 'Utilizamos un control de calidad y servicio extendido a todos nuestros clientes.',
+      cta: 'Proteger mi espacio',
       msg: 'Hola, me interesa el servicio de Control Preventivo. ¿Me pueden dar más información y precios?',
       image: '/images/servicios_5.jpeg',
       imageAlt: 'Servicio de control preventivo de plagas en CDMX - Técnico aplicando gel contra cucarachas y hormigas en cocina',
@@ -344,8 +371,8 @@ const ServicesMatrix = () => {
       title: 'Eliminación Total y Urgente',
       para: 'Bodegas, restaurantes o lugares donde la plaga ya es un problema grande, visible y que no puede esperar.',
       ataca: 'Plagas fuera de control, ratas y ratones.',
-      tecnica: 'Actuamos rápido y con mucha fuerza para que recuperes la tranquilidad y el control de tu espacio de inmediato.',
-      cta: '¡Necesito ayuda urgente!',
+      tecnica: 'Actuamos con prontitud para que recuperes la tranquilidad y el control de tu espacio de inmediato.',
+      cta: 'Necesito ayuda urgente',
       msg: 'Hola, me interesa el servicio de Eliminación Total y Urgente. ¿Me pueden dar más información y precios?',
       image: '/images/servicios_3.jpeg',
       imageAlt: 'Eliminación urgente de plagas en CDMX - Técnico con equipo profesional fumigando contra ratas y cucarachas',
@@ -356,20 +383,20 @@ const ServicesMatrix = () => {
       title: 'Desinfección de Nivel Hospitalario',
       para: 'Clínicas, hospitales, gimnasios y oficinas que necesitan cumplir con normas estrictas de salud y limpieza.',
       ataca: 'Virus, bacterias y hongos invisibles.',
-      tecnica: 'Aplicamos una niebla súper fina que desinfecta todo sin dejar malos olores ni manchar tus muebles.',
-      cta: '¡Quiero desinfectar mi negocio!',
+      tecnica: 'Aplicamos desinfectantes en forma de niebla fina que desinfecta sin dejar malos olores ni manchas en tus muebles.',
+      cta: 'Desinfectar mi negocio',
       msg: 'Hola, me interesa el servicio de Desinfección de Nivel Hospitalario. ¿Me pueden dar más información y precios?',
       image: 'https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&h=400&fit=crop',
       imageAlt: 'Desinfección profesional COFEPRIS en CDMX - Técnico con nebulizador eliminando virus y bacterias',
       imageTitle: 'Desinfección nivel hospitalario - Certificado COFEPRIS CDMX',
     },
     {
-      tag: 'Rescate de Madera (Termitas)',
-      title: 'Rescate de Madera',
-      para: 'Proteger tus muebles, puertas y la estructura de tu casa antes de que se echen a perder y te cuesten muy caro.',
-      ataca: 'Termitas y polillas que se comen la madera.',
-      tecnica: 'Aplicamos tratamientos directos en la madera para crear un escudo protector que dura muchísimo tiempo.',
-      cta: '¡Quiero salvar mi madera!',
+      tag: 'Tratamientos para los Muebles de Madera (Termitas)',
+      title: 'Tratamientos para los Muebles de Madera',
+      para: 'Proteger tus muebles, puertas y la estructura de tu casa antes de que sufran daños irreversibles y generen costos elevados.',
+      ataca: 'Termitas y carcomas que dañan la madera.',
+      tecnica: 'Aplicamos tratamientos directos en la madera para crear un escudo protector con alta durabilidad.',
+      cta: 'Salvar mi madera',
       msg: 'Hola, me interesa el servicio para eliminar termitas y polilla. ¿Me pueden dar más información y precios?',
       image: '/images/madera.jpeg',
       imageAlt: 'Tratamiento anti-termitas en CDMX - Técnico inyectando protección en madera contra termitas y polilla',
@@ -462,7 +489,7 @@ const GuaranteeSection = () => (
               Garantía Certificada COFEPRIS en Todos Nuestros Servicios
             </h2>
             <p className="text-white/90 text-lg leading-relaxed mb-6">
-              Todos nuestros trabajos están respaldados por escrito. Si por alguna razón el problema sigue durante el tiempo de garantía, ¡regresamos y lo solucionamos totalmente gratis!
+              Todos nuestros trabajos están respaldados por escrito. Si por alguna razón el problema persiste durante el periodo de garantía, regresamos y lo solucionamos sin costo adicional.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
@@ -492,7 +519,7 @@ const CallToAction = () => (
         Cotiza tu Fumigación en CDMX Hoy - Respuesta en 15 Minutos
       </h2>
       <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-        ¡Escríbenos ya! Uno de nuestros expertos revisará tu caso y te dará la solución exacta y el precio en menos de 15 minutos. Sin presiones y sin compromisos.
+        Escríbenos ahora. Uno de nuestros expertos revisará tu caso y te dará la solución exacta y el precio en menos de 15 minutos. Sin presiones y sin compromisos.
       </p>
       <a 
         href="https://wa.me/5520872132?text=Hola%2C%20necesito%20un%20diagn%C3%B3stico%20gratis%20para%20un%20problema%20de%20plagas%20en%20mi%20espacio.%20%C2%BFMe%20ayudan%20a%20revisarlo%3F"
