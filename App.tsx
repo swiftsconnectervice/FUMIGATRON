@@ -1071,7 +1071,6 @@ const Footer = () => (
               <span className="font-display font-black text-2xl tracking-tighter">
                 FUMIGATRON
               </span>
-              {/* SVG overlay con hormigas animadas por el perímetro del rectángulo */}
               <svg className="footer-ant-svg" viewBox="0 0 180 44" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Hormiga 1 */}
                 <g>
@@ -1079,17 +1078,13 @@ const Footer = () => (
                     <mpath href="#rectPath"/>
                   </animateMotion>
                   <g transform="translate(-7,-5)">
-                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.75)"/>
-                    <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.85)"/>
+                    <g><line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-10 3 4;10 3 4;-10 3 4" dur="0.5s" repeatCount="indefinite"/></g>
+                    <g><line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 11 6;22 11 6;-22 11 6" dur="0.28s" repeatCount="indefinite"/></g>
+                    <g><line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="22 8 6;-22 8 6;22 8 6" dur="0.28s" repeatCount="indefinite"/></g>
+                    <g><line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 5 6;22 5 6;-22 5 6" dur="0.28s" repeatCount="indefinite"/></g>
                   </g>
                 </g>
                 {/* Hormiga 2 */}
@@ -1098,17 +1093,13 @@ const Footer = () => (
                     <mpath href="#rectPath"/>
                   </animateMotion>
                   <g transform="translate(-7,-5)">
-                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.75)"/>
-                    <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.85)"/>
+                    <g><line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-10 3 4;10 3 4;-10 3 4" dur="0.5s" begin="-0.1s" repeatCount="indefinite"/></g>
+                    <g><line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 11 6;22 11 6;-22 11 6" dur="0.28s" begin="-0.1s" repeatCount="indefinite"/></g>
+                    <g><line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="22 8 6;-22 8 6;22 8 6" dur="0.28s" begin="-0.1s" repeatCount="indefinite"/></g>
+                    <g><line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 5 6;22 5 6;-22 5 6" dur="0.28s" begin="-0.1s" repeatCount="indefinite"/></g>
                   </g>
                 </g>
                 {/* Hormiga 3 */}
@@ -1117,20 +1108,15 @@ const Footer = () => (
                     <mpath href="#rectPath"/>
                   </animateMotion>
                   <g transform="translate(-7,-5)">
-                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.75)"/>
-                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.75)"/>
-                    <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
-                    <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
-                    <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                    <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.85)"/>
+                    <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.85)"/>
+                    <g><line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.8" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-10 3 4;10 3 4;-10 3 4" dur="0.5s" begin="-0.2s" repeatCount="indefinite"/></g>
+                    <g><line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 11 6;22 11 6;-22 11 6" dur="0.28s" begin="-0.2s" repeatCount="indefinite"/></g>
+                    <g><line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="22 8 6;-22 8 6;22 8 6" dur="0.28s" begin="-0.2s" repeatCount="indefinite"/></g>
+                    <g><line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.85)" strokeWidth="0.9" strokeLinecap="round"/><animateTransform attributeName="transform" type="rotate" values="-22 5 6;22 5 6;-22 5 6" dur="0.28s" begin="-0.2s" repeatCount="indefinite"/></g>
                   </g>
                 </g>
-                {/* Path rectangular invisible que define la ruta */}
                 <path id="rectPath" d="M 0,0 L 180,0 L 180,44 L 0,44 Z" fill="none" stroke="none"/>
               </svg>
             </div>
