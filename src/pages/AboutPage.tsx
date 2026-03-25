@@ -159,31 +159,29 @@ const Footer = () => (
               <span className="font-display font-black text-2xl tracking-tighter">
                 FUMIGATRON
               </span>
-              <div className="footer-ant-rect">
-                {[0,1,2].map(i => (
-                  <svg key={i} className="footer-ant-walker" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="scale(-1,1) translate(-18,0)">
-                      <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.7)"/>
-                      <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.7)"/>
-                      <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.7)"/>
-                      <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.8" strokeLinecap="round"/>
-                      <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.8" strokeLinecap="round"/>
-                      <g className="ant-leg-front">
-                        <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                      </g>
-                      <g className="ant-leg-mid">
-                        <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                      </g>
-                      <g className="ant-leg-back">
-                        <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
-                      </g>
+              <svg className="footer-ant-svg" viewBox="0 0 180 44" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {[0,1,2].map((i) => (
+                  <g key={i}>
+                    <animateMotion dur="5s" begin={`${-i * 1.66}s`} repeatCount="indefinite" rotate="auto">
+                      <mpath href="#rectPath"/>
+                    </animateMotion>
+                    <g transform="translate(-7,-5)">
+                      <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.75)"/>
+                      <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.75)"/>
+                      <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.75)"/>
+                      <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
+                      <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.8" strokeLinecap="round"/>
+                      <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
+                      <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.75)" strokeWidth="0.9" strokeLinecap="round"/>
                     </g>
-                  </svg>
+                  </g>
                 ))}
-              </div>
+                <path id="rectPath" d="M 0,0 L 180,0 L 180,44 L 0,44 Z" fill="none" stroke="none"/>
+              </svg>
             </div>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
