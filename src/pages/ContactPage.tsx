@@ -133,31 +133,31 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 pb-12 border-b border-white/10">
         {/* Column 1: Identity */}
         <div>
-          <div className="mb-2">
-            <span className="font-display font-black text-2xl tracking-tighter">
-              FUMIGATRON
-            </span>
-            <div className="footer-ant-trail">
-              <div className="footer-ant-group">
+          <div className="mb-4">
+            <div className="footer-logo-wrap">
+              <span className="font-display font-black text-2xl tracking-tighter">
+                FUMIGATRON
+              </span>
+              <div className="footer-ant-rect">
                 {[0,1,2].map(i => (
-                  <svg key={i} className="footer-ant" width="16" height="11" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg key={i} className="footer-ant-walker" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g transform="scale(-1,1) translate(-18,0)">
-                      <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.5)"/>
-                      <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.5)"/>
-                      <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.5)"/>
-                      <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.5)" strokeWidth="0.8" strokeLinecap="round"/>
-                      <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.5)" strokeWidth="0.8" strokeLinecap="round"/>
+                      <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="rgba(255,255,255,0.7)"/>
+                      <ellipse cx="8" cy="6" rx="2.2" ry="2" fill="rgba(255,255,255,0.7)"/>
+                      <ellipse cx="4" cy="6" rx="2" ry="2.2" fill="rgba(255,255,255,0.7)"/>
+                      <line x1="3" y1="4" x2="1" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.8" strokeLinecap="round"/>
+                      <line x1="4" y1="4" x2="3" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.8" strokeLinecap="round"/>
                       <g className="ant-leg-front">
-                        <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="11" y1="7" x2="13" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="11" y1="5" x2="13" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
                       </g>
                       <g className="ant-leg-mid">
-                        <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="8" y1="7.5" x2="6" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="8" y1="4.5" x2="6" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
                       </g>
                       <g className="ant-leg-back">
-                        <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
-                        <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.5)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="5" y1="7.5" x2="3" y2="11" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
+                        <line x1="5" y1="4.5" x2="3" y2="1" stroke="rgba(255,255,255,0.7)" strokeWidth="0.9" strokeLinecap="round"/>
                       </g>
                     </g>
                   </svg>
