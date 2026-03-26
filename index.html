@@ -107,6 +107,20 @@
         85%  { left: 85%;   top: 60%; }
         100% { left: calc(100% + 18px); top: 55%; }
       }
+      /* Hormiga 4: va por el centro-alto, velocidad media */
+      .ant-over:nth-child(4) {
+        animation: antPath4 5s linear infinite;
+        animation-delay: -2.5s;
+      }
+      @keyframes antPath4 {
+        0%   { left: -18px; top: 20%; }
+        20%  { left: 20%;   top: 45%; }
+        35%  { left: 35%;   top: 10%; }
+        55%  { left: 55%;   top: 40%; }
+        75%  { left: 75%;   top: 15%; }
+        90%  { left: 90%;   top: 35%; }
+        100% { left: calc(100% + 18px); top: 20%; }
+      }
       /* Leg swing */
       .ant-leg-front { animation: legSwingF 0.3s ease-in-out infinite alternate; }
       .ant-leg-mid   { animation: legSwingM 0.3s ease-in-out infinite alternate-reverse; }

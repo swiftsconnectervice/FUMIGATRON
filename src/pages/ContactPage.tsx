@@ -57,7 +57,7 @@ const Navbar = () => {
               FUMIGATRON
             </span>
             <div className="ants-over-text">
-              {[0,1,2].map(i => (
+              {[0,1,2,3].map(i => (
                 <svg key={i} className="ant-over" width="16" height="11" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g transform="scale(-1,1) translate(-18,0)">
                     <ellipse cx="13" cy="6" rx="3.5" ry="2.5" fill="#1B5E20"/>
